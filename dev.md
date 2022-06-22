@@ -8,6 +8,7 @@
 Index.
 
 1. [Bases de datos][#id1]
+  1.1 Mysql
 
 ## Bases de datos <a name='id1'></a>
 
@@ -31,4 +32,89 @@ Una entidad es la representación de un objeto o la abstracción de el, objetos 
         Pistones          bujias
 ~~~
 
+
+## Mysql
+
+Mysql comandline es una herramienta para el uso de mysql desde la terminal.
+
+> para entrar a mysql comadline usaremos el comando administrador: ***sudo mysql***, el cual solicitara los permisos de administradadr para iniciar.
+
+> el comando ***show databases*** mostrara las bases de datos por defecto al instalar mysql y las bases de datos que fueron creadas por el ususario.
+
+> el comando ***use (nombre_database)*** se usara para entrar a la base de datos y para visualizar las tavlas usaremos el comando ***show tables***
+
+> al crear una base de datos se usara el comando ***create database (nombre_nuevo_databese)***.
+
+> para asignar un nombre a una tabla nueva dentro de una base de datos recien creada usaremos elcomando ***use (nombre_nueva_databes)***.
+
+> para crear tablas nuevas dentro de la nueva base de datos creada se usara ***create table (nombre_tabla)***. Revisar entidades y relaciones y normalizar tablas para este paso.
+
+
+## Ejemplo de creación de tabla **practica** en mysql
+~~~
+
+mysql> use practica;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table Departamento(
+    -> ID_Departamento int,
+    -> Nombre varchar(80) not null,
+    -> primary key(ID_Departamento)
+    -> );
+Query OK, 0 rows affected (1.70 sec)
+
+mysql> create table Empleado(
+    -> ID_Empleado int primary key,
+    -> Primer_Nombre varchar(50) not null,
+    -> Segundo_Nombre varchar(50),
+    -> Apellido_Paterno varchar(50) not null,
+    -> Fecha_Nacimiento date not null,
+    -> Fecha_Registro date not null,
+    -> ID_Departamento int not null,
+    -> foreign key(ID_Departamento) references Departamento(ID_Departamento)
+    -> );
+Query OK, 0 rows affected (1.39 sec)
+
+mysql> create table Acceso(
+    -> ID_Empleado int not null,
+    -> Usuario varchar(8) not null,
+    -> Clave varchar(8) not null
+    -> forenign key(ID_Empleado) references Empleado(ID_Empleado)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'forenign key(ID_Empleado) references Empleado(ID_Empleado)
+)' at line 5
+mysql> create table Acceso( ID_Empleado int not null, Usuario varchar(8) not null, Clave varchar(8) not null foreign key(ID_Empleado) references Empleado(ID_Empleado) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(ID_Empleado) references Empleado(ID_Empleado) )' at line 1
+mysql> show tables;
++--------------------+
+| Tables_in_practica |
++--------------------+
+| Departamento       |
+| Empleado           |
++--------------------+
+2 rows in set (0.01 sec)
+
+mysql> create table Acceso(
+    -> ID_Empleado int not null,
+    -> Usuario varchar(8) not null,
+    -> Clave varchar(8) not null,
+    -> foreign key(ID_Empleado) references Empleado(ID_Empleado)
+    -> );
+Query OK, 0 rows affected (1.18 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_practica |
++--------------------+
+| Acceso             |
+| Departamento       |
+| Empleado           |
++--------------------+
+3 rows in set (0.01 sec)
+
+~~~
+
+> el comando para insertar datos en tablas usaremos el comando:  ***insert into (nobre_tabla_creada)***.
 
