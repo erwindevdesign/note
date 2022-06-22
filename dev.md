@@ -30,3 +30,5 @@ Una entidad es la representación de un objeto o la abstracción de el, objetos 
             |               |
         Pistones          bujias
 ~~~
+
+
