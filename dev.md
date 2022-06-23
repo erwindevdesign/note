@@ -116,5 +116,36 @@ mysql> show tables;
 
 ~~~
 
-> el comando para insertar datos en tablas usaremos el comando:  ***insert into (nobre_tabla_creada)***.
+> el comando para insertar datos en tablas usaremos el comando:  ***insert into (nobre_tabla_creada)***: ejemplo:
+~~~
+INSERT INTO peaple(last_name, first_name, address, city)
+VALUES ('Hernandez', 'Laura', 'Calle 21, Wall Street', 'Monterrey'); 
+~~~
+
+> PAra visualizar el contenido ingresado a una tabla usaremos el comando **SELECT \* FROM - nombre_tabla -** ejemplo:
+
+~~~
+SELECT * FROM Empleados;
+
+SELECT fist_name, last_name
+FROM peaple;
+~~~
+
+> Para realizar cambios en datos ya existentes en una tabla se ura el comando **UPDATE** ejemplo:
+~~~
+UPDATE peaple
+SET last_name='Chavez',city='Merida'
+Where person_id=1;
+~~~
+Para borrar el contenido espesificado de una tabla se usara el comando **DELETE FROM - nombre_tabla-** 
+~~~
+DELETE FROM peaple
+WHERE person_id=1;
+~~~
+> Para destruit o soltar una tabla se utilizara el comando **DROP TABLE - nombre_tabla -**.
+~~~
+DROP TABLE peaple;
+~~~
+
+
 
