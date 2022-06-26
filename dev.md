@@ -1,14 +1,52 @@
-# Dev
+# Dev :keyboard:
 
-### Estructura de notas deribadas del aprendisaje de nuevas habilidaddes profecionales relacionadas al desarrollo web y la programación en código.
+### :bamboo: Respaldo de notas deribadas de la curva de aprendisaje en desarrollo web y la programación en código.
 
-### notación de inducción a markdown y a la documentación técnica.
+## Index.
+
+1. [Git & GitHub](#id2)
+  <p align=center >
+    <a><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white' /></a>&nbsp;&nbsp;
+     
+  </p>
+
+2. [Bases de datos](#id1)
+  - Base de datos relacionales.
+  - Mysql
+  <p align=center >
+    <a><img src='https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white' /></a>&nbsp;&nbsp;
+     
+  </p>
+
+## Git & GitHub.
+
+###  Notación de inducción a markdown y a la documentación técnica, gestionando su desarrollo haciendo uso de la ramificación de Git :octocat: como se muestra en el siguiente diagrama.
+
+~~~
+     main ----------- v ----------- > ------------ > ------------ OK
+       |              |                                            | 
+       |              |                                            | 
+       +           develop                                         +
+       |              |                                            |
+       |              |                                            |
+       +              > --------- develop ------ develop           +
+       |                             |              |              |    
+       |                             v              v              |
+       |                             |              |              |  
+    features -------- > --------- relase ------- relase ------- relace
+                 |                   |                             |
+                 +                   +                             |
+                 |                   |                             |
+             features ----------- hotfix ---------- + ---------- hotfix
+
+~~~
+> La *rama*  **main**, como estándar, será la rama en la que se desplegara la versión a producción (*final* / **v1.0**), en la *rama* **develop** será donde se respaldarán textos tomados, sobre el proceso de aprendizaje, con un estilo de escritura a modo de notas a borrador que serviran de base para la estructuración técnica del despliege a produccion (*desarrollo* / **v0.0.11**), en la *rama* **relase** se ejecután pruebas de **usuario/usabilidad** y **rendimiento/revisión** para su optimización del despliegue en main (*prueba* / **v0.1**), para los arreglos y correcciones en la sintaxis y la ortografía del texto en la version *relase* se usara la *rama* **hotfix** (*arreglo/corrección* / **v0.1H** ))  para agregar caracteristicas a los despliegues de *main, relase y hotfix* solicitadas por el usuario/lector se usará la *rama* **features** (*caracteristica* / **V0.1F**).
 
 
-Index.
 
-1. [Bases de datos][#id1]
-  1.1 Mysql
+
+
+
 
 ## Bases de datos <a name='id1'></a>
 
@@ -146,6 +184,18 @@ WHERE person_id=1;
 ~~~
 DROP TABLE peaple;
 ~~~
+
+## Operadores relacionales
+
+### Operadores relacionales o de compración.
+
+- igual a:   **=**
+- distinto a: **!=**
+- menor que: **<**
+- mayor que: **>**
+- menor o igual que: **<=**
+- mayor o igual que: **>=** 
+
 
 
 
