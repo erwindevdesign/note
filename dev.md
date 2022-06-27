@@ -182,7 +182,7 @@ WHERE person_id=1;
 ~~~
 > Para destruit o soltar una tabla se utilizara el comando **DROP TABLE - nombre_tabla -**.
 ~~~
-DROP TABLE peaple;
+DROP TABLE people;
 ~~~
 
 ## Operadores relacionales
@@ -196,6 +196,30 @@ DROP TABLE peaple;
 - menor o igual que: **<=**
 - mayor o igual que: **>=** 
 
+## Query
+
+### Sentencia **SELECT**
 
 
 
+### Sentencia **FROM & JOIN**
+
+La sentencia **From** es una instrucción para indicar de donde requerimos que sean llamados los datos, los cuales al estar normalizada la estructura de la base de datos la disponemos en diferentes tablas, con esta sentencia unimos los resultados solicitados desde diferentes tablas con la sentencia **JOIN** y la estructura de tipos de unión basada en los *diagramas de venn* y la *teoría de conjuntos* que nos ayudara a filtrar las busquedas que realisemos con **SELECT**.
+ 
+ Estructura:
+ ~~~
+SELECT *
+FROM tabla1
+    LEFT JOIN tabla2 ON tabla1.llavePK = tabla2.llaveFK_id
+WHERE tabla2.llaveFK_id IS NULL;
+
+- SELECT es la sentencia que indica la  consulta o proyección de la base de datos, el indicador *  relaciona como un "todo" o  "traer todos los campos" que el query regrese.
+- FROM es la sentencia que indica el origen de la consulta que realizamos con SELECT.
+- LEFT relaciona la busqueda en las tablas por izquierda o derecha tomando como referencia izquierda la tabla que se señale en la sentencia FROM y la derecha la tabla que se señale posterior a LEFT/RIGHT JOIN.
+- JOIN según la teoría de conjuntos y el diagrama de venn, es el conector con el origen de tabla que se le asigne en FROM, con los campos de filtración de la segunda tabla señalada enseguida de JOIN y que nos regresa información del query.
+- ON este modificador relaciona las llaves primarias y foraneas de las tablas. 
+~~~
+
+
+
+ modificador **ON** para relacionar las llaves primarias con las foraneas.

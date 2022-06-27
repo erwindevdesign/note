@@ -5,21 +5,21 @@
 ###  Notación de inducción a markdown y a la documentación técnica, gestionando su desarrollo haciendo uso de la ramificación de Git :octocat: como se muestra en el siguiente diagrama.
 
 ~~~
-     main ----------- v ----------- > ------------ > ------------ OK
-       |              |                                            | 
-       |              |                                            | 
-       +           develop                                         +
-       |              |                                            |
-       |              |                                            |
-       +              > --------- develop ------ develop           +
-       |                             |              |              |    
-       |                             v              v              |
-       |                             |              |              |  
-    features -------- > --------- relase ------- relase ------- relace
-                 |                   |                             |
-                 +                   +                             |
-                 |                   |                             |
-             features ----------- hotfix ---------- + ---------- hotfix
+ main ----------- v ----------- > ------------ > ------------ OK
+   |              |                                            | 
+   |              |                                            | 
+   +           develop                                         +
+   |              |                                            |
+   |              |                                            |
+   +              > --------- develop ------ develop           +
+   |                             |              |              |    
+   |                             v              v              |
+   |                             |              |              |  
+features -------- > --------- relase ------- relase ------- relace
+             |                   |                             |
+             +                   +                             |
+             |                   |                             |
+         features ----------- hotfix ---------- + ---------- hotfix
 
 ~~~
 > La *rama*  **main**, como estándar, será la rama en la que se desplegara la versión a producción (*final* / **v1.0**), en la *rama* **develop** será donde se respaldarán textos tomados, sobre el proceso de aprendizaje, con un estilo de escritura a modo de notas a borrador que serviran de base para la estructuración técnica del despliege a produccion (*desarrollo* / **v0.0.11**), en la *rama* **relase** se ejecután pruebas de **usuario/usabilidad** y **rendimiento/revisión** para su optimización del despliegue en main (*prueba* / **v0.1**), para los arreglos y correcciones en la sintaxis y la ortografía del texto en la version *relase* se usara la *rama* **hotfix** (*arreglo/corrección* / **v0.1H** ))  para agregar caracteristicas a los despliegues de *main, relase y hotfix* solicitadas por el usuario/lector se usará la *rama* **features** (*caracteristica* / **V0.1F**). 
