@@ -1,8 +1,7 @@
-# Repositorio **NOTE** para el respaldo de notas, practica en escritura técnico con **Markdown**. :notebook:
+# :notebook: Repositorio **NOTE** para el respaldo de notas y práctica de escritura técnica.
 
-### :memo: La estructura de un texto para su enfoque en el aprendisaje es vital para la comprensión de la información escrita, este repositorio pretende contener la información recabada durante la adquisición de diversos conocimientos para el crecimiento profecional y transcribirlos a un texto técnico que sea de facil comprención de la información integrada ayudando a mi tecnica de escritura y comunicación a encontrar la linea de comunicación, voz y tono de una marca personal en proceso de definición. *Además* de incrementar habilidades en escritura técnica con lenguaje **Markdown**, versionamiento y ramificación en **GitHub**.
-
-###  Notación de inducción a markdown y a la documentación técnica, gestionando su desarrollo haciendo uso de la ramificación de Git :octocat: como se muestra en el siguiente diagrama.
+La estructura de un texto para su enfoque en el aprendizaje es vital para la comprensión de la información escrita, este repositorio pretende contener la información recabada durante la adquisición de diversos conocimientos para el crecimiento profesional y transcribirlos a un texto técnico que sea de fácil comprensión de la información presentada, ayudando a desarrollar una mejor escritura técnica y comunicación en función del usuario al encontrar la línea de voz y tono de una marca personal y profesional en proceso de definición. *Además* de incrementar habilidades en escritura técnica en **Markdown** y la gestion y estructura de ramificación en **GitHub** :octocat:. 
+Notación de inducción a **Markdown** y a la gestión de desarrollo de ramas haciendo uso de la de Git  como se muestra en el siguiente diagrama.
 
 ~~~
  main ----------- v ----------- > ------------ > ------------ OK
@@ -22,9 +21,9 @@ features -------- > --------- relase ------- relase ------- relace
          features ----------- hotfix ---------- + ---------- hotfix
 
 ~~~
-> La *rama*  **main**, como estándar, será la rama en la que se desplegara la versión a producción (*final* / **v1.0**), en la *rama* **develop** será donde se respaldarán textos tomados, sobre el proceso de aprendizaje, con un estilo de escritura a modo de notas a borrador que serviran de base para la estructuración técnica del despliege a produccion (*desarrollo* / **v0.0.11**), en la *rama* **relase** se ejecután pruebas de **usuario/usabilidad** y **rendimiento/revisión** para su optimización del despliegue en main (*prueba* / **v0.1**), para los arreglos y correcciones en la sintaxis y la ortografía del texto en la version *relase* se usara la *rama* **hotfix** (*arreglo/corrección* / **v0.1H** ))  para agregar caracteristicas a los despliegues de *main, relase y hotfix* solicitadas por el usuario/lector se usará la *rama* **features** (*caracteristica* / **V0.1F**). 
+> La *rama*  **main**, como estándar, será la rama en la que se desplegara la versión a producción (*final* / **v1.0**), en la *rama* **develop** será donde se respaldarán textos tomados, sobre el proceso de aprendizaje, con un estilo de escritura a modo de notas a borrador que servirán de base para la estructuración del despliegue a producción (*desarrollo* / **v0.0.11**), en la *rama* **relase** se ejecutan pruebas de **usuario/usabilidad** y **rendimiento/revisión** para su optimización del despliegue en main (*prueba* / **v0.1**), para los arreglos y correcciones en la sintaxis y la ortografía del texto en la version *relase* se usara la *rama* **hotfix** (*arreglo/corrección* / **v0.1H** ))  para agregar características a los despliegues de *main, relase y hotfix* solicitadas por el usuario/lector se usará la *rama* **features** (*característica* / **V0.1F**). 
 
-### Sin pretensiones :trollface:, con todo el :heart: y como antecedente :black_nib: del recorrido en mi aprendizaje obtenido :speech_balloon: en este multiverso :galaxy: tecnologico. 
+Con todo el :heart: y como antecedente del recorrido en el aprendizaje obtenido :speech_balloon: en este multiverso :space_invader: tecnológico. 
 
 
 <p align=center >

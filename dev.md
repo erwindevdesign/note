@@ -75,6 +75,9 @@ Una entidad es la representación de un objeto o la abstracción de el, objetos 
 
 Mysql comandline es una herramienta para el uso de mysql desde la terminal.
 
+> comentarios en linea: ***--- comentario ...*** o ***# comentario ...***
+comentarios de varias lineas ***/\* comentario \*/.***
+
 > para entrar a mysql comadline usaremos el comando administrador: ***sudo mysql***, el cual solicitara los permisos de administradadr para iniciar.
 
 > el comando ***show databases*** mostrara las bases de datos por defecto al instalar mysql y las bases de datos que fueron creadas por el ususario.
@@ -185,6 +188,8 @@ WHERE person_id=1;
 DROP TABLE people;
 ~~~
 
+modificador **ON** para relacionar las llaves primarias con las foraneas.
+
 ## Operadores relacionales
 
 ### Operadores relacionales o de compración.
@@ -220,6 +225,46 @@ WHERE tabla2.llaveFK_id IS NULL;
 - ON este modificador relaciona las llaves primarias y foraneas de las tablas. 
 ~~~
 
+ejemplos de uso de query:
 
+~~~
+SELECT *
+FROM tabla1
+    LEFT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
 
- modificador **ON** para relacionar las llaves primarias con las foraneas.
+:: Esta sentencia nos regresara **todo** lo que este en la tabla1 (LEFT) que se relacione con la llave foranea_id de la tabla 2 y la llave primaria de la tabla1. 
+~~~
+~~~
+SELECT *
+FROM tabla1
+    RIGHT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
+
+:: Al intercambiar el modificador LEFT por RIGHT la sentencia nos regresara todo lo que exista en la tabla2 y que ADEMÁS se relacione con su llave foranea FK y la llave primaria PK de la primera tabla descrita. 
+~~~
+~~~
+SELECT *
+FROM tabla1
+    LEFT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id
+WHERE tabla2.llaveFK_id IS NULL;
+
+:: Esta sentencia nos regresara todo en la tabla1 que se relacione con su llave primaria y la llave foreane de la segunda tabla, mientres cumpla con el paramentro NULL en el campo de llave foranea de la segunda tabla, quiere desir que no exista tal registro o este nulo.
+~~~
+~~~
+SELECT *
+FROM tabla1
+    RIGHT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id
+WHERE tabla2.llaveFK_id IS NULL;
+
+:: Al intercambiar el modificador LEFT por RIGHT la sentencia nos regresara todo lo que exista en la tabla2 y que ADEMÁS se relacione con su llave foranea FK y la llave primaria PK de la primera tabla descrita que cumplan con un campo nulo cuando la tabla 2 no tenga dicho registro en su llave primaria PK. 
+~~~
+~~~
+SELECT *
+FROM tabla1
+    INNER JOIN tabla2 ON llavePK.id = tabla2.llaveFK_id;
+
+:: el modificador INNER traera de ambas tablas SOLO lo que este relacionado entre la llave primaria PK de la primera tabla con lo que este relacionado al la llave foranea de la segunda tabla.
+~~~
+~~~SELECT *
+FROM tabla1
+    LEFT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
+UNION
