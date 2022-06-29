@@ -23,7 +23,7 @@ features -------- > --------- relase ------- relase ------- relace
 ~~~
 > La *rama*  **main**, como estándar, será la rama en la que se desplegara la versión a producción (*final* / **v1.0**), en la *rama* **develop** será donde se respaldarán textos tomados, sobre el proceso de aprendizaje, con un estilo de escritura a modo de notas a borrador que servirán de base para la estructuración del despliegue a producción (*desarrollo* / **v0.0.11**), en la *rama* **relase** se ejecutan pruebas de **usuario/usabilidad** y **rendimiento/revisión** para su optimización del despliegue en main (*prueba* / **v0.1**), para los arreglos y correcciones en la sintaxis y la ortografía del texto en la version *relase* se usara la *rama* **hotfix** (*arreglo/corrección* / **v0.1H** ))  para agregar características a los despliegues de *main, relase y hotfix* solicitadas por el usuario/lector se usará la *rama* **features** (*característica* / **V0.1F**). 
 
-Con todo el :heart: y como antecedente del recorrido en el aprendizaje obtenido :speech_balloon: en este multiverso :space_invader: tecnológico. 
+Con todo el :heart: y como antecedente del recorrido en el aprendizaje obtenido en este multiverso :space_invader: tecnológico. 
 
 
 <p align=center >

@@ -70,6 +70,21 @@ Una entidad es la representación de un objeto o la abstracción de el, objetos 
         Pistones          bujias
 ~~~
 
+### Tipos de datos
+
+| Tipo | Mysql | Descrition |
+| -- | -- | -- |
+| :binary | blob | Alamcena datos como imágenes, audio o películas |
+| :boolean | tinyint(1) | Almacena valores 1 y 0, true or false, verdadero o falso. |
+| :date | date | Almacena datos tipo fecha |
+| :datatime | datetime | Almacena datos tipo fecha y tipo hora |
+| :decimal | decimal | Almacena datos numericos decimales.  |
+| :float | float | Almacena datos numericos exponeciales muy grandes o muy pequeños |
+| :integer | int(11) | Almacena datos numericos enteros |
+| :string | varchar(255) | Almacena cadenas de texto relativamente cortas de nos mas de 255 caracteres  |
+| :text | text | Almacena cadenas de texto estensas, textos muy largos  |
+| :time | time | Almacena datos tipo tiempo / hora  |
+| :timestamp | datetime | Almacena datos tipo fecha y tipo hora  |
 
 ## Mysql
 
@@ -264,7 +279,15 @@ FROM tabla1
 
 :: el modificador INNER traera de ambas tablas SOLO lo que este relacionado entre la llave primaria PK de la primera tabla con lo que este relacionado al la llave foranea de la segunda tabla.
 ~~~
-~~~SELECT *
+~~~
+SELECT *
 FROM tabla1
     LEFT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
 UNION
+SELECT *
+FROM tabla1
+    RIGHT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
+
+:: 
+
+~~~
