@@ -122,10 +122,10 @@ INSERT INTO peaple(last_name, first_name, address, city)
 VALUES ('Hernandez', 'Laura', 'Calle 21, Wall Street', 'Monterrey'); 
 ~~~
 
-> PAra visualizar el contenido ingresado a una tabla usaremos el comando **SELECT \* FROM - nombre_tabla -** ejemplo:
+> PAra visualizar el contenido ingresado a una tabla usaremos el comando **SELECT * FROM - nombre_tabla -** ejemplo:
 
 ~~~
-SELECT * FROM Empleados;
+SELECT *  FROM Empleados;
 
 SELECT fist_name, last_name
 FROM peaple;
@@ -147,5 +147,18 @@ WHERE person_id=1;
 DROP TABLE peaple;
 ~~~
 
+### Tabla de comando para la manipulación de bases de datos basodos en **SQL**.
 
-
+| Comandos | Descripción |
+| -- | -- |
+| **CREATE** | Crear tablas o nuevos esquemas de **DB**. |
+| **DROP** | Elimina columnas, tablas y **DB**. |
+| **Alter** | Modifixa la estructura de una tabla haciendo uso de orros comandos como: **ADD**, **DROP**, **ADD PRIMARY KEY()**, **ADD FOREIGN KEY()**, entre otros. |
+| **DESCRIBE** | Muestra la estructura de las tablas de **DB**. |
+| **SHOW** | Muestra y enlista BD y tablas. |
+| **USE** | Conecta la base de datos que se le indique. |
+| **SELECT** | Consulta y regresa la **DB** |
+| **INSERT** | Inserta información en la **DB**. |
+| **UPDATE** | Modifica y actualiza la información en la **DB**. |
+| **DELETE** | Elimina ragistros de la base de datos. |
+| **
