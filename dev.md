@@ -86,6 +86,12 @@ Una entidad es la representación de un objeto o la abstracción de el, objetos 
 | :time | time | Almacena datos tipo tiempo / hora  |
 | :timestamp | datetime | Almacena datos tipo fecha y tipo hora  |
 
+### Teoría de conjuntos
+
+- LEFT JOIN
+- RIGHT JOIN
+
+
 ## Mysql
 
 Mysql comandline es una herramienta para el uso de mysql desde la terminal.
@@ -288,6 +294,95 @@ SELECT *
 FROM tabla1
     RIGHT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
 
-:: 
-
+:: El modificador UNION une las dos sentencias haciendo posible que en una consulta diferencial se puedan obtener la totalidad de ambos origenes de datos
 ~~~
+~~~
+SELECT *
+FROM tabla1
+    LEFT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
+WHERE tabla2.llaveFK_id is NULL
+UNION
+SELECT *
+FROM tabla1
+    RIGHT JOIN tabla2 ON llavePK(tabla1).id = tabla2.llaveFK_id;
+WHERE tabla2.llaveFK_id is NULL
+
+:: Al haceer uso de los modificadores UNION y WHERE se crea una sentencia donde las se puede solicitar todo de las tablas excluyendo las que compartan datos relacionados entre ellas.
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE llavePK(int)(tabla1) <= 50; 
+:: La sentencia WHERE nos ayuda a filtrar por campos los resultados de las consultas solicitadas.
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE campo1(text)(title) LIKE '%palabra_descriptiva%'; 
+:: AL agregar a la sentencia el modificados LIKE podremos hacer busquedas de cadenas de texto que incluyan la *palabra_clave* en el WHERE solicitado. Los sigonos % indican busqueda con contenido a la izquierda o derecha.
+
+            %termina_en
+
+            %en_medio_de%
+    
+            inicia_con%
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE campo2(datetime)(fecha) BETWEEN '2022-01-01' AND '2025-12-31';
+:: En el manejo de datos tipo fecha la sentencia WHERE es combinada con modificadores como BETWEEN y AND podemos filtrar la consulta entre diferentes rangos de datos dentro de una base de datos.
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE YEAR(campo2[datetime][fecha]) BETWEEN '2022' AND '2024';
+:: A la sentencia WHERE se le pueden agregar modificadores como YEAR & MONTH, además de BETWEEN & AND para hacer una seleción de datos tipo fecha en la consulta solicitada.
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE llaveFK_id IS NULL;
+
+:: En la sentencia WHERE en uso de datos nulos o NULL nos referenciara en la consulta campos vacios de la base de datos.
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE llaveFK_id IS NOT NULL;
+
+:: El modificador NOT NULL regresara como consulta los campos que no estén nulos, es decir los que si contengan datos, referenciando siempre los campos vacios como puntos de busqueda.
+~~~
+~~~
+SELECT *
+    FROM tabla1
+WHERE llaveFK_id IS NOT NULL
+    AND estatus= áctivo'
+    AND id < 50
+    AND categoria_id=2;
+
+:: La sentencia WHERE usando como referencia inicial los campos nulos, puede regresar en su consulta campos que no esten nulos y que contengan datos, además an integrar en modificador AND podemos incluir multiples campos de filtrado a partir de la sentencia iniciar para reducir y hacer más espesificos los datos devuletos.
+~~~
+~~~
+SELECT estatus, COUNT(*)post_quantity
+    FROM posts 
+    GROUP BY estatus;
+~~~
+~~~
+mysql> SELECT estatus, COUNT(*)post_quantity
+    ->     FROM posts 
+    ->         GROUP BY estatus;
++----------+---------------+
+| estatus  | post_quantity |
++----------+---------------+
+| activo   |            17 |
+| inactivo |             5 |
++----------+---------------+
+2 rows in set (0.02 sec)
+
+:: La sentencia GROUP BY nos ayuda a grupar y regresar un conteo numerico de su solicitud.
+~~~
+~~~
+SELECT YEAR(fecha_publicacion) AS post_year, COUNT(*) AS post_quantity
+FROM posts
+GROUP BY estatus;
