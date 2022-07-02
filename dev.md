@@ -385,4 +385,129 @@ mysql> SELECT estatus, COUNT(*)post_quantity
 ~~~
 SELECT YEAR(fecha_publicacion) AS post_year, COUNT(*) AS post_quantity
 FROM posts
-GROUP BY estatus;
+GROUP BY post_year;
+
++-----------+---------------+
+| post_year | post_quantity |
++-----------+---------------+
+|      2030 |             1 |
+|      2025 |             4 |
+|      2023 |             5 |
+|      2021 |             2 |
+|      2022 |             4 |
+|      2026 |             1 |
+|      2024 |             2 |
+|      2028 |             1 |
+|      2029 |             2 |
++-----------+---------------+
+9 rows in set (0.17 sec)
+
+SELECT MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) AS post_quantity
+FROM posts
+GROUP BY post_month;
+
++------------+---------------+
+| post_month | post_quantity |
++------------+---------------+
+| April      |             5 |
+| May        |             3 |
+| December   |             4 |
+| January    |             3 |
+| June       |             1 |
+| October    |             2 |
+| November   |             1 |
+| March      |             1 |
+| September  |             1 |
+| August     |             1 |
++------------+---------------+
+10 rows in set (0.00 sec)
+~~~
+
+~~~
+mysql> SELECT id,titulo FROM posts ORDER BY id limit 5;
++----+---------------------------------------------------+
+| id | titulo                                            |
++----+---------------------------------------------------+
+| 43 | Se presenta el nuevo teléfono móvil en evento     |
+| 44 | Tenemos un nuevo auto inteligente                 |
+| 45 | Ganador del premio Nobel por trabajo en genética  |
+| 46 | Los mejores vestidos en la alfombra roja          |
+| 47 | Los paparatzi captan escándalo en cámara          |
++----+---------------------------------------------------+
+5 rows in set (0.00 sec)
+
+:: La sentencia ORDER BY ordena el resultado de la consulta e usa modificadores como ASC(ascendente) DESC(descendiente) LIMIT(limitara la cantidad de resultados en la petición).
+~~~
+
+~~~
+mysql> SELECT MONTHNAME(fecha_publicacion)AS post_month,estatus,COUNT(*)AS post_quantity
+    -> FROM posts
+    -> GROUP BY estatus,post_month
+    -> HAVING post_quantity > 2
+    -> ORDER BY post_month;
++------------+---------+---------------+
+| post_month | estatus | post_quantity |
++------------+---------+---------------+
+| April      | activo  |             4 |
+| December   | activo  |             3 |
++------------+---------+---------------+
+2 rows in set (0.00 sec)
+
+:: La sentencia HAVING agrupa tuplas creadas de la únion de varios valores en una tupla o agrupacion de valores creados en el AS, esto WHERE no lo puede ejecutar al hacer una consulta a agrupaciones de valores diferentes de la base de datos, lo que si puede relacionar son los campos ya establecidos en la base de datos. 
+~~~
+
+~~~
+mysql> SELECT new_table_projection.date, COUNT(*) AS posts_count
+    -> FROM(
+    -> SELECT DATE(MIN(fecha_publicacion)) AS date, YEAR(fecha_publicacion) AS post_year
+    -> FROM posts
+    -> GROUP BY post_year
+    -> )AS new_table_projection
+    -> GROUP BY new_table_projection.date
+    -> ORDER BY new_table_projection.date;
++------------+-------------+
+| date       | posts_count |
++------------+-------------+
+| 2021-10-09 |           1 |
+| 2022-04-11 |           1 |
+| 2023-01-10 |           1 |
+| 2024-04-03 |           1 |
+| 2025-01-09 |           1 |
+| 2026-06-04 |           1 |
+| 2028-10-10 |           1 |
+| 2029-01-10 |           1 |
+| 2030-04-05 |           1 |
++------------+-------------+
+9 rows in set (0.00 sec)
+
+:: El consepto de NESTED QUERIES o AGUJERO DE CONEJO, es el nombre que se le otorga a una consulta que consta de un query que tiene dentro de el otro u otros querys que otrogaran tablas o resultados de los que depende la primera consulta o consulta padre.
+~~~
+
+~~~
+mysql> SELECT * 
+    -> FROM posts
+    -> WHERE fecha_publicacion=(
+    -> SELECT MAX(fecha_publicacion)
+    -> FROM posts
+    -> );
+
+:: Esta sentencia nos regresara la ultima inserción de datos que tenga relaciín con el MAX de fecha_publicación.
+~~~
+
+> creación de un quuery, como convertir una pregunta en u query puntos a estimar:
+
+**De pregunta a un Query:**
+
+    SELECT: Lo que quieres mostrar
+
+    FROM: De dónde voy a tomar los datos
+
+    WHERE: Los filtros de los datos que quieres mostrar
+
+    GROUP BY: Los rubros por los que me interesa agrupar la información
+
+    ORDER BY: El orden en que quiero presentar mi información
+
+    HAVING: Los filtros que quiero que mis datos agrupados tengan
+
+
