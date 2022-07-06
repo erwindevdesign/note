@@ -1,22 +1,35 @@
 # Dev :keyboard:
 
-### :bamboo: Respaldo de notas deribadas de la curva de aprendisaje en desarrollo web y la programación en código.
+### :floppy_disk: Respaldo de notas deribadas de la curva de aprendisaje en habilidades de desarrollo y programación en código.
 
 ## Index.
 
-1. [Git & GitHub](#id2)
+1. [Datos y su interacción en el código](#id1)
+
+2. [Git & GitHub](#id2)
   <p align=center >
     <a><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white' /></a>&nbsp;&nbsp;
      
   </p>
 
-2. [Bases de datos](#id1)
-  - Base de datos relacionales.
-  - Mysql
+3. [Bases de datos](#id3)
+    - Base de datos relacionales.
+    - Mysql
   <p align=center >
     <a><img src='https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white' /></a>&nbsp;&nbsp;
      
   </p>
+
+## Datos y su interacción en el código <a name='id1'></a>
+
+El ser humano para darle entendimiento y comprensión a lo que sucede en su **entorno** desarrolla la habilidada de agrupar y organizar la **información** que persibe en su ambiente. Esto ayuda a la comprensión de la interacción con su entorno y la posibilidad de compartir la misma información y pensamiento a partir de la organización y agrupamiento de ideas y conseptos que son semanticamente interpretables en sociedad.
+
+Una de las caracteristicas del desarrollo de **pensamiento lógico** en el ser humano fue la creación del lenguaje para la comunicación entre el colectivo, este intercambio complejo de información constituye lo que llamaeremos como **código** linguistico.
+
+El código existe a partir de un emisor con la intención de comunicar y trasferir datos para la comprensión e interpretación de un reseptor, esto permite además del codigo de comunicación linguistico, y con itensión de ampliar la información adquirida del entorno, un lenguaje no linguistico y estandarizado de facil comprensión en la sociedad, un ejemplo de el es, en artes graficas, los lenguajes de señalización que estandarizan el lenguaje para su comprención a un nivel global que traspase las limitantes del lenguaje linguistico.
+
+La comunicación en función de trasferir ideas y conseptos a travéz de una representación simbólica describen hechos empíricos, seceos 
+
 
 ## Git & GitHub.
 
