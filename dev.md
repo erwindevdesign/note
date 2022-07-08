@@ -6,13 +6,15 @@
 
 1. [Datos y su interacción en el código](#id1)
 
-2. [Git & GitHub](#id2)
+2. [Código](#id2)
+
+2. [Git & GitHub](#id3)
   <p align=center >
     <a><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white' /></a>&nbsp;&nbsp;
      
   </p>
 
-3. [Bases de datos](#id3)
+3. [Bases de datos](#id4)
     - Base de datos relacionales.
     - Mysql
   <p align=center >
@@ -20,15 +22,118 @@
      
   </p>
 
-## Datos y su interacción en el código <a name='id1'></a>
+## Datos y su interacción la sociedad <a name='id1'></a>
 
-El ser humano para darle entendimiento y comprensión a lo que sucede en su **entorno** desarrolla la habilidada de agrupar y organizar la **información** que persibe en su ambiente. Esto ayuda a la comprensión de la interacción con su entorno y la posibilidad de compartir la misma información y pensamiento a partir de la organización y agrupamiento de ideas y conseptos que son semanticamente interpretables en sociedad.
+A lo largo de la historia el ser humano para darle entendimiento y comprensión a lo que sucede en su **entorno** desarrollo habilidades de agrupamiento y organización de la **información** que persibe en su ambiente. Esto ayuda a la comprensión de la interacción con su entorno y la posibilidad de compartir la misma información y pensamiento a partir del pensamiento lógico de ideas y conseptos que son semanticamente interpretables en el colectivo donde se distribulla la información.
 
-Una de las caracteristicas del desarrollo de **pensamiento lógico** en el ser humano fue la creación del lenguaje para la comunicación entre el colectivo, este intercambio complejo de información constituye lo que llamaeremos como **código** linguistico.
+Una de las caracteristicas del desarrollo del **pensamiento lógico** en el ser humano fue la creación del lenguaje para la comunicación en sociedad, este intercambio complejo de información constituye lo que llamaeremos como **código** linguistico.
 
-El código existe a partir de un emisor con la intención de comunicar y trasferir datos para la comprensión e interpretación de un reseptor, esto permite además del codigo de comunicación linguistico, y con itensión de ampliar la información adquirida del entorno, un lenguaje no linguistico y estandarizado de facil comprensión en la sociedad, un ejemplo de el es, en artes graficas, los lenguajes de señalización que estandarizan el lenguaje para su comprención a un nivel global que traspase las limitantes del lenguaje linguistico.
+El código existe a partir de un emisor con la intención de comunicar y trasferir datos para la comprensión e interpretación de un reseptor por medio de un canal de comunicación, esto permite además del codigo de comunicación linguistico, y con itensión de ampliar la información adquirida del entorno, un lenguaje no linguistico y estandarizado sociealmente de facil comprensión, un ejemplo de el es, en artes graficas, los lenguajes de señalización que estandarizan el lenguaje para su comprención a un nivel global que traspase las limitantes del lenguaje linguistico.
 
-La comunicación en función de trasferir ideas y conseptos a travéz de una representación simbólica describen hechos empíricos, seceos 
+La comunicación en función metalingüística de ideas y conseptos a travéz de una representación simbólica describen hechos empíricos de lo que podría considerarse la realidad, esta simbología y codificación del lenguaje permitío exponenciar y diversificar la comunicación a tal grado de de comunicarnos con circuitos electricos y logica computacional gracias al código y al avance de la industria tech ha permitido alcanzar.
+
+## Codigo <a name='id2'></a>
+
+El codigo computacional es la técnica de traducir conseptos complejos de pensamiento lógico a una factorización del del mismo, abordado un **problema** en común afectación social, para la creación de una **solución** que permita ser implementada en diversas áreas al alcance del ecosistema humano afectando, por ser una red compleja de ecosistemas interconectados, a todas las especies en el planeta.
+
+La transferencia de información para lograr la comunicación con componentes logicos requiere de codificar el contenido semántico en forma de expresiones en un lenguaje inerente al componente a programar, la sintaxis del lenguaje codifica algunas de las relaciones de la situación o estado descritos en la información que requerimos transferir al componenete para que se comporte o realice ciertas tareas programables con esta sintasis.
+
+La semantica hace referencia a al significado de los grupos de datos que dependen estrucutralmente y logicamente del siginificado del contenido del  mismo, por ejemplo, cuando leemos un texto coherente, que utiliza **palabras** y **oraciones** adecuadas y que le **dan sentido** a lo que leemos esto es semantica de la oración. Utilizar selectores, etiquetas y una escritura semantica permite, además de la comunicación con componentes logicos, la posibilidad de comunicarnos con un computador y poder dar instrucciones y estructurar reglas de comportamiento que realicen tareas más eficientemente que ayuden al bienestar social
+
+
+ 
+
+
+## Maquetación en CSS
+
+C - Cascading
+S - Style
+S - Sheet
+
+(hojas de estilo en cascada)
+
+Estructura de una declaración:
+
+~~~
+h1 {
+  color: pink;
+}
+
+:: Donde - h1 - representa el selector que conecta al html, - color - es la propiedad a modificar y - pink - es el valor que le asignaremos a la propiedad solicitada.
+~~~
+
+- Selectores básicos:
+
+| Selector | estructura |
+| -- | -- |
+| de **TIPO** | div { ... } |
+| de **CLASE** | .elemento { ... } |
+| por **ID** | #id_del_elemento { ... } |
+| por **ATRIBUTO** | a [ href= " ... "]{ ... } |
+| **UNIVERSAL** | * { ... } |  
+
+- Selectores combinados
+
+| Selector | estructura |
+| -- | -- |
+| DECENDIENTES | div p { ... } |
+| HIJO DIRECTO | div > p { ... } |
+| ELEMENTO ADYASENTE | div + p { ... } |
+| GENERAL DE HERMANOS | div ~ p { ... } |
+
+- Slectores y sus pseudoclas y pseudoelementos
+
+| PSEUDOCLASES | PSEUDOELEMENTOS |
+| -- | -- |
+| **: active** | **: : after** |
+| **: focus** | **: : before** |
+| **: hover** | **: : first-letter** |
+| **: nth-child(n)** | **: : placeholder** |
+
+- Espesifisidad
+
+> toda declaración que se encuentre en la parte baja del código se sobre escribiran sobre las que se encuentre arriba por lo cual predominara la declarión que se encuentre más abajo del código.
+
+- RELEVANCIA DE CLASES
+
+| especificidad | descripción |
+| -- | -- |
+| **X,0,0,0,0** | ! important |
+| **0,X,0,0,0** | estilos de línea STYLE tarjet |
+| **0,0,X,0,0** | # ID 
+| **0,0,0,X,0** | clases, atributos y pseudoclases |
+| **0,0,0,0,X** | elementos y pseudoelementos |
+| **0,0,0,0,0** | selentor universal |
+
+~~~
+#id h1 ::first-letter
+        1 0 0  #id (id)
+        0 0 1  h1 (elemento)
+        0 0 1  ::first-letter (pseudoelemento)
+    =   1 0 2  -- espesificidad alta --
+
+p.sidemenu div::hover
+        0 0 1  p (elemento)
+        0 1 0  .sidemenu (clase)
+        0 0 1  div (elemento)
+        0 1 0  :hover (speudoclase)
+    =   0 2 2  -- espesificidad baja --
+
+
+~~~
+
+~~~
+li             {} /* specificity = 0,0,0,1 */
+li:first-child {} /* specificity = 0,0,1,1 */
+li:first-line  {} /* specificity = 0,0,0,2 */
+li.red         {} /* specificity = 0,0,1,1 */
+~~~
+
+:: Ver también: 
+
+[pseudoclases page-list](https://css-tricks.com/pseudo-class-selectors/) <br>
+[pseudoelementos page-list](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
 
 
 ## Git & GitHub.
