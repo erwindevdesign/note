@@ -1,6 +1,6 @@
 # Dev :keyboard:
 
-### :bamboo: Respaldo de notas deribadas de la curva de aprendisaje en desarrollo web y la programación en código.
+### Respaldo de notas creadas durante la adquosición de habilidades en desarrollo web y programación en código.
 
 ## Index.
 
@@ -20,7 +20,7 @@
 
 ## Git & GitHub.
 
-###  Notación de inducción a markdown y a la documentación técnica, gestionando su desarrollo haciendo uso de la ramificación de Git :octocat: como se muestra en el siguiente diagrama.
+###  Notación de inducción a __Markdown__ y a la escritura técnica, estructurando su desarrollo haciendo uso de la ramificación de :octocat: Git como se muestra en el siguiente diagrama.
 
 ~~~
      main ----------- v ----------- > ------------ > ------------ OK
@@ -215,6 +215,7 @@ modificador **ON** para relacionar las llaves primarias con las foraneas.
 - mayor que: **>**
 - menor o igual que: **<=**
 - mayor o igual que: **>=** 
+
 
 ## Query
 
