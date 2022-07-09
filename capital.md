@@ -39,3 +39,5 @@ definir un esti;o y comportamiento
 
 organizaion plana --> whatsapp, slack
 organizacion autoritaria --> correo electronicp/burocravoa
+
+
