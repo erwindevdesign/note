@@ -165,7 +165,42 @@ Caracteristicas de normalizar una base de datos:
 - Proteger la integridad de los datos
 - Evitar problemas de actualización de los datos en las tablas
 
-Existen 3 tipos o niveles de normalización de data denominados **Forma Normal 1,2 y 3**.
+Existen 3 tipos o niveles de normalización de data denominados **Forma Normal 1,2 y 3 --> 4**.
+
+1. La primera fomra normal (1FN) se seguiran los siguientes requerimientos:
+
+    * Eliminar los grupos repetidos de las tablas individuales.
+    * Crear una tabla separada por cada grupo de datos relacioneados.
+    * Identificar cada grupo de datos relacionados con una clave primaria.
+    
+    - Todos los atributos son atómicos. Un atributi es atómico si los elementos que componene el dominio son indivisible o minimos.
+    - La tabla contiene una clave primaria única.
+    - La clave primaria no contiene atributos nulos (NUT NULL).
+    - No debe existir bariación en el numero de columnas.
+    - Los campos no clave deben identificarse por la clave (dependencia funcional).
+    - Debe existir una independencia del orden tanto de filas como de columnas, si los datos cambian de orden no debera cambiar su significado.
+    - Una tabla no debera contener múltiples valores en cada columna.
+    - Los datos son atómicos ( a cada valor de X le pertenece un valor de Y, y viceversa)
+
+2. La segunda forma normal debe serguir los siguientes pasos:
+
+    - Contar con la primera forma normal.
+    - Crear tablas separadas para aquellos grupos de datos que se aplican a varios registros.
+    - Relacionar estas tablas mediante una clave externa.
+    - sus atributos no principales dependen de forma completa de la clave principal. 
+    - No deberan existir dependencias parciales.
+
+3. La tercera dormal normal debera considerar lo siguiente:
+
+    - Se debe contar con la primera y segunda forma normalizadora se **BD**.
+    - Se eliminaran aquellos campor que no dependan de la clave.
+    - Ninguna columna podra depender de otra columna que no tenga clave.
+    - No puede haber datos derivados.
+    - No debra haber ninguna dependencia funcional trancitiva entre los atributos que no son clave.
+    - El atributo *no primo* es implicado por la clave primaria en una secuencia no transitiva.
+
+
+
 
 ## Teoría de conjuntos
 
@@ -220,17 +255,26 @@ Una entidad es la representación de un objeto o la abstracción de el, objetos 
 
 ## Lenguaje de definición de datos **DDL, DML, DCL y TCL**.
 
+### Tabla de comando para la manipulación de bases de datos basados en **SQL**.
+
+| Comandos     | Descripción                                                                                                                                            |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **DESCRIBE** | Muestra la estructura de las tablas de **DB**.                                                                                                         |
+| **SHOW**     | Muestra y enlista **BD** tablas.                                                                                                                         |
+| **comentar:** | comentarios en linea: **_--- comentario ..._** o **_# comentario ..._** y comentarios de varias lineas **_/\* comentario \*/._** |
+
 El **lenguaje de definición de datos (DDL)**, permite crear y modificar la estructura de una base da datos con las siguinetes sentencias:
 
 | Sentencia    | Descripción                                                                                                                                            |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **USE**      | Conecta la base de datos que se le indique.                                                                                                            |
 | **CREATE**   | Crear nuevas tablas y esquemas en la **BD**                                                                                               |
 | **ALTER**    | Modifixa la estructura de una tabla haciendo uso de orros comandos como: **ADD**, **DROP**, **ADD PRIMARY KEY()**, **ADD FOREIGN KEY()**, entre otros. |
 | **DROP**     | Elimina columnas, tablas e indices dentro de la **BD**.                                                                                               |
 | **TRUNCATE** | Se emplea para eliminar todos los registros de una tabla                                                                                               |
 | **COMMENT**  | Empleado para agregar comentarios al diccionario de datos                                                                                      |
 | **REANAME**  | Se utiliza para realizar cambios en el nombre de objetos dentro de la **BD** |
-| **USE**      | Conecta la base de datos que se le indique.                                                                                                            |
+
 
 El **lenguaje de manipulación de datso (DML)** pemite referenciar acciones que interactuen con los datos dentro de la **BD**.
 
@@ -248,29 +292,17 @@ El **lenguaje de control de datos (DCL)** permite crear **roles**, **permisos** 
 | **GRANT**   | Se utiliza para otorgar privilegios de acceso de usuario a la **BD**.                                     |
 | **REVOKE**   | Se utiliza para revertir privilegios de acceso otorgados por la sentencia **GRANT** |
 
-El **lenguaje de control transaccional (TCL)** 
+El **lenguaje de control transaccional (TCL)** nos ayudan para transaccionar en una sola sentencia las diferentes solicitudes que una base de datos relacional que pudiera ejercerse sobre sus datos, para continuar con la integridad referencial de la **BD**.
 
-
-### Tabla de comando para la manipulación de bases de datos basados en **SQL**.
-
-| Comandos     | Descripción                                                                                                                                            |
+| Sentencia    | Descripción                                                                                                                                            |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **CREATE**   | Crear tablas o nuevos esquemas de la **BD**.                                                                                                           |
-| **DROP**     | Elimina columnas, tablas y **DB**.                                                                                                                     |
-| **Alter**    | Modifixa la estructura de una tabla haciendo uso de orros comandos como: **ADD**, **DROP**, **ADD PRIMARY KEY()**, **ADD FOREIGN KEY()**, entre otros. |
-| **DESCRIBE** | Muestra la estructura de las tablas de **DB**.                                                                                                         |
-| **SHOW**     | Muestra y enlista BD y tablas.                                                                                                                         |
-| **USE**      | Conecta la base de datos que se le indique.                                                                                                            |
-| **SELECT**   | Consulta y regresa la **DB**                                                                                                                           |
-| **INSERT**   | Inserta información en la **DB**.                                                                                                                      |
-| **UPDATE**   | Modifica y actualiza la información en la **DB**.                                                                                                      |
-| **DELETE**   | Elimina ragistros de la base de datos.                                                                                                                 |
-
-| \*\*
+| **BEGIN TRASACTION**   | Se utiliza para indicar el comienzo d euna trasacción dentro de la**BD**.                                     |
+| **COMMIT**   | Se utiliza para grabar los cambios efectuados por la trasacción de datos |
+| **ROLLBACK** | Se utiliza para deshacer los cambios efectuados por el ultimo **COMMIT** de la trasacción de datos |
 
 ## Query
 
-> creación de un quuery, como convertir una pregunta en u query puntos a estimar:
+> creación de un query, como convertir una pregunta en un query puntos a estimar:
 
 **De pregunta a un Query:**
 
@@ -288,16 +320,13 @@ El **lenguaje de control transaccional (TCL)**
 
 ## Mysql
 
-Mysql comandline es una herramienta para el uso de mysql desde la terminal.
-
-> comentarios en linea: **_--- comentario ..._** o **_# comentario ..._**
-> comentarios de varias lineas **_/\* comentario \*/._**
+Mysql comandline es una herramienta para el uso de mysql desde la terminal:
 
 > para entrar a mysql comadline usaremos el comando administrador: **_sudo mysql_**, el cual solicitara los permisos de administradadr para iniciar.
 
 > el comando **_show databases_** mostrara las bases de datos por defecto al instalar mysql y las bases de datos que fueron creadas por el ususario.
 
-> el comando **_use (nombre_database)_** se usara para entrar a la base de datos y para visualizar las tavlas usaremos el comando **_show tables_**
+> el comando **_use (nombre_database)_** se usara para entrar a la base de datos y para visualizar las tablas usaremos el comando **show tables**
 
 > al crear una base de datos se usara el comando **_create database (nombre_nuevo_databese)_**.
 
@@ -305,7 +334,7 @@ Mysql comandline es una herramienta para el uso de mysql desde la terminal.
 
 > para crear tablas nuevas dentro de la nueva base de datos creada se usara **_create table (nombre_tabla)_**. Revisar entidades y relaciones y normalizar tablas para este paso.
 
-> Ejemplo de creación de tabla **practica** en mysql
+Ejemplo de creación de tabla **practica** en mysql:
 
 ```
 
