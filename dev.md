@@ -34,7 +34,7 @@ La comunicación en función metalingüística de ideas y conseptos a travéz de
 
 ## Codigo <a name='id2'></a>
 
-El codigo computacional es la técnica de traducir conseptos complejos de pensamiento lógico a una factorización del del mismo, abordado un **problema** en común afectación social, para la creación de una **solución** que permita ser implementada en diversas áreas al alcance del ecosistema humano afectando, por ser una red compleja de ecosistemas interconectados, a todas las especies en el planeta.
+El codigo computacional es la técnica de traducir conseptos complejos de pensamiento lógico a una factorización del mismo, abordado un **problema** en común afectación social, para la creación de una **solución** que permita ser implementada en diversas áreas al alcance del ecosistema humano afectando, por ser una red compleja de ecosistemas interconectados, a todas las especies en el planeta.
 
 La transferencia de información para lograr la comunicación con componentes logicos requiere de codificar el contenido semántico en forma de expresiones en un lenguaje inerente al componente a programar, la sintaxis del lenguaje codifica algunas de las relaciones de la situación o estado descritos en la información que requerimos transferir al componenete para que se comporte o realice ciertas tareas programables con esta sintasis.
 
@@ -88,7 +88,7 @@ h1 {
 
 - Espesifisidad
 
-> toda declaración que se encuentre en la parte baja del código se sobre escribiran sobre las que se encuentre arriba por lo cual predominara la declarión que se encuentre más abajo del código.
+> toda declaración que se encuentre en la parte baja del código se sobre escribira sobre las que se encuentre arriba por lo cual predominara la declarión que se encuentre más abajo del código.
 
 - RELEVANCIA DE CLASES
 
@@ -98,8 +98,10 @@ h1 {
 | **0,X,0,0,0** | estilos de línea STYLE tarjet    |
 | **0,0,X,0,0** | # ID                             |
 | **0,0,0,X,0** | clases, atributos y pseudoclases |
-| **0,0,0,0,X** | elementos y pseudoelementos      |
-| **0,0,0,0,0** | selentor universal               |
+| **0,0,0,0,X** | selectores y pseudoelementos      |
+| **0,0,0,0,0** | selector universal               |
+
+EJEMPLO:
 
 ```
 #id h1 ::first-letter
@@ -129,6 +131,217 @@ li.red         {} /* specificity = 0,0,1,1 */
 
 [pseudoclases page-list](https://css-tricks.com/pseudo-class-selectors/) <br>
 [pseudoelementos page-list](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+## Display 
+
+Al tipo de visualización y acomodo de los elementos dentro de un **HTML** se le denomina **display** y cuenta con los siguientes estilos:
+
+1. block;
+- inline;
+- inline-block;
+- flex;
+- grid;
+
+Existen elementos con atributos display preestablesidos ṕor HTML, para revisar un listado de estos elementos y propiedades revise la lista en:
+
+[propiedades css](https://htmlreference.io/)
+
+1. **display: block;**
+Los elementos con propiedad **display** **block** como estilo de visualización comenzaran en una nueva linea, ocupando todo el ancho de pantalla, max-width. La etiqueta div cuenta con la propiedad **display** **block** predefinida por **HTML**.
+
+HTML
+~~~
+<body class="content">
+    <div class="section_one">
+        display: block;
+    </div>
+    <div class="section_two">
+        display: block;
+    </div>
+    <div class="section_three">
+        display: block;
+    </div>
+</body>
+~~~
+CSS
+~~~
+:root{ 
+    /* color1 */
+    --gray-color: hsl(186, 12%, 22%);
+    /* color2 */
+    --ocre-color: hsl(39, 89%, 54%);
+    /* color3 */
+    --brown-color: hsl(33, 83%, 46%);
+    /* color4 */
+    --merlotred-color: hsl(16, 96%, 23%);
+    /* color5 */
+    --orangered-color: hsl(16, 75%, 48%);
+    }
+
+html{
+    font-size: 62.5%;
+    background-color: var(--gray-color);
+    }
+
+*   {
+    box-sizing: border-box;
+    }
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+.section_one, .section_two, .section_three{
+    margin-bottom: 4vh;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 2rem;
+    background-color: var(--ocre-color);
+    color: var(--merlotred-color);
+    }
+    
+.section_one{
+        height: 33vh;
+        
+    }
+
+.section_two{
+        height: 33vh;
+       
+    }
+
+.section_three{
+        height: 33vh;
+        
+    }
+
+~~~
+![Imagen ejemplo de display: block en pantalla.](https://i.imgur.com/DPfAIdt.png)
+
+
+
+2. **display: inline;**
+
+Los elementos con propiedades **display: inline;** permiten la inserción de elementos limitando las dimenciones a su contenido (texto) permitiendo posicionarce uno frete a otro inabilitando la modificación de dimenciones **height:** y **width:**, al ser un elemento en linea podra ser modificado su margin de forma horizontal pero invalidadndo las modificaciones verticales **(top y button)**.
+
+HTML 
+~~~
+<body class="content">
+    <a href="" class="section_one">display: inline;</a>
+    <a href="" class="section_two">display: inline;</a>
+    <a href="" class="section_three">display: inline;</a>
+</body>
+~~~
+CSS
+~~~
+:root{ 
+    /* color1 */
+    --gray-color: hsl(186, 12%, 22%);
+    /* color2 */
+    --ocre-color: hsl(39, 89%, 54%);
+    /* color3 */
+    --brown-color: hsl(33, 83%, 46%);
+    /* color4 */
+    --merlotred-color: hsl(16, 96%, 23%);
+    /* color5 */
+    --orangered-color: hsl(16, 75%, 48%);
+}
+
+html{
+    font-size: 62.5%;
+    background-color: var(--gray-color);
+}
+
+*   {
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section_one, .section_two, .section_three{
+    margin-bottom: 4vh;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 2rem;
+    background-color: var(--ocre-color);
+    color: var(--merlotred-color);
+}
+~~~
+![Imagen ejemplo de display: inline en patalla.](https://i.imgur.com/SQE1HUX.png)
+
+3. **display: inline-block;**
+
+Los elementos con propiedades **inline-block** permite las caracteristicas de ambas propiedades, **inline** permitiendo posicionarce un elemento frente a otro mientras le permita su contenido, y sus dimenciones **height:** y **width:**, las cuales igual que la propiedad **block**, permite modificar su tamaño e ingresar margenes y padding para modificar su posición  de elementos.
+
+HTML
+~~~
+<body class="content">
+    <button class="section_one">display: inline-block;</button>
+    <button class="section_two">display: inline-block;</button>
+    <button class="section_three">display: inline-block;</button>
+</body>
+~~~
+CSS
+~~~
+:root{
+            
+    /* color1 */
+    --gray-color: hsl(186, 12%, 22%);
+    /* color2 */
+    --ocre-color: hsl(39, 89%, 54%);
+    /* color3 */
+    --brown-color: hsl(33, 83%, 46%);
+    /* color4 */
+    --merlotred-color: hsl(16, 96%, 23%);
+    /* color5 */
+    --orangered-color: hsl(16, 75%, 48%);
+}
+
+html{
+    font-size: 62.5%;
+    background-color: var(--gray-color);
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section_one, .section_two, .section_three{
+    margin-bottom: 4vh;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 2rem;
+    background-color: var(--ocre-color);
+    color: var(--merlotred-color);
+}
+
+.section_one{
+    height: 100px;
+    width: 30vw;
+}
+
+.section_two{
+    height: 200px;
+    width: 40vw;
+}
+
+.section_three{
+    height: 300px;
+    width: 20vw;
+}
+~~~
+
+![Imagen ejemplo de display: inline-block en patalla.](https://i.imgur.com/xzfn4a0.png)
+
+
+
 
 ## Git & GitHub.
 
