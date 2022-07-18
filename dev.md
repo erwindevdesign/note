@@ -22,9 +22,9 @@
      
   </p>
 
-## Datos y su interacción la sociedad <a name='id1'></a>
+## Datos y su interacción en la sociedad <a name='id1'></a>
 
-A lo largo de la historia el ser humano para darle entendimiento y comprensión a lo que sucede en su **entorno** desarrollo habilidades de agrupamiento y organización de la **información** que persibe en su ambiente. Esto ayuda a la comprensión de la interacción con su entorno y la posibilidad de compartir la misma información y pensamiento a partir del pensamiento lógico de ideas y conseptos que son semanticamente interpretables en el colectivo donde se distribulla la información.
+Durante la historia, el ser humano ha desarrollafo entendimiento y comprensión de lo que sucede en su **entorno** desarrollo habilidades de **agrupamiento** y **organización** de la **información** que persibe en su ambiente. Esto ayuda su comprensión del ser con su entorno y la posibilidad de compartir la misma información y pensamiento a partir del pensamiento lógico de ideas y conseptos que son semanticamente interpretables en un flujo de comunicación donde se distribulla la información adecuada para su comprensión sistemica.
 
 Una de las caracteristicas del desarrollo del **pensamiento lógico** en el ser humano fue la creación del lenguaje para la comunicación en sociedad, este intercambio complejo de información constituye lo que llamaeremos como **código** linguistico.
 
@@ -137,6 +137,15 @@ li.red         {} /* specificity = 0,0,1,1 */
 
 
 ## Git & GitHub.
+
+SINTAXIS DE COMANDOS
+
+| comando | descripción |
+| -- | -- |
+| git checkout -b (new_branch) | Este comando es una meztla de git branch (new_branch) y git checkout (new_branch) |
+| 
+
+
 
 ###  Notación de inducción a __Markdown__ y a la escritura técnica, estructurando su desarrollo haciendo uso de la ramificación de :octocat: Git como se muestra en el siguiente diagrama.
 
