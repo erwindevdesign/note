@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Template display:</title>
+    <style>
+
+        /* ============ color ============ */
+        
+        /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL
+        color5: RGB #D9501E == HSV  16,86,85 == HSL
+
+        */
+        
+        :root{
+            
+            /* color1 */
+            --gray-color: hsl(186, 12%, 22%);
+            /* color2 */
+            --ocre-color: hsl(39, 89%, 54%);
+            /* color3 */
+            --brown-color: hsl(33, 83%, 46%);
+            /* color4 */
+            --merlotred-color: hsl(16, 96%, 23%);
+            /* color5 */
+            --orangered-color: hsl(16, 75%, 48%);
+        }
+        html{
+            font-size: 62.5%;
+            background-color: var(--gray-color);
+            
+        }
+
+        *{
+            box-sizing: border-box;
+
+        }
+
+
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .section_one, .section_two, .section_three{
+            margin-bottom: 4vh;
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 2rem;
+            background-color: var(--ocre-color);
+            color: var(--merlotred-color);
+            
+        }
+        .section_one{
+            height: 100px;
+            width: 30vw;
+        }
+
+        .section_two{
+            height: 200px;
+            width: 40vw;
+
+        }
+
+        .section_three{
+            height: 300px;
+            width: 20vw;
+        }
+    </style>
+</head>
+<body class="content">
+    <button class="section_one">display: inline-block;</button>
+    <button class="section_two">display: inline-block;</button>
+    <button class="section_three">display: inline-block;</button>
+
+    <!-- <a href="" class="section_one">display: inline;</a>
+    <a href="" class="section_two">display: inline;</a>
+    <a href="" class="section_three">display: inline;</a> -->
+
+    <!-- <div class="section_one">
+        display: block;
+    </div>
+    <div class="section_two">
+        display: block;
+    </div>
+    <div class="section_three">
+        display: block;
+    </div> -->
+</body>
+</html>
