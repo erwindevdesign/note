@@ -48,8 +48,13 @@
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        .content{
+            display: flex;
+            flex-wrap:wrap;
+        }
+
         .section_one, .section_two, .section_three{
-            margin-bottom: 4vh;
+            margin: 2vh;
             font-size: 1.4rem;
             font-weight: bold;
             padding: 2rem;
@@ -58,26 +63,25 @@
             
         }
         .section_one{
-            height: 100px;
-            width: 30vw;
+            height: 400px;
+            width: 400px;
         }
 
         .section_two{
             height: 200px;
-            width: 40vw;
-
+            width: 200px;
         }
 
         .section_three{
             height: 300px;
-            width: 20vw;
+            width: 300px;
         }
     </style>
 </head>
 <body class="content">
-    <button class="section_one">display: inline-block;</button>
-    <button class="section_two">display: inline-block;</button>
-    <button class="section_three">display: inline-block;</button>
+    <button class="section_one">display: flex; <br> 1</button>
+    <button class="section_two">display: flex; <br> 2</button>
+    <button class="section_three">display: flex; <br> 3</button>
 
     <!-- <a href="" class="section_one">display: inline;</a>
     <a href="" class="section_two">display: inline;</a>

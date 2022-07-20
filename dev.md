@@ -137,10 +137,10 @@ li.red         {} /* specificity = 0,0,1,1 */
 Al tipo de visualización y acomodo de los elementos dentro de un **HTML** se le denomina **display** y cuenta con los siguientes estilos:
 
 1. block;
-- inline;
-- inline-block;
-- flex;
-- grid;
+2. inline;
+3. inline-block;
+4. flex;
+5. grid;
 
 Existen elementos con atributos display preestablesidos ṕor HTML, para revisar un listado de estos elementos y propiedades revise la lista en:
 
@@ -340,6 +340,10 @@ body{
 
 ![Imagen ejemplo de display: inline-block en patalla.](https://i.imgur.com/xzfn4a0.png)
 
+4. **display: flex;**
+
+Los elementos con elementos con caracteristicas **display: flex;** gozan de una extenza variedad de propiedades que permitaran un diversidad de formas de vissibilidad y las bases de la interactividad que podriamos dar a una página web. 
+
 
 
 
@@ -349,7 +353,7 @@ SINTAXIS DE COMANDOS
 
 | comando | descripción |
 | -- | -- |
-| git checkout -b (new_branch) | Este comando es una meztla de git branch (new_branch) y git checkout (new_branch) |
+| git checkout -b (new_branch) | Este comando es una mezcla de git branch (new_branch) y git checkout (new_branch) |
 | 
 
 
