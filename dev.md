@@ -267,6 +267,7 @@ body{
     padding: 2rem;
     background-color: var(--ocre-color);
     color: var(--merlotred-color);
+    height: 33vh;
 }
 ~~~
 ![Imagen ejemplo de display: inline en patalla.](https://i.imgur.com/SQE1HUX.png)
