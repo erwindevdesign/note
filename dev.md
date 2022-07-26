@@ -34,9 +34,9 @@ La comunicación en función metalingüística de ideas y conseptos a travéz de
 
 ## Codigo <a name='id2'></a>
 
-El codigo computacional es la técnica de traducir conseptos complejos de pensamiento lógico a una factorización del mismo, abordado un **problema** en común afectación social, para la creación de una **solución** que permita ser implementada en diversas áreas al alcance del ecosistema humano afectando, por ser una red compleja de ecosistemas interconectados, a todas las especies en el planeta.
+El codigo computacional es la técnica de traducir conseptos complejos de pensamiento lógico en una factorización del mismo problema de forma estructural para la comprención computacional, abordado un **problema** en común afectación social, para la creación de una **solución** que permita ser implementada en diversas áreas de la tecnólogia.
 
-La transferencia de información para lograr la comunicación con componentes logicos requiere de codificar el contenido semántico en forma de expresiones en un lenguaje inerente al componente a programar, la sintaxis del lenguaje codifica algunas de las relaciones de la situación o estado descritos en la información que requerimos transferir al componenete para que se comporte o realice ciertas tareas programables con esta sintasis.
+La transferencia de información para lograr la comunicación con componentes logicos requiere de codificar el contenido semántico en forma de expresiones de un lenguaje computacional inerente al componente a programar, la sintaxis del lenguaje codifica algunas de las relaciones de la situación o estado descritos en la información que requerimos transferir al componenete para que se comporte o realice ciertas tareas programables con esta sintasis.
 
 La semantica hace referencia a al significado de los grupos de datos que dependen estrucutralmente y logicamente del siginificado del contenido del mismo, por ejemplo, cuando leemos un texto coherente, que utiliza **palabras** y **oraciones** adecuadas y que le **dan sentido** a lo que leemos esto es semantica de la oración. Utilizar selectores, etiquetas y una escritura semantica permite, además de la comunicación con componentes logicos, la posibilidad de comunicarnos con un computador y poder dar instrucciones y estructurar reglas de comportamiento que realicen tareas más eficientemente que ayuden al bienestar social
 
@@ -142,7 +142,7 @@ Al tipo de visualización y acomodo de los elementos dentro de un **HTML** se le
 4. flex;
 5. grid;
 
-Existen elementos con atributos display preestablesidos ṕor HTML, para revisar un listado de estos elementos y propiedades revise la lista en:
+Existen elementos con atributos display preestablesidos por HTML, para revisar un listado de estos elementos y propiedades revise la lista en:
 
 [propiedades css](https://htmlreference.io/)
 
@@ -343,7 +343,7 @@ body{
 
 4. **display: flex;**
 
-Los elementos con elementos con caracteristicas **display: flex;** gozan de una extenza variedad de propiedades que permitaran un diversidad de formas de vissibilidad y las bases de la interactividad que podriamos dar a una página web. 
+Los elementos con elementos con caracteristicas **display: flex;** gozan de una extenza variedad de propiedades que permitaran un diversidad de formas de posicionamiento y visualización de las bases de la interactividad con el usuario en una página web. 
 
 
 
@@ -356,7 +356,6 @@ SINTAXIS DE COMANDOS
 | -- | -- |
 | git checkout -b (new_branch) | Este comando es una mezcla de git branch (new_branch) y git checkout (new_branch) |
 | 
-
 
 
 ###  Notación de inducción a __Markdown__ y a la escritura técnica, estructurando su desarrollo haciendo uso de la ramificación de :octocat: Git como se muestra en el siguiente diagrama:
