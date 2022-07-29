@@ -134,7 +134,7 @@ li.red         {} /* specificity = 0,0,1,1 */
 
 ## Display 
 
-Al tipo de visualización y acomodo de los elementos dentro de un **HTML** se le denomina **display** y cuenta con los siguientes estilos:
+Al tipo de visualización y comportamiento de los elementos dentro de un **HTML** se le denomina **display** y cuenta con los siguientes estilos:
 
 1. block;
 2. inline;
@@ -343,7 +343,665 @@ body{
 
 4. **display: flex;**
 
-Los elementos con elementos con caracteristicas **display: flex;** gozan de una extenza variedad de propiedades que permitaran un diversidad de formas de posicionamiento y visualización de las bases de la interactividad con el usuario en una página web. 
+Los elementos con elementos con caracteristicas **display: flex;** gozan de una variedad de propiedades que permitén la visualización y comportamiento de los elementos en pantalla.
+
+Los elementos con **display: flex;** como propiedad es un conjunto de instrucciones para el comportaiento de los elementos según las dimenciones de su **contenedor** y el acomodo de su contenido.
+
+Entenderemos la relación del contenedor y los elementos dentro aplicando **display: flex;** al contenedor padre y las demás propiedades **flex** a los elementos hijos dento de el.
+
+Propiedades del contenedor (flex container)
+
+1. **display**: la propiedad display la aplicaremos al contenedor afectando los elementos dentro de el.
+
+2. **flex-direction**: la dirección de los elementos dentro del contenedor con caracteristicas **flex-directión** tienen las siguientes propiedades:
+
+  * **flex-direction: row;**
+    
+    HTML
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-direction: row; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-direction: row; <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-direction: row; <br>
+        3 
+
+    </body>
+    ~~~
+    CSS
+    ~~~
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 200px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 200px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 200px;
+      }
+    
+    </style>
+    ~~~
+  
+
+![ejemplo de un display flex con un flex direction en row](https://i.imgur.com/wS0C2h7.png)
+
+
+* **flex-direction: row-reverse;**
+    
+    HTML
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-direction: row-reverse; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-direction: row-reverse; <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-direction: row-reverse; <br>
+        3 
+
+    </body>
+    ~~~
+    CSS
+    ~~~
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 200px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 200px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 200px;
+      }
+    
+    </style>
+    ~~~
+![ejemplo de un display flex con un flex direction en row-reverse](https://i.imgur.com/4C6odZK.png)
+
+ * **flex-direction: column;**
+
+    HTML
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-direction: column; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-direction: column; <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-direction: column; <br>
+        3 
+
+    </body>
+    ~~~
+    CSS
+    ~~~
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 200px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 200px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 200px;
+      }
+    
+    </style>
+    ~~~
+
+![ejemplo de un display flex con un flex direction en column](https://i.imgur.com/AsoLiCl.png)
+
+  * **flex-direction: column-reverse;**
+  
+  
+  HTML
+
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-direction: column-reverse; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-direction: column-reverse <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-direction: column-reverse; <br>
+        3 
+
+    </body>
+    ~~~
+    CSS
+    ~~~
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 300px;
+      }
+    
+    </style>
+    ~~~
+
+![Imgur](https://i.imgur.com/WmfU1F1.png)
+
+* **flex-wrap: wrap;**
+
+HTML
+
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-wrap: wrap; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-wrap: wrap; <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-wrap: wrap; <br>
+        3 
+
+    </body>
+    ~~~
+    CSS
+    ~~~
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 300px;
+      }
+    
+    </style>
+    ~~~
+
+1200px width
+
+![Imgur](https://i.imgur.com/y3Ixt7o.png)
+
+800px width
+
+![Imgur](https://i.imgur.com/XURo7ZC.png)
+
+350px width
+
+![Imgur](https://i.imgur.com/xh9m0Gx.png)
+
+* **flex-wrap: wrap-reverse;**
+
+HTML
+
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-wrap: wrap-reverse; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-wrap: wrap-reverse; <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-wrap: wrap-reverse; <br>
+        3 
+
+    </body>
+    ~~~
+
+CSS
+
+    ~~~
+
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 300px;
+      }
+    
+      </style>
+         
+    ~~~
+
+
+1200px width
+
+![Imgur](https://i.imgur.com/iI9Fhsk.png)
+
+800px width
+
+![Imgur](https://i.imgur.com/j3PeBFt.png)
+
+350px width
+
+![Imgur](https://i.imgur.com/YNcyL4O.png)
+
+1
+
+
+
+
+
+
+
+
+
+
 
 
 

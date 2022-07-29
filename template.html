@@ -45,14 +45,15 @@
 
       .content {
         display: flex;
+        flex-wrap: wrap-reverse;
         /* flex-wrap: wrap;
         flex-direction: row; */
         /* height: 100vh;
         width: 100vw; */
 
-        flex-flow:row wrap;
+        /* flex-flow:row wrap;
         justify-content: space-around;
-        align-items: initial;
+        align-items: initial; */
       }
 
       .section_one,
@@ -70,20 +71,20 @@
       }
 
       .section_one {
-        height: 400px;
-        width: 400px;
+        height: 200px;
+        width: 300px;
         /* order: 3; */
         /* flex-grow: 1; */
       }
 
       .section_two {
         height: 200px;
-        width: 200px;
+        width: 300px;
         /* order: 1; */
       }
 
       .section_three {
-        height: 300px;
+        height: 200px;
         width: 300px;
         /* order: 2; */
       }
@@ -128,21 +129,27 @@
     
     </style>
   </head>
-  <body class="content">
+  <body class="">
     <div class="content">
       <button class="section_one">
         display: flex; <br />
-        1
+        flex-wrap: grap-reverse; <br>
+        1 <br>
+        
       </button>
       <button class="section_two">
         display: flex; <br />
-        2
+        flex-wrap: grap-reverse; <br>
+        2 <br>
+        
       </button>
       <button class="section_three">
         display: flex; <br />
-        3
+        flex-wrap: grap-reverse; <br>
+        3 <br>
+        
       </button>
-      <button class="section_four">
+     <!--  <button class="section_four">
         display: flex; <br />
         4
       </button>
@@ -151,7 +158,7 @@
         5
       </button>
       <button class="section_six">display: flex; <br />6</button>
-    </div>
+    </div> -->
 
     <!-- <a href="" class="section_one">display: inline;</a>
     <a href="" class="section_two">display: inline;</a>
