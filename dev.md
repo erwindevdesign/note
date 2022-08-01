@@ -991,13 +991,113 @@ CSS
 
 ![Imgur](https://i.imgur.com/YNcyL4O.png)
 
-1
+* **display-wrap: nowrap;**
 
 
+HTML
 
+    ~~~
+    <body class="content">
+    <div class="content">
+      <button class="section_one">
+        display: flex; <br />
+        flex-wrap: wrap-reverse; <br>
+        1 
+        
+      </button>
+      <button class="section_two">
+        display: flex; <br />
+        flex-wrap: wrap-reverse; <br>
+        2 
+        
+      </button>
+      <button class="section_three">
+        display: flex; <br />
+        flex-wrap: wrap-reverse; <br>
+        3 
 
+    </body>
+    ~~~
 
+CSS
 
+    ~~~
+
+    <style>
+      /* ============ color ============ */
+
+      /* 
+
+        color1: RGB #323E40 == HSC 186,22,25 == HSL 186,12,22
+        color2: RGB #F2A922 == HSV  39,86,95 == HSL  39,89,54
+        color3: RGB #D98014 == HSV  33,91,85 == HSL  33,83,46
+        color4: RGB #732002 == HSV  16,98,45 == HSL  16,96,23
+        color5: RGB #D9501E == HSV  16,86,85 == HSL  16,75,48
+
+        */
+
+      :root {
+        /* color1 */
+        --gray-color: hsl(186, 12%, 22%);
+        /* color2 */
+        --ocre-color: hsl(39, 89%, 54%);
+        /* color3 */
+        --brown-color: hsl(33, 83%, 46%);
+        /* color4 */
+        --merlotred-color: hsl(16, 96%, 23%);
+        /* color5 */
+        --orangered-color: hsl(16, 75%, 48%);
+      }
+      html {
+        font-size: 62.5%;
+        background-color: var(--gray-color);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .section_one,
+      .section_two,
+      .section_three{
+        margin: 2vh;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 2rem;
+        background-color: var(--ocre-color);
+        color: var(--merlotred-color);
+      }
+
+      .section_one {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_two {
+        height: 200px;
+        width: 300px;
+      }
+
+      .section_three {
+        height: 200px;
+        width: 300px;
+      }
+    
+      </style>
+         
+    ~~~
+
+1200px (width)
+![Imgur](https://i.imgur.com/NucLl9Z.png)
 
 
 
@@ -1610,4 +1710,28 @@ mysql> SELECT *
 
 :: Esta sentencia nos regresara la ultima inserción de datos que tenga relaciín con el MAX de fecha_publicación.
 ```
+
+## Pensamiento lógico: Algoritmos y Diagramas de Flujo.
+
+Operación matemáticas
+
+Operación: es un proceso mediante el cual relacionamos entes para obtener resultados.
+Matematica: el uso de simbolos para la representación lógica de un ente a relacionar.
+
+En todo proceso el resultado es el objetivo de una operación.
+
+un operación se compone de los elementos a los cuales vamos a someter a la operación y un simbolo que definira el resultado definido.
+
+- ¿Que información provee?
+- ¿cuantas entradas tiene?
+- ¿cuales son las operaciones?
+- ¿cual es el objetivo del resultado?
+- ¿Para que requiero el resultado?
+- ¿que vamos a ahacer con el?
+- ¿cual es el tipo de resultado que necesito?
+
+
+> crear mejores estructuras y mejores flujos de trabjo, sin hacer reprocesos de operaciones.
+
+> como la simbologia de las matematicas basica, juega un papel muy importante en la lógica de los procesos y el estructura del algoritmo.
 

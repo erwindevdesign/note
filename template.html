@@ -44,8 +44,19 @@
       }
 
       .content {
-        display: flex;
-        flex-wrap: wrap-reverse;
+        display: grid;
+        grid-template-columns: 350px 350px;
+        grid-template-rows: 300px 300px;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        gap: 3rem;
+        
+        
+        
+        /* display: flex;
+        flex-wrap: wrap-reverse; */
         /* flex-wrap: wrap;
         flex-direction: row; */
         /* height: 100vh;
@@ -62,10 +73,10 @@
       .section_four,
       .section_five,
       .section_six {
-        margin: 2vh;
+        
         font-size: 1.4rem;
         font-weight: bold;
-        padding: 2rem;
+        
         background-color: var(--ocre-color);
         color: var(--merlotred-color);
       }
