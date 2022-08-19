@@ -132,6 +132,44 @@ li.red         {} /* specificity = 0,0,1,1 */
 [pseudoclases page-list](https://css-tricks.com/pseudo-class-selectors/) <br>
 [pseudoelementos page-list](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
+## Centrar un div:
+con **POSITION**
+~~~
+.center-container {  
+  position:absolute;  
+  left: 50%;  
+  top: 50%;  
+  transform: translate(-50%, -50%);  
+}  
+~~~
+con **FLEX**
+~~~
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+}
+~~~
+con **GRID**
+~~~
+.center-content {
+  display: grid;
+  palce-items: center; 
+}
+~~~
+
+## Efectos CSS
+
+**sticky scrolling**
+
+~~~
+.content {
+  position: sticky;
+  top: 0;
+}
+~~~
+
+
 ## Display 
 
 Al tipo de visualización y comportamiento de los elementos dentro de un **HTML** se le denomina **display** y cuenta con los siguientes estilos:
@@ -1106,6 +1144,7 @@ CSS
 
 
 
+
 ## Git & GitHub.
 
 SINTAXIS DE COMANDOS
@@ -1734,4 +1773,10 @@ un operación se compone de los elementos a los cuales vamos a someter a la oper
 > crear mejores estructuras y mejores flujos de trabjo, sin hacer reprocesos de operaciones.
 
 > como la simbologia de las matematicas basica, juega un papel muy importante en la lógica de los procesos y el estructura del algoritmo.
+
+
+
+## PHP :elephant:
+
+  
 
