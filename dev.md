@@ -1778,5 +1778,22 @@ un operación se compone de los elementos a los cuales vamos a someter a la oper
 
 ## PHP :elephant:
 
-  
+### sintax
 
+* Etiqueta de apertura en PHP: **<?php**
+* Etiqueta de cierre en PHP: **?>**
+* imprimir en panrlla: **echo " "**
+* en PHP cualquier línea de codigo debemos cerrar con punto y como: **;**
+* salto de línea: **\n**
+* Definir nombre de variable: **$name = " "  ;**
+
+
+
+
+## show-console-font
+
+### ASCII
+
+* ver tabla de caracteres ascii en consola0: **man ascii*
+* insertar caracteres ascii: **ctrl + shift + u** para  indicar la inserción de caracteres especiales 
+* insertaremos el numero que indica en HEX (hexadecximal) de la tabla de caracteres
