@@ -1,6 +1,6 @@
 # Dev :keyboard:
 
-### :floppy_disk: Respaldo de notas deribadas de la curva de aprendisaje en habilidades de desarrollo y programación en código.
+### :floppy_disk: Respaldo de notas creadas de la curva de aprendisaje en habilidades de desarrollo y programación en código.
 
 ## Index.
 
@@ -36,7 +36,7 @@
 7. [Git & GitHub](#id7)
 
   <p align=center >
-    <a><img src='https://img.shields.io/badge/-PERFORCE%20HELIX-00AEEF?style=for-the-badge&logo=Perforce&logoColor=white' /></a>&nbsp;&nbsp;
+    <a><img src='https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white' /></a>&nbsp;&nbsp;
     <a><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white' /></a>&nbsp;&nbsp;    
   </p>
 
