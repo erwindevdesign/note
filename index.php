@@ -136,7 +136,98 @@ echo 5 % 2; */
 
 $horas = 7501;
 
-echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
+/* echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
 echo "Sobran: " . ($horas % 3600) . " segundos";
+
+echo "\n"; */
+
+/* $a = 5;
+$b = 5;
+$b2 = "9";
+$c = 9;
+$d = 2;
+
+// Igual ==
+var_dump($a == $b);
+var_dump($a == $b2);
+echo "\n"; 
+// Identico ===
+var_dump($a === $b);
+var_dump($a === $b2);
+echo "\n"; 
+// Diferente !=
+var_dump($a != $b);
+var_dump($a != $b2);
+echo "\n"; 
+// diferente exacto !==
+var_dump($a !== $b);
+var_dump($a !== $b2);
+echo "\n"; 
+// Menor que <
+var_dump($a < $b);
+var_dump($a < $b2);
+var_dump($c < $d);
+var_dump($c < $b);
+echo "\n"; 
+// Mayor que >
+var_dump($a > $b);
+var_dump($a > $b2);
+var_dump($c > $d);
+var_dump($c > $b);
+echo "\n"; 
+// Mayor o igual que >=
+var_dump($a >= $b);
+var_dump($a >= $b2);
+var_dump($c >= $d);
+var_dump($c >= $b);
+echo "\n"; 
+// Menor o igual que <=
+var_dump($a <= $b);
+var_dump($a <= $b2);
+var_dump($c <= $d);
+var_dump($c <= $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump($a <=> $b);
+var_dump($a <=> $b2);
+var_dump($c <=> $d);
+var_dump($c <=> $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump(2 <=> 1);
+var_dump(1 <=> 1);
+var_dump(-50 <=> 1);
+echo "\n"; 
+// Funsión de NULL ??
+$edad_de_laura = 55;
+$edad_de_pepito = 23;
+
+echo $edad_de_juanito ?? $edad_de_laura ?? $edad_de_pepito ;
+echo "\n";  */
+
+
+// Operadores adicionales
+
+// operadores de asignación
+/* $edad_de_maria = ($edad_de_laura = 25) + 3;
+echo "La edad de laura es: $edad_de_laura \n";
+echo "La edad de maria es: $edad_de_maria";
+
+// Operadores de incremento
+$contador = 1;
+echo "\n"; 
+/* $contador = $contador +1; */
+/* $contador += 1; */
+/* $contador++; 
+ 
+
+echo "\n"; 
+echo $contador; */
+
+$nombre = "Carlos";
+/* $nombre = $nombre . " " . "Santana"; */
+echo "\n";
+$nombre .= " " . "Santana";
+echo $nombre;
 
 echo "\n";

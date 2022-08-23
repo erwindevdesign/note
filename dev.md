@@ -1858,8 +1858,15 @@ $nombre_de_variable =  "asignación_de_dato"
 | Tipo | Descripción | Operador | 
 | -- | -- | -- |
 | Igual | Regresan el valor **bool** de la comparación entre elementos | == |
-
-
+| Identico | Regresan el valor **bool** de la comparación entre elementos comparando tipos de datos | === |
+| Diferente | Regresan el valor **bool** de la diferenciación entre elementos | != |
+| Diferente exacto | Regresan el valor **bool** de la diferenciación entre elementos comparando tipos de datos | !== |
+| Menor que | Regresa el valor **bool** de la comparación del valor de menor cantidad entre los elementos | < |
+| Mayor que |  Regresa el valor **bool** de la comparación del valor con mayor cantidad entre los elementos | > |
+| Menor o igual que | Regresa el valor **bool** de la comparación del valor de igual o menor cantidad entre los elementos | <= | 
+| Mayor o igual que | Regresa el valor **bool** de la comparación del valor de igual o mayor cantidad entre los elementos | <= | 
+| Spaceship | Regresa el valor **int** de 1,0,-1 de la comparación entre los elementos que sean mayores (1), iguales (0) o menores (-1) | <=> |
+| Función de NULL | Regresa el valor **int** de la primera comparación entre elementos y su contenido | ?? |
 
 
 ## show-console-font
