@@ -224,10 +224,13 @@ echo "\n";
 echo "\n"; 
 echo $contador; */
 
-$nombre = "Carlos";
-/* $nombre = $nombre . " " . "Santana"; */
+/* $nombre = "Carlos";
+/* $nombre = $nombre . " " . "Santana";
 echo "\n";
 $nombre .= " " . "Santana";
-echo $nombre;
+echo $nombre; */
+
+$segundos = readline(" Ingresa el tiempo en segundos: ");
+echo $segundos;
 
 echo "\n";

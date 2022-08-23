@@ -1416,7 +1416,11 @@ $nombre_de_variable =  "asignación_de_dato"
 | Spaceship | Regresa el valor **int** de 1,0,-1 de la comparación entre los elementos que sean mayores (1), iguales (0) o menores (-1) | <=> |
 | Función de NULL | Regresa el valor **int** de la primera comparación entre elementos y su contenido | ?? |
 
-## Base de datos
+
+
+
+
+## Base de datos <a name='id10'></a>
 
 #### Normalización de base de datos
 
