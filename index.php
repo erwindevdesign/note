@@ -230,7 +230,35 @@ echo "\n";
 $nombre .= " " . "Santana";
 echo $nombre; */
 
-$segundos = readline(" Ingresa el tiempo en segundos: ");
-echo $segundos;
+/* $segundos = readline("Ingresa el tiempo en segundos: ");
+$horas = (int)($segundos / 3600);
+$segundos = (int)($segundos % 3600);
+
+echo $horas . " horas, con " . $segundos . " " . "segundos"; */
+
+// segundos a horas, minutos y segundos restantes
+/* $segundos = readline("Ingresa el tiempo en segundos: ");
+$horas = (int)($segundos / 3600);
+$segundos = (int)($segundos % 3600);
+$minutos = (int)($segundos/60);
+$segundos = (int) ($segundos % 60); 
+
+echo $horas . " horas, con " . $minutos . " minutos y ". $segundos . " " . "segundos"; */
+
+// horas a segundos, minutos y horas restantes.
+
+/* $horas = readline("Ingresa el tiempo en horas: ");
+$segundos = (int)($horas * 3600);
+$horas = (int)($horas % 3600);
+
+echo $horas . " horas, son " . $segundos . " " . "segundos"; */
+
+$horas = readline("Ingresa las horas: ");
+$minutos = readline("Ingresa los minutos: ");
+$segundos = readline("Ingresa los segundos: ");
+
+$resultado = ($horas * 60 * 60)+($minutos * 60)+$segundos;
+
+echo "El resultado a segundos es de: $resultado segundos.";
 
 echo "\n";
