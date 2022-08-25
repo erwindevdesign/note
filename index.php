@@ -252,13 +252,30 @@ $segundos = (int)($horas * 3600);
 $horas = (int)($horas % 3600);
 
 echo $horas . " horas, son " . $segundos . " " . "segundos"; */
-
+/* 
 $horas = readline("Ingresa las horas: ");
 $minutos = readline("Ingresa los minutos: ");
 $segundos = readline("Ingresa los segundos: ");
 
 $resultado = ($horas * 60 * 60)+($minutos * 60)+$segundos;
 
-echo "El resultado a segundos es de: $resultado segundos.";
+echo "El resultado a segundos es de: $resultado segundos."; */
+
+// Arreglos-Array
+// existen dos metodos para definir un array:
+// 1 - corchetes
+/* $edades = [20, 18, 40];
+
+echo 'primer subindice: ' . $edades[0] . "\n";
+echo 'segundo subindice: ' . $edades[1] . "\n";
+echo 'tercer subindice: ' . $edades[2] . "\n";
+
+echo "\n"; */
+// 2-función array
+$edades = array(20, 18, 40);
+
+echo 'primer subindice: ' . $edades[0] . "\n";
+echo 'segundo subindice: ' . $edades[1] . "\n";
+echo 'tercer subindice: ' . $edades[2] . "\n";
 
 echo "\n";
