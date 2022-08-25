@@ -144,7 +144,130 @@ echo 5 % 2; */
 
 $horas = 7501;
 
-echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
+/* echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
 echo "Sobran: " . ($horas % 3600) . " segundos";
 
+echo "\n"; */
+
+/* $a = 5;
+$b = 5;
+$b2 = "9";
+$c = 9;
+$d = 2;
+
+// Igual ==
+var_dump($a == $b);
+var_dump($a == $b2);
+echo "\n"; 
+// Identico ===
+var_dump($a === $b);
+var_dump($a === $b2);
+echo "\n"; 
+// Diferente !=
+var_dump($a != $b);
+var_dump($a != $b2);
+echo "\n"; 
+// diferente exacto !==
+var_dump($a !== $b);
+var_dump($a !== $b2);
+echo "\n"; 
+// Menor que <
+var_dump($a < $b);
+var_dump($a < $b2);
+var_dump($c < $d);
+var_dump($c < $b);
+echo "\n"; 
+// Mayor que >
+var_dump($a > $b);
+var_dump($a > $b2);
+var_dump($c > $d);
+var_dump($c > $b);
+echo "\n"; 
+// Mayor o igual que >=
+var_dump($a >= $b);
+var_dump($a >= $b2);
+var_dump($c >= $d);
+var_dump($c >= $b);
+echo "\n"; 
+// Menor o igual que <=
+var_dump($a <= $b);
+var_dump($a <= $b2);
+var_dump($c <= $d);
+var_dump($c <= $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump($a <=> $b);
+var_dump($a <=> $b2);
+var_dump($c <=> $d);
+var_dump($c <=> $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump(2 <=> 1);
+var_dump(1 <=> 1);
+var_dump(-50 <=> 1);
+echo "\n"; 
+// Funsión de NULL ??
+$edad_de_laura = 55;
+$edad_de_pepito = 23;
+
+echo $edad_de_juanito ?? $edad_de_laura ?? $edad_de_pepito ;
+echo "\n";  */
+
+
+// Operadores adicionales
+
+// operadores de asignación
+/* $edad_de_maria = ($edad_de_laura = 25) + 3;
+echo "La edad de laura es: $edad_de_laura \n";
+echo "La edad de maria es: $edad_de_maria";
+
+// Operadores de incremento
+$contador = 1;
+echo "\n"; 
+/* $contador = $contador +1; */
+/* $contador += 1; */
+/* $contador++; 
+ 
+
+echo "\n"; 
+echo $contador; */
+
+/* $nombre = "Carlos";
+/* $nombre = $nombre . " " . "Santana";
 echo "\n";
+$nombre .= " " . "Santana";
+echo $nombre; */
+
+/* $segundos = readline("Ingresa el tiempo en segundos: ");
+$horas = (int)($segundos / 3600);
+$segundos = (int)($segundos % 3600);
+
+echo $horas . " horas, con " . $segundos . " " . "segundos"; */
+
+// segundos a horas, minutos y segundos restantes
+/* $segundos = readline("Ingresa el tiempo en segundos: ");
+$horas = (int)($segundos / 3600);
+$segundos = (int)($segundos % 3600);
+$minutos = (int)($segundos/60);
+$segundos = (int) ($segundos % 60); 
+
+echo $horas . " horas, con " . $minutos . " minutos y ". $segundos . " " . "segundos"; */
+
+// horas a segundos, minutos y horas restantes.
+
+/* $horas = readline("Ingresa el tiempo en horas: ");
+$segundos = (int)($horas * 3600);
+$horas = (int)($horas % 3600);
+
+echo $horas . " horas, son " . $segundos . " " . "segundos"; */
+
+$horas = readline("Ingresa las horas: ");
+$minutos = readline("Ingresa los minutos: ");
+$segundos = readline("Ingresa los segundos: ");
+
+$resultado = ($horas * 60 * 60)+($minutos * 60)+$segundos;
+
+echo "El resultado a segundos es de: $resultado segundos.";
+
+echo "\n";
+

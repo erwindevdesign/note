@@ -40,4 +40,28 @@ definir un esti;o y comportamiento
 organizaion plana --> whatsapp, slack
 organizacion autoritaria --> correo electronicp/burocravoa
 
+## FLUJO DE DESARROLLO DE PRODUCTO DIGITAL <a name="id2"></a>
+~~~
+	** PROCESO CREATIVO
+	
+		-- DOCUMENT ( ... ) --
+			       |
+			       v
+		- ~~moodboard~~
+		- ~~brefing~~
+		- wireframe
+		- ~~guideline~~
+		- ~~UI template~~
+		- Prototype / fist preview " (Alpha version)
+		- file versioning
+		- * documentation
+		- ~~component specs bank~~
+		- ~~UI kit / documentation~~ 
+		- ~~atomic design~~ " (Beta version)
+		- Deploy " (RC relase version)
+		- PRODUCCIÓN
+~~~
+
+![Flujo de trabajo](https://i.imgur.com/c4cfDX9.png)
+
 

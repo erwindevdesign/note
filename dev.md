@@ -1,6 +1,6 @@
 # Dev :keyboard:
 
-### :floppy_disk: Respaldo de notas deribadas de la curva de aprendisaje en habilidades de desarrollo y programación en código.
+### :floppy_disk: Respaldo de notas creadas de la curva de aprendisaje en habilidades de desarrollo y programación en código.
 
 ## Index.
 
@@ -8,21 +8,61 @@
 
 2. [Código](#id2)
 
-3. [Git & GitHub](#id3)
-<p align=center >
-  <a><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white' /></a>&nbsp;&nbsp;
-
+3. [HTML](#id3)
+  <p align=center >
+    <a>
+      <img src='https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white' />
+    </a>&nbsp;&nbsp;
   </p>
 
-3. [Bases de datos](#id4)
+4. [CSS](#id4)
+  
+  <p align=center >
+    <a>
+      <img src='https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white' />
+    </a>&nbsp;&nbsp;
+  </p>
+
+5. [Display](#id5)
+
+6. [Terminal](#id6)
+
+  <p align=center >
+    <a>
+      <img src='https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white' />
+    </a>&nbsp;&nbsp;
+  </p>
+
+7. [Git & GitHub](#id7)
+
+  <p align=center >
+    <a><img src='https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white' /></a>&nbsp;&nbsp;
+    <a><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white' /></a>&nbsp;&nbsp;    
+  </p>
+
+
+8. [Tipos de datos](#id8)
+
+9. [PHP](#id9)
+  <p align=center >
+    <a>
+      <img src='https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white' />
+    </a>&nbsp;&nbsp;
+  </p>
+
+10. [Bases de datos](#id10)
    - Base de datos relacionales.
    - Mysql
+  
+
+11. [SQL](#id11)
+
    <p align=center >
      <a><img src='https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white' /></a>&nbsp;&nbsp;
 
   </p>
 
-## Datos y su interacción en la sociedad <a name='id1'></a>
+## Datos y su interacción en el código <a name='id1'></a>
 
 Durante la historia, el ser humano ha desarrollafo entendimiento y comprensión de lo que sucede en su **entorno** desarrollo habilidades de **agrupamiento** y **organización** de la **información** que persibe en su ambiente. Esto ayuda su comprensión del ser con su entorno y la posibilidad de compartir la misma información y pensamiento a partir del pensamiento lógico de ideas y conseptos que son semanticamente interpretables en un flujo de comunicación donde se distribulla la información adecuada para su comprensión sistemica.
 
@@ -30,7 +70,7 @@ Una de las caracteristicas del desarrollo del **pensamiento lógico** en el ser 
 
 El código existe a partir de un emisor con la intención de comunicar y trasferir datos para la comprensión e interpretación de un reseptor por medio de un canal de comunicación, esto permite además del codigo de comunicación linguistico, y con itensión de ampliar la información adquirida del entorno, un lenguaje no linguistico y estandarizado sociealmente de facil comprensión, un ejemplo de el es, en artes graficas, los lenguajes de señalización que estandarizan el lenguaje para su comprención a un nivel global que traspase las limitantes del lenguaje linguistico.
 
-La comunicación en función metalingüística de ideas y conseptos a travéz de una representación simbólica describen hechos empíricos de lo que podría considerarse la realidad, esta simbología y codificación del lenguaje permitío exponenciar y diversificar la comunicación a tal grado de de comunicarnos con circuitos electricos y logica computacional gracias al código y al avance de la industria tech ha permitido alcanzar.
+La comunicación metalingüística de ideas y conseptos a travéz de la representación simbólica, describen hechos empíricos de lo que podría considerarse la realidad. Esta simbología y codificación del lenguaje permitío exponenciar y diversificar la comunicación al grado de comunicarnos con circuitos electricos y logica computacional gracias al código y al avance de la industria tech.
 
 ## Codigo <a name='id2'></a>
 
@@ -40,7 +80,17 @@ La transferencia de información para lograr la comunicación con componentes lo
 
 La semantica hace referencia a al significado de los grupos de datos que dependen estrucutralmente y logicamente del siginificado del contenido del mismo, por ejemplo, cuando leemos un texto coherente, que utiliza **palabras** y **oraciones** adecuadas y que le **dan sentido** a lo que leemos esto es semantica de la oración. Utilizar selectores, etiquetas y una escritura semantica permite, además de la comunicación con componentes logicos, la posibilidad de comunicarnos con un computador y poder dar instrucciones y estructurar reglas de comportamiento que realicen tareas más eficientemente que ayuden al bienestar social
 
-## Maquetación en CSS
+
+
+
+
+## HTML <a name='id3'></a>
+
+
+
+## CSS <a name='id4'></a>
+
+#### Maquetación en CSS
 
 C - Cascading
 S - Style
@@ -132,7 +182,7 @@ li.red         {} /* specificity = 0,0,1,1 */
 [pseudoclases page-list](https://css-tricks.com/pseudo-class-selectors/) <br>
 [pseudoelementos page-list](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
-## Centrar un div:
+#### Centrar un div:
 con **POSITION**
 ~~~
 .center-container {  
@@ -158,7 +208,7 @@ con **GRID**
 }
 ~~~
 
-## Efectos CSS
+#### Efectos CSS
 
 **sticky scrolling**
 
@@ -170,7 +220,7 @@ con **GRID**
 ~~~
 
 
-## Display 
+## Display <a name='id5'></a>
 
 Al tipo de visualización y comportamiento de los elementos dentro de un **HTML** se le denomina **display** y cuenta con los siguientes estilos:
 
@@ -1138,14 +1188,78 @@ CSS
 ![Imgur](https://i.imgur.com/NucLl9Z.png)
 
 
+## Terminal <a name='id6'></a>
+
+#### show-console-font
+
+#### ASCII
+
+* ver tabla de caracteres ascii en consola0: **man ascii*
+* insertar caracteres ascii: **ctrl + shift + u** para  indicar la inserción de caracteres especiales 
+* insertaremos el numero que indica en HEX (hexadecximal) de la tabla de caracteres
+
+#### Comandos **Vi** (movile)
+
+| Comandos | Uso |
+| -- | --|
+| H | Desplazamiento a la parte superios de lo que se encuentre en pantalla. |
+| L | Desplazaniento a la parte inferior de lp que se encuentee en pantalla. |
+| G | Desplazamiento hasta el final del doumento. |
+| w | Desplaza el cursor al primer caracter de la primera palabra a la derecha. | 
+| b | Desplaza el cursor al primer carácter de la primera palabra a la izquierda. |
+| e | Desplaza el cursor al último carácter de la primera palabra a la derecha. | 
+| ge | Desplaza el cursor al último carácter de la primera palabra a la izquierda. |
+| 0 | Desplazamiento al inicio de la linea donde se encuentre el cursor. |
+| $ | Desplazamiento al final de la linea donde se encuentre el cursor. |
+| Ctrl + B | Funsión similar a RePag. |
+| Ctrl + F | Funsión similat a AvPag. |
+| i | Activa la inserción de caracteres donde se encuentre el cursor. (estado insert). |
+| I | Activa la inserción de caracteres al inicio de la línea de donde se encuentre el cursor. |
+| a | Activa la inserción a la derecha de donde se encuentre el cursor.
+| A | Activa la inserción de caracteres al final de la línea donde se encuentre el cirsor. | 
+| O | Inserta una linea en blanco antes de la línea donde se encuemtre el cursor. |
+| o | Inserta una línea en blanco después de la línea donde se encuentre el cursor.
+| r | Sustituye el carácter en el que se encuentre el cursor por la letra que presiones despues de *r*. |
+| R | Sobre escribe a partir de la posición inicial del cursor. |
+| x | Borra los caracteres en dirección hacia la izquierda partiendo de la posición del cursor. |
+| X | Borra los carácteres den dirección hacia la derecha partiendo de la posición del cursor. |
+| dd | Corta la línea donde se encuentre el curaor manteniendola en el portapapeles. |
+| D o d$ | Corta desde la posición del cursor hasa el final de la línea. |
+| yy o Y | Copia completamente toda la línea donde se encuentre el cursor. |
+| yX | Copia los mismos carateres que le indiquemos sustituyendo *X* por un número partiemdo desde la posoción del cursor. |
+| P | Pega el contenido del portapapeles en la línea previa a la que se encuentre el cursor. |
+| p | Pega el contenido del portapapeles en la línea sihiente a la que se encuentre el cursor. |
+| . | Repite el último comando. |
+| u (undo) | Deshace el último comando. |
+| U | Deshace el último comando aplicado en la línea donde se encuentre el cursor. |
+| Ctrl + R (Redo) | Rehace el último comando. |
+| n | Pasa a la siguiente coincidencia en la busqueda. |
+| N | Pasa a la anterior coincidencia en la busqeda. |
+| :n | Nos llevara al siguiente fichero / arvhivo abirto. |
+| :N | Nos llevara al fichero / archivo anterior. |
+| :buffers | Muestra un listado de los ficheros abiertos y su estado. |
+| :buffers X | Nos lleva al fichero que le indiquemos al sustituir X por el número de indice del fichero al que queramos redireccionarnos. |
+| :e 'Archivo' | Inserta el contenido de un fichero en la línea donde se encuentre el cursor. |
+| :r | Inserta el comtenido del fichero actual en la línea siguiente a la posicion del cirsor. |
+| :w o :w 'Archivo' | Guarda los cambios en el fichero actual o del fichero que le indiquemos. |
+| :q | Salir del entorno Vi / Vim / NeoVim. |
+| :wq o x! o ZZ | Guarda los cambios del archivo actual y sale de Vi / Vim / NeoVim. |
+| :r! 'Comando' | Ejecuta el comando en consola e inserta la salida del mismo en el fichero actual, en la posición del cirsor. |
+| :/ | Busca en el documento la palabra que escribamos tras el carácter *diagonal*. |
+| 10dd | Repetir 10 veces el comando dd, es decir, borrar 10 líneas desde la línea donde se encuentre el cursor. |
+| 5x | Repetir 5 veces el comando *x*, es decir, borrar 5 carácteres a partir de la posición actual del cursor. | 
+| 60i-<ESC><ENTER> | Inserta 60 guiones consecutivos. |
+| Ctrl + G | Muestra en la barra de estado el nombre del fichero, la línea actual y el porcentaje de la posición del cursor en el fichero. |
+| :bn | Te mueves al siguiente buffer (fichero). |
+| :bp | Te mueves al buffer (fichero) anterior. |
+| :bd | Cierra el buffer (fichero) actual. |
+| :earlier 1h | Vuelve al estado del fichero de una hora antes. |
+| :later 10m | Avanza, en caso de haber usado el comando *:earlier*, 10 minutos en el estado del fichero. |
+| ^ | 
 
 
 
-
-
-
-
-## Git & GitHub.
+## Git & GitHub.<a name='id7'></a>
 
 SINTAXIS DE COMANDOS
 
@@ -1178,7 +1292,137 @@ SINTAXIS DE COMANDOS
 
 > La _rama_ **main**, como estándar, será la rama en la que se desplegara la versión a producción (_final_ / **v1.0**), en la _rama_ **develop** será donde se respaldarán textos tomados, sobre el proceso de aprendizaje, con un estilo de escritura a modo de notas a borrador que serviran de base para la estructuración técnica del despliege a produccion (_desarrollo_ / **v0.0.11**), en la _rama_ **relase** se ejecután pruebas de **usuario/usabilidad** y **rendimiento/revisión** para su optimización del despliegue en main (_prueba_ / **v0.1**), para los arreglos y correcciones en la sintaxis y la ortografía del texto en la version _relase_ se usara la _rama_ **hotfix** (_arreglo/corrección_ / **v0.1H** )) para agregar caracteristicas a los despliegues de _main, relase y hotfix_ solicitadas por el usuario/lector se usará la _rama_ **features** (_caracteristica_ / **V0.1F**).
 
-## Normalización de base de datos
+
+## Tipos de datos <a name='id8'></a>
+
+#### Pensamiento lógico: Algoritmos y Diagramas de Flujo.
+
+Operación matemáticas
+
+Operación: es un proceso mediante el cual relacionamos entes para obtener resultados.
+Matematica: el uso de simbolos para la representación lógica de un ente a relacionar.
+
+En todo proceso el resultado es el objetivo de una operación.
+
+un operación se compone de los elementos a los cuales vamos a someter a la operación y un simbolo que definira el resultado definido.
+
+- ¿Que información provee?
+- ¿cuantas entradas tiene?
+- ¿cuales son las operaciones?
+- ¿cual es el objetivo del resultado?
+- ¿Para que requiero el resultado?
+- ¿que vamos a ahacer con el?
+- ¿cual es el tipo de resultado que necesito?
+
+
+> crear mejores estructuras y mejores flujos de trabjo, sin hacer reprocesos de operaciones.
+
+> como la simbologia de las matematicas basica, juega un papel muy importante en la lógica de los procesos y el estructura del algoritmo.
+
+
+
+
+
+
+## PHP :elephant: <a name='id9'></a>
+
+### sintax
+
+* Etiqueta de apertura en PHP: **<?php**
+* Etiqueta de cierre en PHP: **?>**
+* imprimir en panrlla: **echo " "**
+* en PHP cualquier línea de codigo debemos cerrar con punto y como: **;**
+* salto de línea: **\n**
+* Definir nombre de variable: **$name = " "  ;**
+* Comentarios en línea: **//** y **#**
+* Comentarios en varias líneas: **/\*  \*/**
+
+Estructura de una variable
+
+$nombre_de_variable =  "asignación_de_dato"
+
+### Tipos de dato
+
+| Tipos de dato númerico | dato |
+| -- | -- |
+| integer | 1,2,3,999. |
+| float | 3.1416 | 
+| double | 3.141592653589793238462643383 |
+
+| Tipos de dato caracteres | dato |
+| -- | -- |
+| char | a,b,c,5 |
+| string | abcd, abecedario, 9999 | 
+
+| Tipos de dato boleano | dato |
+| -- | -- |
+| bool | true, false |
+
+| Tipos de dato nulos | dato |
+| -- | -- |
+| NULL | expresión que no contiene ningún valor  |
+| undefined | variable que no ha sido definida | 
+
+### Operadores logicos
+
+**AND - &&**
+| valor1 | operador | valor2 | resultado |
+| -- | -- | -- | -- |
+| true | and | true | true ( 1 ) |
+| true | and | false | false ( 0 ) |
+| false | and | true | false ( 0 ) |
+| false | and | false | false ( 0 ) |
+
+
+**OR - ||**
+| valor1 | operador | valor2 | resultado |
+| -- | -- | -- | -- |
+| true | or | true | true ( 1 ) |
+| true | or | false | true ( 1 ) |
+| false | or | true | true ( 1 ) |
+| false | or | false | false ( 0 ) |
+
+**NOT - !$variable_name**
+| operador | valor | resultado |
+| -- | -- | -- | 
+| NOT | true | false ( 0 ) |
+| NOT | false | true ( 1 ) |
+
+### Operadores aritméticos
+
+| Tipo | Descripción | Operador | Ejemplo |
+| -- | -- | -- | -- | 
+| adición  |  suma dos o más elementos | + | $elemento1 + $elemento2 + $elemento3 |
+|sustracción | resta de dos o más elementos | - | $elemento1 - $elemento2 - $elemento3 |
+| multiplicación | multiplicación de dos o más elementos | * | $elemento1 * $elemento2 * $elemento3 |
+| División | división de dos o más elementos | / | $elemento1 / $elemento2 / $elemento3 |
+| módulo | devuelve el residuo de una división | % | $a % $b |
+| potenciación | eleva un elemento al exponente indicado | ** | $a ** $b |
+| identidad | añpisicionarce entes de la variable, convierte un **string** a **int** o **float**, según el contenido de la variable. | + | +$a |
+| negación | convierte un elemento positivo a negativo | - | -$a |
+
+### Operadores relacionales
+
+| Tipo | Descripción | Operador | 
+| -- | -- | -- |
+| Igual | Regresan el valor **bool** de la comparación entre elementos | == |
+| Identico | Regresan el valor **bool** de la comparación entre elementos comparando tipos de datos | === |
+| Diferente | Regresan el valor **bool** de la diferenciación entre elementos | != |
+| Diferente exacto | Regresan el valor **bool** de la diferenciación entre elementos comparando tipos de datos | !== |
+| Menor que | Regresa el valor **bool** de la comparación del valor de menor cantidad entre los elementos | < |
+| Mayor que |  Regresa el valor **bool** de la comparación del valor con mayor cantidad entre los elementos | > |
+| Menor o igual que | Regresa el valor **bool** de la comparación del valor de igual o menor cantidad entre los elementos | <= | 
+| Mayor o igual que | Regresa el valor **bool** de la comparación del valor de igual o mayor cantidad entre los elementos | <= | 
+| Spaceship | Regresa el valor **int** de 1,0,-1 de la comparación entre los elementos que sean mayores (1), iguales (0) o menores (-1) | <=> |
+| Función de NULL | Regresa el valor **int** de la primera comparación entre elementos y su contenido | ?? |
+
+
+
+
+
+## Base de datos <a name='id10'></a>
+
+#### Normalización de base de datos
 
 El proceso de organización y estructura de las tablas que serán relacionadas, para evitar la redundancia y complejidad de ralación con los datos, se realiza el proceso de creación de una base de datos óptima llamado **normalización de data o de base de datos**.
 
@@ -1230,7 +1474,7 @@ Existen 3 tipos o niveles de normalización de data denominados **Forma Normal 1
 - LEFT JOIN
 - RIGHT JOIN
 
-## Bases de datos <a name='id1'></a>
+## Bases de datos <a name='id10'></a>
 
 ### Entidades y atributos.
 
@@ -1341,7 +1585,10 @@ El **lenguaje de control transaccional (TCL)** nos ayudan para transaccionar en 
 
     HAVING: Los filtros que quiero que mis datos agrupados tengan
 
-## Mysql
+
+
+
+## Mysql <a name='id11'></a>
 
 Mysql comandline es una herramienta para el uso de mysql desde la terminal:
 
@@ -1749,124 +1996,4 @@ mysql> SELECT *
 
 :: Esta sentencia nos regresara la ultima inserción de datos que tenga relaciín con el MAX de fecha_publicación.
 ```
-
-## Pensamiento lógico: Algoritmos y Diagramas de Flujo.
-
-Operación matemáticas
-
-Operación: es un proceso mediante el cual relacionamos entes para obtener resultados.
-Matematica: el uso de simbolos para la representación lógica de un ente a relacionar.
-
-En todo proceso el resultado es el objetivo de una operación.
-
-un operación se compone de los elementos a los cuales vamos a someter a la operación y un simbolo que definira el resultado definido.
-
-- ¿Que información provee?
-- ¿cuantas entradas tiene?
-- ¿cuales son las operaciones?
-- ¿cual es el objetivo del resultado?
-- ¿Para que requiero el resultado?
-- ¿que vamos a ahacer con el?
-- ¿cual es el tipo de resultado que necesito?
-
-
-> crear mejores estructuras y mejores flujos de trabjo, sin hacer reprocesos de operaciones.
-
-> como la simbologia de las matematicas basica, juega un papel muy importante en la lógica de los procesos y el estructura del algoritmo.
-
-
-
-## PHP :elephant:
-
-### sintax
-
-* Etiqueta de apertura en PHP: **<?php**
-* Etiqueta de cierre en PHP: **?>**
-* imprimir en panrlla: **echo " "**
-* en PHP cualquier línea de codigo debemos cerrar con punto y como: **;**
-* salto de línea: **\n**
-* Definir nombre de variable: **$name = " "  ;**
-* Comentarios en línea: **//** y **#**
-* Comentarios en varias líneas: **/\*  \*/**
-
-Estructura de una variable
-
-$nombre_de_variable =  "asignación_de_dato"
-
-### Tipos de dato
-
-| Tipos de dato númerico | dato |
-| -- | -- |
-| integer | 1,2,3,999. |
-| float | 3.1416 | 
-| double | 3.141592653589793238462643383 |
-
-| Tipos de dato caracteres | dato |
-| -- | -- |
-| char | a,b,c,5 |
-| string | abcd, abecedario, 9999 | 
-
-| Tipos de dato boleano | dato |
-| -- | -- |
-| bool | true, false |
-
-| Tipos de dato nulos | dato |
-| -- | -- |
-| NULL | expresión que no contiene ningún valor  |
-| undefined | variable que no ha sido definida | 
-
-### Operadores logicos
-
-**AND - &&**
-| valor1 | operador | valor2 | resultado |
-| -- | -- | -- | -- |
-| true | and | true | true ( 1 ) |
-| true | and | false | false ( 0 ) |
-| false | and | true | false ( 0 ) |
-| false | and | false | false ( 0 ) |
-
-
-**OR - ||**
-| valor1 | operador | valor2 | resultado |
-| -- | -- | -- | -- |
-| true | or | true | true ( 1 ) |
-| true | or | false | true ( 1 ) |
-| false | or | true | true ( 1 ) |
-| false | or | false | false ( 0 ) |
-
-**NOT - !$variable_name**
-| operador | valor | resultado |
-| -- | -- | -- | 
-| NOT | true | false ( 0 ) |
-| NOT | false | true ( 1 ) |
-
-### Operadores aritméticos
-
-| Tipo | Descripción | Operador | Ejemplo |
-| -- | -- | -- | -- | 
-| adición  |  suma dos o más elementos | + | $elemento1 + $elemento2 + $elemento3 |
-|sustracción | resta de dos o más elementos | - | $elemento1 - $elemento2 - $elemento3 |
-| multiplicación | multiplicación de dos o más elementos | * | $elemento1 * $elemento2 * $elemento3 |
-| División | división de dos o más elementos | / | $elemento1 / $elemento2 / $elemento3 |
-| módulo | devuelve el residuo de una división | % | $a % $b |
-| potenciación | eleva un elemento al exponente indicado | ** | $a ** $b |
-| identidad | añpisicionarce entes de la variable, convierte un **string** a **int** o **float**, según el contenido de la variable. | + | +$a |
-| negación | convierte un elemento positivo a negativo | - | -$a |
-
-### Operadores relacionales
-
-| Tipo | Descripción | Operador | 
-| -- | -- | -- |
-| Igual | Regresan el valor **bool** de la comparación entre elementos | == |
-
-
-
-
-## show-console-font
-
-### ASCII
-
-* ver tabla de caracteres ascii en consola0: **man ascii*
-* insertar caracteres ascii: **ctrl + shift + u** para  indicar la inserción de caracteres especiales 
-* insertaremos el numero que indica en HEX (hexadecximal) de la tabla de caracteres
 
