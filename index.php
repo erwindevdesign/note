@@ -1,5 +1,13 @@
 <?php
 
+echo "PHP es un lenguaje de programación que ocupa más del 70 % de los lenguajes que se utilizan en el desarrollo web";
+echo "\n";
+echo "\n";
+echo "Los ejercicios presentados son referencia del aprendisaje del lenguaje PHP y pretende presentar una recapitulación de ellos a modo de tutorial y antecedente del apre disaje obtenido";
+echo "\n\n"; 
+
+
+
 // echo "hola \n mami \n" ; 
 
 // $name = "Carlos";
@@ -279,3 +287,4 @@ echo 'segundo subindice: ' . $edades[1] . "\n";
 echo 'tercer subindice: ' . $edades[2] . "\n";
 
 echo "\n";
+
