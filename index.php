@@ -1,27 +1,46 @@
 <?php
 
-echo "PHP es un lenguaje de programación que ocupa más del 70 % de los lenguajes que se utilizan en el desarrollo web";
+/*
+
+// 1.salto de linea
+
 echo "\n";
+
+echo "PHP lenguage";
+
 echo "\n";
-echo "Los ejercicios presentados son referencia del aprendisaje del lenguaje PHP y pretende presentar una recapitulación de ellos a modo de tutorial y antecedente del apre disaje obtenido";
-echo "\n\n"; 
+
+echo "Salto de línea entre instrucciones";
+
+echo "\n";
 
 
+echo "Esto es un ... \nsalto de linea dentro de un string\n" ;
 
-// echo "hola \n mami \n" ; 
+echo "Esto es un ...";
 
-// $name = "Carlos";
-// $firtsname = "Santana";
+echo "\n\n";
 
-// echo "My nombre es " . $name . " " . $firtsname . "\n";
+echo "doble salto de línea";
 
-// echo "El resultado de 546316 x 3464613 es " . (546316*3464613) . "\n";
+echo "\n";
 
-/* $personas = [
+*/
+
+// 2.variables y concadenación
+
+$name = "Carlos";
+
+$firtsname = "Santana";
+
+echo "My nombre es " . $name . " " . $firtsname . "\n";
+
+echo "El resultado de 546316 x 3464613 es " . (546316*3464613) . "\n";
+$personas = [
     "Carlos" => 22,
     "Mr. Michi" => 15,
     "Juan" => 65
-]; */
+];
 
 // var_dump($personas);
 
@@ -280,7 +299,7 @@ echo 'tercer subindice: ' . $edades[2] . "\n";
 
 echo "\n"; */
 // 2-función array
-$edades = array(20, 18, 40);
+/* $edades = array(20, 18, 40);
 
 echo 'primer subindice: ' . $edades[0] . "\n";
 echo 'segundo subindice: ' . $edades[1] . "\n";
@@ -288,3 +307,52 @@ echo 'tercer subindice: ' . $edades[2] . "\n";
 
 echo "\n";
 
+// array
+// $edades = [20, 18, 40];
+$edades = array(20, 18, 40);
+
+echo "Una de las edades que esta dentro es " . $edades[2];
+
+echo "\n";
+
+// array asociativo
+
+$cafes = array(
+    "Capuccino" => 50,
+    "Latte" => 49,
+    "Americano" => 70
+);
+
+// echo "El precio del cafe Americano es de {$cafes['Americano']}";
+
+
+$personas = array(
+
+    "Carlos" => array(
+        "edad" => 20,
+        "apellido" => "Santana"
+    ),
+
+    "Mr.Michi" => array(
+        "edad" => 18,
+        "apellido" => "Michisancio"
+    ),
+
+);
+
+echo "La informacion de Mr. Michi es: Edad: " . $personas["Mr.Michi"]["edad"] . " Apellido: " . $personas["Mr.Michi"]["apellido"];
+*/
+
+// count
+
+/* $edades = [18, 22, 40, 34];
+
+echo count($edades);
+
+
+
+echo "\n";  */
+
+
+
+// -------------------     ------------------- //

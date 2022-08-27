@@ -1416,8 +1416,50 @@ $nombre_de_variable =  "asignación_de_dato"
 | Spaceship | Regresa el valor **int** de 1,0,-1 de la comparación entre los elementos que sean mayores (1), iguales (0) o menores (-1) | <=> |
 | Función de NULL | Regresa el valor **int** de la primera comparación entre elementos y su contenido | ?? |
 
+### Ejemplo de código
 
+Salto de línea
+> el salto de línea se indentifica por la integración de **"\n"** en la posición de linea donde se requiera el salto.
 
+.php:
+
+```
+// 1.salto de linea
+
+<?php
+
+echo "\n";
+
+echo "PHP lenguage";
+
+echo "\n";
+
+echo "Salto de línea entre instrucciones";
+
+echo "\n";
+
+echo "Esto es un ... \nsalto de linea dentro de un string\n" ;
+
+echo "Esto es un ...";
+
+echo "\n\n";
+
+echo "doble salto de línea";
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+
+PHP lenguage
+Salto de línea entre instrucciones
+Esto es un ... 
+salto de linea dentro de un string
+Esto es un ...
+
+doble salto de línea
+```
 
 
 ## Base de datos <a name='id10'></a>
@@ -1467,16 +1509,12 @@ Existen 3 tipos o niveles de normalización de data denominados **Forma Normal 1
     - El atributo *no primo* es implicado por la clave primaria en una secuencia no transitiva.
 
 
-
-
-## Teoría de conjuntos
+#### Teoría de conjuntos
 
 - LEFT JOIN
 - RIGHT JOIN
 
-## Bases de datos <a name='id10'></a>
-
-### Entidades y atributos.
+#### Entidades y atributos.
 
 Una entidad es la representación de un objeto o la abstracción de el, objetos que contienen implicitamente atributos que contienen valores los cuales son particulariedades y que les hacen ser un objeto espesifico.
 
