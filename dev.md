@@ -1421,11 +1421,9 @@ $nombre_de_variable =  "asignación_de_dato"
 Salto de línea
 > el salto de línea se indentifica por la integración de **"\n"** en la posición de linea donde se requiera el salto.
 
-.php:
+index.php:
 
 ```
-// 1.salto de linea
-
 <?php
 
 echo "\n";
@@ -1459,6 +1457,268 @@ salto de linea dentro de un string
 Esto es un ...
 
 doble salto de línea
+```
+Variables y concadenación
+> Dentro de una variable podemós guardar información que se transforme a lo largo de la ejecución del código.
+
+index.php:
+```
+<?php
+
+echo "\n"; 
+
+$name = "Carlos"; // variable-1
+
+$firtsname = "Santana"; // variable-2
+
+echo "My nombre es " . $name . " " . $firtsname . "\n"; // concadenando variable 1-2
+
+echo "\n"; 
+
+echo "El resultado de 546316 x 3464613 es " . (546316*3464613) . "\n"; // concadenando una operación matematica
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+
+My nombre es Carlos Santana
+
+El resultado de 546316 x 3464613 es 1892773515708
+```
+Ver el contenido de un arreglo
+> Los arreglos continene variables y existen diversos comandos que pueden mostrar su tipo de contenido por pantalla
+
+index.php [comando: var_dump(  )]:
+```
+<?php
+
+echo "\n";
+
+$personas = [
+    "Carlos" => 22,
+    "Mr. Michi" => 15,
+    "Juan" => 65
+];
+
+var_dump($personas);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+
+array(3) {
+  ["Carlos"]=>
+  int(22)
+  ["Mr. Michi"]=>
+  int(15)
+  ["Juan"]=>
+  int(65)
+```
+index.php [comando: print_r(  )]:
+ ```
+<?php
+
+echo "\n";
+
+$personas = [
+    "Carlos" => 22,
+    "Mr. Michi" => 15,
+    "Juan" => 65
+];
+
+print_r($personas);
+
+echo "\n";
+ ```
+consola:
+```
+❯ php index.php
+
+Array
+(
+    [Carlos] => 22
+    [Mr. Michi] => 15
+    [Juan] => 65
+)
+```
+Constante
+
+> las constantes resguardan datos fijos que se utilizarán a lo largo de la ejecución del código.
+
+index.php:
+ ```
+<?php
+
+define("NUMERO_PI", 3.1416); 
+// el numero pi utilizado en nuestro codigo puede ser resguardado dentro de una constante ( define( ) ) para la manipilación del dato contenido.
+
+echo NUMERO_PI; 
+// imprime por pantalla el número pi resguardado en la constante.
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+3.1416
+```
+index.php [ var_dump(NUMERO_PI) ]:
+ ```
+ <?php
+
+define("NUMERO_PI", 3.1416);
+
+echo NUMERO_PI;
+
+echo "\n";
+
+var_dump(NUMERO_PI);
+
+echo "\n";
+ ```
+consola:
+```
+❯ php index.php
+3.1416
+float(3.1416)
+```
+Operadores y tipos de datos resultantes con concadenación de salto de linea
+> los operadores nos ayudan a relacionar datos y obtener un resultado de esa interacción.
+
+index.php:
+ ```
+<?php
+
+$numero = "23"; // string que contine una cadena de texto de 2 carácteres númericos
+
+$nuevo_numero = $numero + 2; // variable que contiene una operación aritmetica que incluye una variable y una dato entero (int)
+
+echo "\n";
+
+echo($nuevo_numero) . "\n";
+
+echo($numero) . "\n";
+
+var_dump($nuevo_numero) . "\n";
+
+var_dump($numero) . "\n";
+ ```
+consola:
+```
+❯ php index.php
+
+25
+23
+int(25)
+string(2) "23"
+```
+Variable con contenido numerico relacionado con un tipo de dato flotante
+> Las operaciones aritmeticas y relacionales permiten realizar operaciones entre diversos tipos de datos.
+
+index.php [ ]:
+```
+<?php
+
+$numero = 10;
+
+$numero_b = $numero + 0.5;
+
+echo "\n";
+
+var_dump($numero_b). "\n"; 
+
+```
+consola:
+```
+❯ php index.php
+
+float(10.5)
+```
+
+
+.php [ ]:
+ ```
+<?php
+
+$papas = "10 papas en el costal" . "\n";
+
+echo "\n";
+
+$cuantas_papas_hay = $papas + 5;
+
+echo $cuantas_papas_hay . "\n";
+ ```
+consola (con advertercia):
+```
+❯ php index.php
+
+PHP Warning:  A non-numeric value encountered in /home/erwin/Documentos/Desarrollo Web/note/index.php on line 142
+15
+```
+Mostrar una cadena de texto STRING como entero INT
+> las relaciones entre datos permiten mediante algunas instrucciones poder cambiar de tipo de dato
+
+index.php [ ]:
+ ```
+<?php
+
+echo "\n";
+
+$numero = "5";
+
+var_dump($numero) . "\n";
+
+$numero = (int)$numero;
+
+var_dump($numero) . "\n";
+ ```
+consola:
+```
+❯ php index.php
+
+string(1) "5"
+int(5)
+```
+Imprimir por pantalla un número flotante FLOAT en uno entero INT 
+
+index.php [ ]:
+ ```
+<?php
+
+$dias = 5.89;
+
+$dias = (int)$dias;
+
+var_dump($dias);
+
+echo "\n";
+ ```
+consola:
+```
+❯ php index.php
+int(5)
+```
+
+.php [ ]:
+ ```
+
+ ```
+consola:
+```
+
+```
+
+.php [ ]:
+ ```
+
+ ```
+consola:
+```
+
 ```
 
 

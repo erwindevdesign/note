@@ -27,15 +27,37 @@ echo "\n";
 
 */
 
+
+
+
+/*
 // 2.variables y concadenación
 
-$name = "Carlos";
+echo "\n"; 
 
-$firtsname = "Santana";
+$name = "Carlos"; // variable-1
 
-echo "My nombre es " . $name . " " . $firtsname . "\n";
+$firtsname = "Santana"; // variable-2
 
-echo "El resultado de 546316 x 3464613 es " . (546316*3464613) . "\n";
+echo "My nombre es " . $name . " " . $firtsname . "\n"; // concadenando variable 1-2
+
+echo "\n"; 
+
+echo "El resultado de 546316 x 3464613 es " . (546316*3464613) . "\n"; // concadenando una operación matematica
+
+echo "\n"; 
+
+*/
+
+
+
+
+/* 
+
+// 3. Ver contenido var_dump(  ) &  print_r(  );
+
+echo "\n";
+
 $personas = [
     "Carlos" => 22,
     "Mr. Michi" => 15,
@@ -44,46 +66,118 @@ $personas = [
 
 // var_dump($personas);
 
-// print_r($personas);
+print_r($personas);
 
-/* $numero_1 = 8;
-$numero_2 = 7;
+echo "\n";
+
+*/
+
+
+
+
+/*
+
+// 4.definiendo una contante
 
 define("NUMERO_PI", 3.1416);
 
 echo NUMERO_PI;
 
-echo "\n"; */
+echo "\n";
 
-/* $numero = "23";
-$nuevo_numero = $numero + 2;
+var_dump(NUMERO_PI);
 
-var_dump($nuevo_numero);
-var_dump($numero); */
+echo "\n";
 
-/* $numero = 10;
+*/
+
+
+
+/*
+
+// 5.Resultado de operadores y tipo de dato
+
+
+$numero = "23"; // string que contine una cadena de texto de 2 carácteres númericos
+
+$nuevo_numero = $numero + 2; // variable que contiene una operación aritmetica que incluye una variable y una dato entero (int)
+
+echo "\n";
+
+echo($nuevo_numero) . "\n";
+
+echo($numero) . "\n";
+
+var_dump($nuevo_numero) . "\n";
+
+var_dump($numero) . "\n";
+
+*/
+
+
+
+
+/*
+
+// 6.resultado de operación entre una variable que continene un INT y un dato tipo float
+
+$numero = 10;
+
 $numero_b = $numero + 0.5;
 
-var_dump($numero_b); */
+echo "\n";
 
-/* $papas = "10 papas en el costal";
+var_dump($numero_b). "\n"; 
+
+*/
+
+
+
+
+
+/*
+
+// String relacionado en una suma con dato entero INT
+
+$papas = "10 papas en el costal" . "\n";
+
+echo "\n";
+
 $cuantas_papas_hay = $papas + 5;
 
-echo $cuantas_papas_hay;
-echo "\n"; */
+echo $cuantas_papas_hay . "\n";
 
-/* $numero = "5";
-var_dump($numero);
+*/
+
+
+
+/* 
+
+// Mostrar una cadena de texto STRING como entero INT
+
+echo "\n";
+
+$numero = "5";
+
+var_dump($numero) . "\n";
+
 $numero = (int)$numero;
-var_dump($numero); */
 
-/* $dias = 5.89;
+var_dump($numero) . "\n";
+
+*/
+
+
+
+// Imprimir por pantalla un número flotante FLOAT en uno entero INT 
+
+$dias = 5.89;
+
 $dias = (int)$dias;
+
 var_dump($dias);
 
-
-
-echo "\n"; */
+echo "\n";
 
 /* $bandera = false;
 var_dump($bandera); */
