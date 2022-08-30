@@ -1683,13 +1683,15 @@ consola:
 string(1) "5"
 int(5)
 ```
-Imprimir por pantalla un número flotante FLOAT en uno entero INT 
+Imprimir por pantalla una variable que contiene un dato  tipo flotante FLOAT en un entero INT 
 
-index.php [ ]:
+index.php:
  ```
 <?php
 
 $dias = 5.89;
+
+var_dump($dias) . "\n";
 
 $dias = (int)$dias;
 
@@ -1700,26 +1702,617 @@ echo "\n";
 consola:
 ```
 ❯ php index.php
+float(5.89)
 int(5)
 ```
+Booleano
+> los datos booleanos (true & false) pueden ser representados por 1 & 0 y e imprimirse por pantalla como bool.
 
-.php [ ]:
+index.php:
  ```
+<?php
+
+$bandera = false;
+
+var_dump($bandera);
 
  ```
+consola:
+```
+❯ php index.php
+bool(false)
+```
+Imprimir booleano por pantalla desde una dato entero INT
+> 
+index.php:
+```
+<?php
+
+$bandera = 1;
+
+var_dump($bandera);
+
+$bandera = (bool) $bandera;
+
+var_dump($bandera);
+
+echo "\n"; 
+```
+consola:
+```
+❯ php index.php
+int(1)
+bool(true)
+```
+Imprimir por pantalla entero INTT desde una variable STRING y un BOOL
+index.php:
+```
+<?php
+
+$numero = "5";
+
+var_dump($numero);
+
+$numero = (int)$numero;
+
+var_dump($numero);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+string(1) "5"
+int(5)
+```
+index.php:
+```
+<?php
+
+$dias = 5.89;
+
+var_dump($dias);
+
+$dias = (int)$dias;
+
+var_dump($dias);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+float(5.89)
+int(5)
+```
+Variables & operadores lógicos
+
+index.php:
+```
+<?php
+
+// variables
+$ataque_agua = true;
+$ataque_fuego = false;
+$ataque_electrico = false;
+$velocidad_alta = true;
+
+// operaciones logicas
+var_dump($ataque_agua && $velocidad_alta); // AND
+var_dump($ataque_fuego || $ataque_electrico); // OR
+var_dump($ataque_agua || $ataque_fuego); // OR
+var_dump(!$ataque_fuego); // NOT
+var_dump(!$ataque_electrico && $ataque_agua); // NOT . AND 
+```
+consola:
+```
+❯ php index.php
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+```
+Operadores VAR_DUMP( ) & PRINT_R( ) mostrando el resultado de una exponenciación
+
+index.php:
+```
+<?php
+
+$resultado = (5**3);
+
+echo $resultado;
+
+echo "\n";
+
+var_dump($resultado);
+
+print_r($resultado);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+125
+int(125)
+125% 
+```
+Concadenando dos resultados de operadores 
+
+index.php:
+```
+<?php
+
+echo (5*6) . " " . (80/4); 
+```
+consola:
+```
+❯ php index.php
+30 20% 
+```
+División y residuo
+> el residuo de una división es todo el restante desimal que existe entre la división como dividir 5 / 2 y obtener 2.5, el .5 es el residuo de una parte de la operación al incluir ambos operadores su residuo será de 1.
+
+index.php:
+```
+<?php
+
+echo 5 / 2 . "\n";
+
+echo 5 % 2 . "\n";
+```
+consola:
+```
+❯ php index.php
+2.5
+1
+```
+Convertir segundos a horas con su residuo convertido a segundos restantes
+
+index.php:
+```
+<?php
+
+$horas = 7501;
+
+echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
+
+echo "Sobran: " . ($horas % 3600) . " segundos";
+
+echo "\n"; 
+```
+consola:
+```
+❯ php index.php
+7501 segundos convertidos a horas son: 2
+Sobran: 301 segundos
+```
+Operadores relacionales
+index.php:
+```
+<?php
+
+$a = 5;
+$b = 5;
+$b2 = "9";
+$c = 9;
+$d = 2;
+
+// Igual ==
+var_dump($a == $b);
+var_dump($a == $b2);
+echo "\n"; 
+// Identico ===
+var_dump($a === $b);
+var_dump($a === $b2);
+echo "\n"; 
+// Diferente !=
+var_dump($a != $b);
+var_dump($a != $b2);
+echo "\n"; 
+// diferente exacto !==
+var_dump($a !== $b);
+var_dump($a !== $b2);
+echo "\n"; 
+// Menor que <
+var_dump($a < $b);
+var_dump($a < $b2);
+var_dump($c < $d);
+var_dump($c < $b);
+echo "\n"; 
+// Mayor que >
+var_dump($a > $b);
+var_dump($a > $b2);
+var_dump($c > $d);
+var_dump($c > $b);
+echo "\n"; 
+// Mayor o igual que >=
+var_dump($a >= $b);
+var_dump($a >= $b2);
+var_dump($c >= $d);
+var_dump($c >= $b);
+echo "\n"; 
+// Menor o igual que <=
+var_dump($a <= $b);
+var_dump($a <= $b2);
+var_dump($c <= $d);
+var_dump($c <= $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump($a <=> $b);
+var_dump($a <=> $b2);
+var_dump($c <=> $d);
+var_dump($c <=> $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump(2 <=> 1);
+var_dump(1 <=> 1);
+var_dump(-50 <=> 1);
+echo "\n"; 
+// Funsión de NULL ??
+$edad_de_laura = 55;
+$edad_de_pepito = 23;
+
+echo $edad_de_juanito ?? $edad_de_laura ?? $edad_de_pepito ;
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+bool(true)
+bool(false)
+
+bool(true)
+bool(false)
+
+bool(false)
+bool(true)
+
+bool(false)
+bool(true)
+
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+
+bool(true)
+bool(true)
+bool(false)
+bool(false)
+
+int(0)
+int(-1)
+int(1)
+int(1)
+
+int(1)
+int(0)
+int(-1)
+
+55
+```
+Operadores de asignación
+
+index.php [ = ]:
+```
+<?php
+
+$edad_de_maria = ($edad_de_laura = 25) + 3;
+
+echo "La edad de laura es: $edad_de_laura \n";
+
+echo "La edad de maria es: $edad_de_maria";
+```
+consola:
+```
+❯ php index.php
+La edad de laura es: 25 
+La edad de maria es: 28
+```
+Operadores de incremento 
+
+index.php [ +1 ]:
+```
+<?php
+
+$contador = 1;
+
+$contador = $contador +1 ;
+
+echo $contador . "\n";
+```
+consola:
+```
+❯ php index.php
+2
+```
+
+index.php [ +=1 ]:
+```
+<?php
+
+$contador = 1;
+
+$contador = $contador +=1 ;
+
+echo $contador . "\n";
+```
+consola:
+```
+❯ php index.php
+2
+```
+
+
+index.php [ ++ ]:
+```
+<?php
+
+$contador = 1;
+
+$contador = ++$contador;
+
+echo $contador . "\n";
+```
+consola:
+```
+❯ php index.php
+2
+```
+
+Concadenando una variable dentro de otra variable y un string.
+
+index.php [ ]:
+```
+<?php
+
+$nombre = "Carlos";
+
+$nombre = $nombre . " " . "Santana";
+
+$nombre .= " " . "Santana" . "\n";
+
+echo $nombre;
+```
+consola:
+```
+❯ php index.php
+Carlos Santana Santana
+```
+Convertir segundos a horas con su residuo ingresando dato desde consola.
+
+index.php [ readline( ) ]:
+```
+<?php
+
+$segundos = readline("Ingresa el tiempo en segundos: ");
+
+$horas = (int)($segundos / 3600);
+
+$segundos = (int)($segundos % 3600);
+
+echo $horas . " horas, con " . $segundos . " " . "segundos" . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa el tiempo en segundos: 76501
+21 horas, con 901 segundos
+```
+segundos a horas, minutos y residuo de segundos
+
+index.php:
+```
+<?php
+
+$segundos = readline("Ingresa el tiempo en segundos: ");
+
+$horas = (int)($segundos / 3600);
+
+$segundos = (int)($segundos % 3600);
+
+$minutos = (int)($segundos/60);
+
+$segundos = (int) ($segundos % 60); 
+
+echo $horas . " horas, con " . $minutos . " minutos y ". $segundos . " " . "segundos" . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa el tiempo en segundos: 494949
+137 horas, con 29 minutos y 9 segundos
+```
+horas a segundos
+
+index.php [ ]:
+```
+<?php
+
+$horas = readline("Ingresa el tiempo en horas: ");
+
+$segundos = (int)($horas * 3600);
+
+$horas = (int)($horas % 3600);
+
+echo $horas . " horas, son " . $segundos . " " . "segundos" . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa el tiempo en horas: 2.5
+2 horas, son 9000 segundos
+```
+Horas, munutos y segundos sumados a segundos 
+
+index.php:
+```
+<?php
+
+$horas = readline("Ingresa las horas: ");
+
+$minutos = readline("Ingresa los minutos: ");
+
+$segundos = readline("Ingresa los segundos: ");
+
+$resultado = ($horas * 60 * 60)+($minutos * 60) + $segundos;
+
+echo "El resultado a segundos es de: $resultado segundos." . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa las horas: 1
+Ingresa los minutos: 120
+Ingresa los segundos: 1
+El resultado a segundos es de: 10801 segundos.
+```
+Array
+
+index.php [ corchetes ]:
+```
+<?php
+
+$edades = [20, 18, 40];
+
+echo 'primer subindice: ' . $edades[0] . "\n";
+
+echo 'segundo subindice: ' . $edades[1] . "\n";
+
+echo 'tercer subindice: ' . $edades[2] . "\n";
+```
+consola:
+```
+❯ php index.php
+primer subindice: 20
+segundo subindice: 18
+tercer subindice: 40
+```
+
+index.php [ función ]:
+```
+<?php
+
+$edades = array(20, 18, 40);
+
+echo 'primer subindice: ' . $edades[0] . "\n";
+
+echo 'segundo subindice: ' . $edades[1] . "\n";
+
+echo 'tercer subindice: ' . $edades[2] . "\n";
+```
+consola:
+```
+❯ php index.php
+primer subindice: 20
+segundo subindice: 18
+tercer subindice: 40
+```
+Imprimiendo por pantalla un subindice de un array
+
+index.php:
+```
+<?php
+
+edades = array(20, 18, 40);
+
+echo "Una de las edades que esta dentro es " . $edades[2] . "\n";
+```
+consola:
+```
+❯ php index.php
+Una de las edades que esta dentro es 40
+```
+Array asociativo
+
+index.php:
+```
+<?php
+```
 consola:
 ```
 
 ```
 
-.php [ ]:
- ```
-
- ```
+index.php [ ]:
+```
+<?php
+```
 consola:
 ```
 
 ```
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
+
+
+
 
 
 ## Base de datos <a name='id10'></a>

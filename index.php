@@ -137,7 +137,7 @@ var_dump($numero_b). "\n";
 
 /*
 
-// String relacionado en una suma con dato entero INT
+// 7.String relacionado en una suma con dato entero INT
 
 $papas = "10 papas en el costal" . "\n";
 
@@ -153,7 +153,7 @@ echo $cuantas_papas_hay . "\n";
 
 /* 
 
-// Mostrar una cadena de texto STRING como entero INT
+// 8.Mostrar una cadena de texto STRING como entero INT
 
 echo "\n";
 
@@ -169,9 +169,14 @@ var_dump($numero) . "\n";
 
 
 
-// Imprimir por pantalla un número flotante FLOAT en uno entero INT 
+
+/*
+
+// 9.Imprimir por pantalla un número flotante FLOAT en uno entero INT 
 
 $dias = 5.89;
+
+var_dump($dias) . "\n";
 
 $dias = (int)$dias;
 
@@ -179,15 +184,38 @@ var_dump($dias);
 
 echo "\n";
 
-/* $bandera = false;
-var_dump($bandera); */
+*/
+
+
+
+
+
 /* 
-$bandera = 1;
-$bandera = (bool) $bandera;
+
+// 10.booleanos
+
+$bandera = false;
+
 var_dump($bandera);
 
-echo "\n"; */
-/* 
+$bandera = 1;
+
+var_dump($bandera);
+
+$bandera = (bool) $bandera;
+
+var_dump($bandera);
+
+echo "\n"; 
+
+*/
+
+
+
+/*
+
+# 11.tipos de dato
+
 // Easy
 $nombre = "Carlos"; # string
 $apellido = "Gómez"; # string
@@ -216,22 +244,42 @@ var_dump($presento_examen);
 var_dump($numero_preguntas);
 var_dump($numero_respuestas);
 var_dump($promedio_maximo);
-var_dump($michis); */
+var_dump($michis); 
+
+*/
 
 
-/* $numero = "5";
+/* 
+
+// 12.imprimir por pantalla entero INTT desde una variable STRING y un BOOL
+
+$numero = "5";
+
 var_dump($numero);
+
 $numero = (int)$numero;
-var_dump($numero); */
 
-/* $dias = 5.89;
+var_dump($numero);
+
+$dias = 5.89;
+
 var_dump($dias);
+
 $dias = (int)$dias;
+
 var_dump($dias);
-echo "\n"; */
+
+echo "\n";
+
+*/
 
 
-/* // variables
+
+/* 
+
+// 13.Variables & operadores lógicos
+
+// variables
 $ataque_agua = true;
 $ataque_fuego = false;
 $ataque_electrico = false;
@@ -242,27 +290,83 @@ var_dump($ataque_agua && $velocidad_alta);
 var_dump($ataque_fuego || $ataque_electrico);
 var_dump($ataque_agua || $ataque_fuego);
 var_dump(!$ataque_fuego);
-var_dump(!$ataque_electrico && $ataque_agua); */
+var_dump(!$ataque_electrico && $ataque_agua);
 
-/* $resultado = (5**3);
+*/
+
+
+
+
+/* 
+
+// 14.Operadores VAR_DUMP( ) & PRINT_R( ) mostrando el resultado de una exponenciación
+
+$resultado = (5**3);
+
 echo $resultado;
+
 echo "\n";
+
 var_dump($resultado);
-print_r($resultado); */
 
-/* echo (5*6) . " " . (80/4); */
+print_r($resultado);
 
-/* echo 5 / 2 . "\n";
-echo 5 % 2; */
+echo "\n";
+
+*/
+
+
+
+
+
+/* 
+
+// 15.Concadenando dos resultados de operadores aritmeticos 
+
+echo (5*6) . " " . (80/4) . "\n";
+
+*/
+
+
+
+
+
+/* 
+
+// 16.División y residuo
+
+echo 5 / 2 . "\n";
+
+echo 5 % 2 . "\n";
+
+ */
+
+
+
+/* 
+
+// 17.Convertir segundos a horas con su residuo convertido a segundos restantes
 
 $horas = 7501;
 
-/* echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
+echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
+
 echo "Sobran: " . ($horas % 3600) . " segundos";
 
-echo "\n"; */
+echo "\n"; 
 
-/* $a = 5;
+*/
+
+
+
+
+
+
+/* 
+
+// 18.Operadores relacionales
+
+$a = 5;
 $b = 5;
 $b2 = "9";
 $c = 9;
@@ -324,92 +428,206 @@ $edad_de_laura = 55;
 $edad_de_pepito = 23;
 
 echo $edad_de_juanito ?? $edad_de_laura ?? $edad_de_pepito ;
-echo "\n";  */
+echo "\n";
+
+*/
 
 
-// Operadores adicionales
 
-// operadores de asignación
-/* $edad_de_maria = ($edad_de_laura = 25) + 3;
+
+
+
+
+// 19.Operadores adicionales
+
+
+
+/* 
+
+// 19.1.Operadores de asignación
+
+$edad_de_maria = ($edad_de_laura = 25) + 3;
+
 echo "La edad de laura es: $edad_de_laura \n";
+
 echo "La edad de maria es: $edad_de_maria";
 
-// Operadores de incremento
+*/
+
+
+
+
+
+
+/* 
+
+// 19.2.Operadores de incremento
+
+// +1
+
 $contador = 1;
-echo "\n"; 
-/* $contador = $contador +1; */
-/* $contador += 1; */
-/* $contador++; 
+
+$contador = ++$contador;
+
+echo $contador . "\n";
+
+// $contador +1;
+// $contador += 1; 
+// $contador++; 
  
 
 echo "\n"; 
-echo $contador; */
 
-/* $nombre = "Carlos";
-/* $nombre = $nombre . " " . "Santana";
-echo "\n";
-$nombre .= " " . "Santana";
-echo $nombre; */
+*/
 
-/* $segundos = readline("Ingresa el tiempo en segundos: ");
+
+/* 
+
+// 20.Concadenando una variable dentro de otra variable y un string.
+
+$nombre = "Carlos";
+
+$nombre = $nombre . " " . "Santana";
+
+$nombre .= " " . "Santana" . "\n";
+
+echo $nombre;
+
+*/
+
+
+
+
+/* 
+
+// 21.Convertir segundos a horas con su residuo ingresando dato desde consola.
+
+$segundos = readline("Ingresa el tiempo en segundos: ");
+
 $horas = (int)($segundos / 3600);
+
 $segundos = (int)($segundos % 3600);
 
-echo $horas . " horas, con " . $segundos . " " . "segundos"; */
+echo $horas . " horas, con " . $segundos . " " . "segundos" . "\n";
 
-// segundos a horas, minutos y segundos restantes
-/* $segundos = readline("Ingresa el tiempo en segundos: ");
+*/
+
+
+
+/* 
+
+// 22.segundos a horas, minutos y residuo de segundos
+
+$segundos = readline("Ingresa el tiempo en segundos: ");
+
 $horas = (int)($segundos / 3600);
+
 $segundos = (int)($segundos % 3600);
+
 $minutos = (int)($segundos/60);
+
 $segundos = (int) ($segundos % 60); 
 
-echo $horas . " horas, con " . $minutos . " minutos y ". $segundos . " " . "segundos"; */
+echo $horas . " horas, con " . $minutos . " minutos y ". $segundos . " " . "segundos";
 
-// horas a segundos, minutos y horas restantes.
+*/
 
-/* $horas = readline("Ingresa el tiempo en horas: ");
+
+
+
+/* 
+
+// 23.horas a segundos.
+
+$horas = readline("Ingresa el tiempo en horas: ");
+
 $segundos = (int)($horas * 3600);
+
 $horas = (int)($horas % 3600);
 
-echo $horas . " horas, son " . $segundos . " " . "segundos"; */
+echo $horas . " horas, son " . $segundos . " " . "segundos" . "\n";
+
+*/
+
+
+
+
+
 /* 
+
+// 24.Horas, munutos y segundos sumados a segundos 
+
 $horas = readline("Ingresa las horas: ");
+
 $minutos = readline("Ingresa los minutos: ");
+
 $segundos = readline("Ingresa los segundos: ");
 
 $resultado = ($horas * 60 * 60)+($minutos * 60)+$segundos;
 
-echo "El resultado a segundos es de: $resultado segundos."; */
+echo "El resultado a segundos es de: $resultado segundos." . "\n";
 
-// Arreglos-Array
+*/
+
+
+
+/* 
+
+// 25Arreglos-Array
+
 // existen dos metodos para definir un array:
-// 1 - corchetes
-/* $edades = [20, 18, 40];
+
+// 25.1.corchetes
+
+$edades = [20, 18, 40];
 
 echo 'primer subindice: ' . $edades[0] . "\n";
+
 echo 'segundo subindice: ' . $edades[1] . "\n";
+
 echo 'tercer subindice: ' . $edades[2] . "\n";
 
-echo "\n"; */
-// 2-función array
-/* $edades = array(20, 18, 40);
+*/
+
+
+
+
+
+/* 
+
+// 25.2.función array
+
+$edades = array(20, 18, 40);
 
 echo 'primer subindice: ' . $edades[0] . "\n";
+
 echo 'segundo subindice: ' . $edades[1] . "\n";
+
 echo 'tercer subindice: ' . $edades[2] . "\n";
 
 echo "\n";
 
-// array
+*/
+
+
+/* 
+
+// 26.imprimir subindice de un array
+
 // $edades = [20, 18, 40];
+
 $edades = array(20, 18, 40);
 
 echo "Una de las edades que esta dentro es " . $edades[2];
 
-echo "\n";
+*/
 
-// array asociativo
+
+
+
+/* 
+
+// 27.array asociativo
 
 $cafes = array(
     "Capuccino" => 50,
@@ -417,7 +635,11 @@ $cafes = array(
     "Americano" => 70
 );
 
-// echo "El precio del cafe Americano es de {$cafes['Americano']}";
+echo "El precio del cafe Americano es de $ {$cafes['Americano']}" . "\n";
+
+*/
+
+
 
 
 $personas = array(
@@ -435,7 +657,9 @@ $personas = array(
 );
 
 echo "La informacion de Mr. Michi es: Edad: " . $personas["Mr.Michi"]["edad"] . " Apellido: " . $personas["Mr.Michi"]["apellido"];
-*/
+
+
+
 
 // count
 
