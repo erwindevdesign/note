@@ -1416,6 +1416,1161 @@ $nombre_de_variable =  "asignación_de_dato"
 | Spaceship | Regresa el valor **int** de 1,0,-1 de la comparación entre los elementos que sean mayores (1), iguales (0) o menores (-1) | <=> |
 | Función de NULL | Regresa el valor **int** de la primera comparación entre elementos y su contenido | ?? |
 
+### Ejemplo de código
+
+Salto de línea
+> el salto de línea se indentifica por la integración de **"\n"** en la posición de linea donde se requiera el salto.
+
+index.php:
+
+```
+<?php
+
+echo "\n";
+
+echo "PHP lenguage";
+
+echo "\n";
+
+echo "Salto de línea entre instrucciones";
+
+echo "\n";
+
+echo "Esto es un ... \nsalto de linea dentro de un string\n" ;
+
+echo "Esto es un ...";
+
+echo "\n\n";
+
+echo "doble salto de línea";
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+
+PHP lenguage
+Salto de línea entre instrucciones
+Esto es un ... 
+salto de linea dentro de un string
+Esto es un ...
+
+doble salto de línea
+```
+Variables y concadenación
+> Dentro de una variable podemós guardar información que se transforme a lo largo de la ejecución del código.
+
+index.php:
+```
+<?php
+
+echo "\n"; 
+
+$name = "Carlos"; // variable-1
+
+$firtsname = "Santana"; // variable-2
+
+echo "My nombre es " . $name . " " . $firtsname . "\n"; // concadenando variable 1-2
+
+echo "\n"; 
+
+echo "El resultado de 546316 x 3464613 es " . (546316*3464613) . "\n"; // concadenando una operación matematica
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+
+My nombre es Carlos Santana
+
+El resultado de 546316 x 3464613 es 1892773515708
+```
+Ver el contenido de un arreglo
+> Los arreglos continene variables y existen diversos comandos que pueden mostrar su tipo de contenido por pantalla
+
+index.php [comando: var_dump(  )]:
+```
+<?php
+
+echo "\n";
+
+$personas = [
+    "Carlos" => 22,
+    "Mr. Michi" => 15,
+    "Juan" => 65
+];
+
+var_dump($personas);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+
+array(3) {
+  ["Carlos"]=>
+  int(22)
+  ["Mr. Michi"]=>
+  int(15)
+  ["Juan"]=>
+  int(65)
+```
+index.php [comando: print_r(  )]:
+ ```
+<?php
+
+echo "\n";
+
+$personas = [
+    "Carlos" => 22,
+    "Mr. Michi" => 15,
+    "Juan" => 65
+];
+
+print_r($personas);
+
+echo "\n";
+ ```
+consola:
+```
+❯ php index.php
+
+Array
+(
+    [Carlos] => 22
+    [Mr. Michi] => 15
+    [Juan] => 65
+)
+```
+Constante
+
+> las constantes resguardan datos fijos que se utilizarán a lo largo de la ejecución del código.
+
+index.php:
+ ```
+<?php
+
+define("NUMERO_PI", 3.1416); 
+// el numero pi utilizado en nuestro codigo puede ser resguardado dentro de una constante ( define( ) ) para la manipilación del dato contenido.
+
+echo NUMERO_PI; 
+// imprime por pantalla el número pi resguardado en la constante.
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+3.1416
+```
+index.php [ var_dump(NUMERO_PI) ]:
+ ```
+ <?php
+
+define("NUMERO_PI", 3.1416);
+
+echo NUMERO_PI;
+
+echo "\n";
+
+var_dump(NUMERO_PI);
+
+echo "\n";
+ ```
+consola:
+```
+❯ php index.php
+3.1416
+float(3.1416)
+```
+Operadores y tipos de datos resultantes con concadenación de salto de linea
+> los operadores nos ayudan a relacionar datos y obtener un resultado de esa interacción.
+
+index.php:
+ ```
+<?php
+
+$numero = "23"; // string que contine una cadena de texto de 2 carácteres númericos
+
+$nuevo_numero = $numero + 2; // variable que contiene una operación aritmetica que incluye una variable y una dato entero (int)
+
+echo "\n";
+
+echo($nuevo_numero) . "\n";
+
+echo($numero) . "\n";
+
+var_dump($nuevo_numero) . "\n";
+
+var_dump($numero) . "\n";
+ ```
+consola:
+```
+❯ php index.php
+
+25
+23
+int(25)
+string(2) "23"
+```
+Variable con contenido numerico relacionado con un tipo de dato flotante
+> Las operaciones aritmeticas y relacionales permiten realizar operaciones entre diversos tipos de datos.
+
+index.php [ ]:
+```
+<?php
+
+$numero = 10;
+
+$numero_b = $numero + 0.5;
+
+echo "\n";
+
+var_dump($numero_b). "\n"; 
+
+```
+consola:
+```
+❯ php index.php
+
+float(10.5)
+```
+
+
+.php [ ]:
+ ```
+<?php
+
+$papas = "10 papas en el costal" . "\n";
+
+echo "\n";
+
+$cuantas_papas_hay = $papas + 5;
+
+echo $cuantas_papas_hay . "\n";
+ ```
+consola (con advertercia):
+```
+❯ php index.php
+
+PHP Warning:  A non-numeric value encountered in /home/erwin/Documentos/Desarrollo Web/note/index.php on line 142
+15
+```
+Mostrar una cadena de texto STRING como entero INT
+> las relaciones entre datos permiten mediante algunas instrucciones poder cambiar de tipo de dato
+
+index.php [ ]:
+ ```
+<?php
+
+echo "\n";
+
+$numero = "5";
+
+var_dump($numero) . "\n";
+
+$numero = (int)$numero;
+
+var_dump($numero) . "\n";
+ ```
+consola:
+```
+❯ php index.php
+
+string(1) "5"
+int(5)
+```
+Imprimir por pantalla una variable que contiene un dato  tipo flotante FLOAT en un entero INT 
+
+index.php:
+ ```
+<?php
+
+$dias = 5.89;
+
+var_dump($dias) . "\n";
+
+$dias = (int)$dias;
+
+var_dump($dias);
+
+echo "\n";
+ ```
+consola:
+```
+❯ php index.php
+float(5.89)
+int(5)
+```
+Booleano
+> los datos booleanos (true & false) pueden ser representados por 1 & 0 y e imprimirse por pantalla como bool.
+
+index.php:
+ ```
+<?php
+
+$bandera = false;
+
+var_dump($bandera);
+
+ ```
+consola:
+```
+❯ php index.php
+bool(false)
+```
+Imprimir booleano por pantalla desde una dato entero INT
+> 
+index.php:
+```
+<?php
+
+$bandera = 1;
+
+var_dump($bandera);
+
+$bandera = (bool) $bandera;
+
+var_dump($bandera);
+
+echo "\n"; 
+```
+consola:
+```
+❯ php index.php
+int(1)
+bool(true)
+```
+Imprimir por pantalla entero INTT desde una variable STRING y un BOOL
+index.php:
+```
+<?php
+
+$numero = "5";
+
+var_dump($numero);
+
+$numero = (int)$numero;
+
+var_dump($numero);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+string(1) "5"
+int(5)
+```
+index.php:
+```
+<?php
+
+$dias = 5.89;
+
+var_dump($dias);
+
+$dias = (int)$dias;
+
+var_dump($dias);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+float(5.89)
+int(5)
+```
+Variables & operadores lógicos
+
+index.php:
+```
+<?php
+
+// variables
+$ataque_agua = true;
+$ataque_fuego = false;
+$ataque_electrico = false;
+$velocidad_alta = true;
+
+// operaciones logicas
+var_dump($ataque_agua && $velocidad_alta); // AND
+var_dump($ataque_fuego || $ataque_electrico); // OR
+var_dump($ataque_agua || $ataque_fuego); // OR
+var_dump(!$ataque_fuego); // NOT
+var_dump(!$ataque_electrico && $ataque_agua); // NOT . AND 
+```
+consola:
+```
+❯ php index.php
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+```
+Operadores VAR_DUMP( ) & PRINT_R( ) mostrando el resultado de una exponenciación
+
+index.php:
+```
+<?php
+
+$resultado = (5**3);
+
+echo $resultado;
+
+echo "\n";
+
+var_dump($resultado);
+
+print_r($resultado);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+125
+int(125)
+125% 
+```
+Concadenando dos resultados de operadores 
+
+index.php:
+```
+<?php
+
+echo (5*6) . " " . (80/4); 
+```
+consola:
+```
+❯ php index.php
+30 20% 
+```
+División y residuo
+> el residuo de una división es todo el restante desimal que existe entre la división como dividir 5 / 2 y obtener 2.5, el .5 es el residuo de una parte de la operación al incluir ambos operadores su residuo será de 1.
+
+index.php:
+```
+<?php
+
+echo 5 / 2 . "\n";
+
+echo 5 % 2 . "\n";
+```
+consola:
+```
+❯ php index.php
+2.5
+1
+```
+Convertir segundos a horas con su residuo convertido a segundos restantes
+
+index.php:
+```
+<?php
+
+$horas = 7501;
+
+echo "$horas segundos convertidos a horas son: " . (int)($horas / 3600) . "\n";
+
+echo "Sobran: " . ($horas % 3600) . " segundos";
+
+echo "\n"; 
+```
+consola:
+```
+❯ php index.php
+7501 segundos convertidos a horas son: 2
+Sobran: 301 segundos
+```
+Operadores relacionales
+index.php:
+```
+<?php
+
+$a = 5;
+$b = 5;
+$b2 = "9";
+$c = 9;
+$d = 2;
+
+// Igual ==
+var_dump($a == $b);
+var_dump($a == $b2);
+echo "\n"; 
+// Identico ===
+var_dump($a === $b);
+var_dump($a === $b2);
+echo "\n"; 
+// Diferente !=
+var_dump($a != $b);
+var_dump($a != $b2);
+echo "\n"; 
+// diferente exacto !==
+var_dump($a !== $b);
+var_dump($a !== $b2);
+echo "\n"; 
+// Menor que <
+var_dump($a < $b);
+var_dump($a < $b2);
+var_dump($c < $d);
+var_dump($c < $b);
+echo "\n"; 
+// Mayor que >
+var_dump($a > $b);
+var_dump($a > $b2);
+var_dump($c > $d);
+var_dump($c > $b);
+echo "\n"; 
+// Mayor o igual que >=
+var_dump($a >= $b);
+var_dump($a >= $b2);
+var_dump($c >= $d);
+var_dump($c >= $b);
+echo "\n"; 
+// Menor o igual que <=
+var_dump($a <= $b);
+var_dump($a <= $b2);
+var_dump($c <= $d);
+var_dump($c <= $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump($a <=> $b);
+var_dump($a <=> $b2);
+var_dump($c <=> $d);
+var_dump($c <=> $b);
+echo "\n"; 
+// Spaceship <=>
+var_dump(2 <=> 1);
+var_dump(1 <=> 1);
+var_dump(-50 <=> 1);
+echo "\n"; 
+// Funsión de NULL ??
+$edad_de_laura = 55;
+$edad_de_pepito = 23;
+
+echo $edad_de_juanito ?? $edad_de_laura ?? $edad_de_pepito ;
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+bool(true)
+bool(false)
+
+bool(true)
+bool(false)
+
+bool(false)
+bool(true)
+
+bool(false)
+bool(true)
+
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+
+bool(true)
+bool(true)
+bool(false)
+bool(false)
+
+int(0)
+int(-1)
+int(1)
+int(1)
+
+int(1)
+int(0)
+int(-1)
+
+55
+```
+Operadores de asignación
+
+index.php [ = ]:
+```
+<?php
+
+$edad_de_maria = ($edad_de_laura = 25) + 3;
+
+echo "La edad de laura es: $edad_de_laura \n";
+
+echo "La edad de maria es: $edad_de_maria";
+```
+consola:
+```
+❯ php index.php
+La edad de laura es: 25 
+La edad de maria es: 28
+```
+Operadores de incremento 
+
+index.php [ +1 ]:
+```
+<?php
+
+$contador = 1;
+
+$contador = $contador +1 ;
+
+echo $contador . "\n";
+```
+consola:
+```
+❯ php index.php
+2
+```
+
+index.php [ +=1 ]:
+```
+<?php
+
+$contador = 1;
+
+$contador = $contador +=1 ;
+
+echo $contador . "\n";
+```
+consola:
+```
+❯ php index.php
+2
+```
+
+
+index.php [ ++ ]:
+```
+<?php
+
+$contador = 1;
+
+$contador = ++$contador;
+
+echo $contador . "\n";
+```
+consola:
+```
+❯ php index.php
+2
+```
+
+Concadenando una variable dentro de otra variable y un string.
+
+index.php [ ]:
+```
+<?php
+
+$nombre = "Carlos";
+
+$nombre = $nombre . " " . "Santana";
+
+$nombre .= " " . "Santana" . "\n";
+
+echo $nombre;
+```
+consola:
+```
+❯ php index.php
+Carlos Santana Santana
+```
+Convertir segundos a horas con su residuo ingresando dato desde consola.
+
+index.php [ readline( ) ]:
+```
+<?php
+
+$segundos = readline("Ingresa el tiempo en segundos: ");
+
+$horas = (int)($segundos / 3600);
+
+$segundos = (int)($segundos % 3600);
+
+echo $horas . " horas, con " . $segundos . " " . "segundos" . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa el tiempo en segundos: 76501
+21 horas, con 901 segundos
+```
+segundos a horas, minutos y residuo de segundos
+
+index.php:
+```
+<?php
+
+$segundos = readline("Ingresa el tiempo en segundos: ");
+
+$horas = (int)($segundos / 3600);
+
+$segundos = (int)($segundos % 3600);
+
+$minutos = (int)($segundos/60);
+
+$segundos = (int) ($segundos % 60); 
+
+echo $horas . " horas, con " . $minutos . " minutos y ". $segundos . " " . "segundos" . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa el tiempo en segundos: 494949
+137 horas, con 29 minutos y 9 segundos
+```
+horas a segundos
+
+index.php [ ]:
+```
+<?php
+
+$horas = readline("Ingresa el tiempo en horas: ");
+
+$segundos = (int)($horas * 3600);
+
+$horas = (int)($horas % 3600);
+
+echo $horas . " horas, son " . $segundos . " " . "segundos" . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa el tiempo en horas: 2.5
+2 horas, son 9000 segundos
+```
+Horas, munutos y segundos sumados a segundos 
+
+index.php:
+```
+<?php
+
+$horas = readline("Ingresa las horas: ");
+
+$minutos = readline("Ingresa los minutos: ");
+
+$segundos = readline("Ingresa los segundos: ");
+
+$resultado = ($horas * 60 * 60)+($minutos * 60) + $segundos;
+
+echo "El resultado a segundos es de: $resultado segundos." . "\n";
+```
+consola:
+```
+❯ php index.php
+Ingresa las horas: 1
+Ingresa los minutos: 120
+Ingresa los segundos: 1
+El resultado a segundos es de: 10801 segundos.
+```
+Array
+
+index.php [ corchetes ]:
+```
+<?php
+
+$edades = [20, 18, 40];
+
+echo 'primer subindice: ' . $edades[0] . "\n";
+
+echo 'segundo subindice: ' . $edades[1] . "\n";
+
+echo 'tercer subindice: ' . $edades[2] . "\n";
+```
+consola:
+```
+❯ php index.php
+primer subindice: 20
+segundo subindice: 18
+tercer subindice: 40
+```
+
+index.php [ función ]:
+```
+<?php
+
+$edades = array(20, 18, 40);
+
+echo 'primer subindice: ' . $edades[0] . "\n";
+
+echo 'segundo subindice: ' . $edades[1] . "\n";
+
+echo 'tercer subindice: ' . $edades[2] . "\n";
+```
+consola:
+```
+❯ php index.php
+primer subindice: 20
+segundo subindice: 18
+tercer subindice: 40
+```
+Imprimiendo por pantalla un subindice de un array
+
+index.php:
+```
+<?php
+
+$edades = array(20, 18, 40);
+
+echo "Una de las edades que esta dentro es " . $edades[2] . "\n";
+```
+consola:
+```
+❯ php index.php
+Una de las edades que esta dentro es 40
+```
+Array asociativo
+
+index.php:
+```
+<?php
+
+$cafes = array(
+    "Capuccino" => 50,
+    "Latte" => 49,
+    "Americano" => 70
+);
+
+echo "El precio del cafe Americano es de $ {$cafes['Americano']}" . "\n";
+
+```
+consola:
+```
+❯ php index.php
+
+El precio del cafe Americano es de $ 70
+```
+Consulta de variables dentro de aaray 
+
+index.php [ ]:
+```
+<?php
+
+$personas = array(
+    "Carlos" => array(
+        "edad" => 20,
+        "apellido" => "Santana"
+    ),
+    "Mr.Michi" => array(
+        "edad" => 18,
+        "apellido" => "Michisancio"
+    ),
+);
+
+echo "La informacion de Carlos es: Edad: " . $personas["Carlos"]["edad"] . " Apellido: " . $personas["Carlos"]["apellido"] . "\n";
+
+```
+consola:
+```
+❯ php index.php
+La informacion de Carlos es: Edad: 20 Apellido: Santana
+```
+Count - funsion
+
+> Conteo de elementos en un array
+
+index.php:
+```
+<?php
+
+$edades = [18, 22, 40, 34];
+
+echo count($edades) . "\n";
+```
+consola:
+```
+❯ php index.php
+4
+```
+array_push
+
+> insertar un elemento dentro de un array
+
+index.php [ array_push ]:
+```
+<?php
+
+$edades = [18, 22, 40, 46];
+
+array_push($edades, 13);
+
+var_dump($edades);
+```
+consola:
+```
+❯ php index.php
+array(5) {
+  [0]=>
+  int(18)
+  [1]=>
+  int(22)
+  [2]=>
+  int(40)
+  [3]=>
+  int(46)
+  [4]=>
+  int(13)
+}
+```
+is_array
+
+index.php [ is_array ]:
+```
+<?php
+
+$edades = [18, 22, 40, 46];
+
+$no_array = " ";
+
+var_dump (is_array ($edades)) . "\n"; 
+
+var_dump (is_array ($no_array) ) . "\n"; 
+```
+consola:
+```
+❯ php index.php
+bool(true)
+bool(false)
+```
+Manipulación de array's
+
+index.php [ explote ]:
+```
+<?php
+
+$fruits_list = "fresa, cereza, manzana";
+
+$fruits_list_array = explode(",", $fruits_list);
+
+var_dump($fruits_list_array) . "\n";
+```
+consola:
+```
+❯ php index.php
+array(3) {
+  [0]=>
+  string(5) "fresa"
+  [1]=>
+  string(7) " cereza"
+  [2]=>
+  string(8) " manzana"
+}
+```
+
+index.php [ implode ]:
+```
+
+<?php
+
+$fruits_list_array = ["fresa", "cereza", "manzana"];
+
+$fruits_list = implode(",", $fruits_list_array);
+
+var_dump($fruits_list) . "\n";
+```
+consola:
+```
+❯ php index.php
+string(20) "fresa,cereza,manzana"
+```
+POKEMON array
+
+index.php:
+```
+<?php
+
+$pokemon = [
+    
+    "Bulbasur" => array(
+        "element" => "plant",
+        "color" => "green",
+        "food" => array(
+            "favorite" => "salty",
+            "no_favorite" => "sweet",
+        )
+        ),
+
+    "Charmander" => array(
+        "element" => "fire",
+        "color" => "red",
+        "food" => array(
+            "favorite" => "smoky",
+            "no_favorite" => "dry",
+        )
+        ),
+    
+    "Squirtle" => array(
+        "element" => "aqua",
+        "color" => "blue",
+        "food" => array(
+            "favorite" => "sweet",
+            "no_favorite" => "salty",
+        )
+        ),
+    ];
+
+echo "The color of Bulbasur es " . $pokemon["Bulbasur"]["color"] . "\n";
+
+echo "The favorite food of Charmander is " . $pokemon["Charmander"]["food"]["favorite"] . "\n";
+
+echo "Squirtle is " . $pokemon["Squirtle"]["element"] . " element" . "\n";
+```
+consola:
+```
+❯ php index.php
+The color of Bulbasur is green
+The favorite food of Charmander is smoky
+Squirtle is aqua element
+```
+
+MICHI array
+
+index.php:
+```
+<?php
+
+$escuela = array(
+    array(
+        "Nombre" => "MichiJose",
+        "Ocupacion" => "jQuery developer",
+        "Color" => "Blanco con manchas negras",
+        "Comidas" => array(
+            "Favoritas"=> "Pescado, Pollo",
+            "No_favoritas" => "Atún",
+        ),
+    ),
+    array(
+        "Nombre" => "Michisancio",
+        "Ocupacion" => "Amazing developer",
+        "Color" => "Naranja con rayitas",
+        "Comidas" => array(
+            "Favoritas"=> "Lasaña, Atún",
+            "No_favoritas" => "Fresas, Cacahuates",
+        ),
+    ),
+    array(
+        "Nombre" => "Mr. Michi",
+        "Ocupacion" => "PHP developer",
+        "Color" => "night mode",
+        "Comidas" => array(
+            "Favoritas"=> "Pizza, Salmon",
+            "No_favoritas" => "Pollo, Atun",
+        ),
+    ),
+
+
+    );
+
+$michisancio = $escuela[1];
+
+echo "Las comidas favoritas de Michisancio son " . $michisancio["Comidas"]["Favoritas"];
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Las comidas favoritas de Michisancio son Lasaña, Atún
+```
+as condicionale snos ayudan a tomar deciciones respecto al flujo del codigo y de sus multiples variables de interacción.
+
+## if & else
+
+La sentencia **if** nos ayuda a validar una condición, mientrás que la sentencia **else** se cumplira si la anterior es invalidada.
+
+Sintaxis
+.php:
+```
+<?php
+
+if (/* Condición (bool:true, false){
+  // Si la condición se valida, se ejecuta esto.
+}
+else{
+  // Si lo anterior no se cumple, se ejecutara esto.
+}
+```
+
+
+Validar el acceso a una sala de cine según los asientos disponibles
+
+index.php [ validado ]:
+```
+<?php
+
+$asientos_disponibles = 16;
+
+if ($asientos_disponibles > 0 ){
+    echo "Existen asientos disponibles para esta película ";
+
+}
+
+else {
+    echo "Lo sentimos, la sala esta completamente llena";
+}
+
+echo "\n";
+
+```
+consola:
+```
+❯ php index.php
+Existen asientos disponibles para esta película
+```
+
+
+
+index.php [ invalidadndo ]:
+```
+<?php
+
+$asientos_disponibles = 0;
+
+if ($asientos_disponibles > 0 ){
+    echo "Existen asientos disponibles para esta película ";
+
+}
+
+else {
+    echo "Lo sentimos, la sala esta completamente llena";
+}
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Lo sentimos, la sala esta completamente llena
+```
+
+
+
+index.php [ ]:
+```
+<?php
+```
+consola:
+```
+
+```
+
 
 
 
@@ -1467,16 +2622,12 @@ Existen 3 tipos o niveles de normalización de data denominados **Forma Normal 1
     - El atributo *no primo* es implicado por la clave primaria en una secuencia no transitiva.
 
 
-
-
-## Teoría de conjuntos
+#### Teoría de conjuntos
 
 - LEFT JOIN
 - RIGHT JOIN
 
-## Bases de datos <a name='id10'></a>
-
-### Entidades y atributos.
+#### Entidades y atributos.
 
 Una entidad es la representación de un objeto o la abstracción de el, objetos que contienen implicitamente atributos que contienen valores los cuales son particulariedades y que les hacen ser un objeto espesifico.
 
