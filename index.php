@@ -642,6 +642,10 @@ echo "El precio del cafe Americano es de $ {$cafes['Americano']}" . "\n";
 
 
 
+/* 
+
+// 28.Consulta de variables dentro de array 
+
 $personas = array(
 
     "Carlos" => array(
@@ -656,21 +660,206 @@ $personas = array(
 
 );
 
-echo "La informacion de Mr. Michi es: Edad: " . $personas["Mr.Michi"]["edad"] . " Apellido: " . $personas["Mr.Michi"]["apellido"];
+echo "La informacion de Carlos es: Edad: " . $personas["Carlos"]["edad"] . " Apellido: " . $personas["Carlos"]["apellido"];
+
+*/
 
 
 
 
-// count
 
-/* $edades = [18, 22, 40, 34];
+/* 
+
+// 29.count
+
+$edades = [18, 22, 40, 34];
 
 echo count($edades);
 
+echo "\n";
+
+*/
 
 
-echo "\n";  */
+
+
+/* 
+
+// 30.array_push
+
+$edades = [18, 22, 40, 46];
+
+array_push($edades, 13);
+
+var_dump($edades); 
+
+*/
 
 
 
-// -------------------     ------------------- //
+/* 
+
+// is_array
+
+$edades = [18, 22, 40, 46];
+
+$no_array = " ";
+
+var_dump (is_array ($edades)) . "\n"; 
+
+var_dump (is_array ($no_array) ) . "\n"; 
+
+*/
+
+
+
+// explote & implode
+
+# la función explote e implote convierte strigns a array y viceversa
+
+/* 
+
+$fruits_list = "fresa, cereza, manzana";
+
+$fruits_list_array = explode(",", $fruits_list);
+
+var_dump($fruits_list_array) . "\n";
+
+*/
+
+/* 
+
+
+$fruits_list_array = ["fresa", "cereza", "manzana"];
+
+$fruits_list = implode(",", $fruits_list_array);
+
+var_dump($fruits_list) . "\n";
+
+*/
+
+
+
+
+/* 
+
+// 31.POKEMON array
+$pokemon = [
+    
+    "Bulbasur" => array(
+        "element" => "plant",
+        "color" => "green",
+        "food" => array(
+            "favorite" => "salty",
+            "no_favorite" => "sweet",
+        )
+        ),
+
+    "Charmander" => array(
+        "element" => "fire",
+        "color" => "red",
+        "food" => array(
+            "favorite" => "smoky",
+            "no_favorite" => "dry",
+        )
+        ),
+    
+    "Squirtle" => array(
+        "element" => "aqua",
+        "color" => "blue",
+        "food" => array(
+            "favorite" => "sweet",
+            "no_favorite" => "salty",
+        )
+        ),
+    ];
+
+echo "The color of Bulbasur is " . $pokemon["Bulbasur"]["color"] . "\n";
+
+echo "The favorite food of Charmander is " . $pokemon["Charmander"]["food"]["favorite"] . "\n";
+
+echo "Squirtle is " . $pokemon["Squirtle"]["element"] . " element" . "\n";
+
+*/
+
+
+
+
+
+/* 
+
+// 32.MICHIS array
+
+$escuela = array(
+    array(
+        "Nombre" => "MichiJose",
+        "Ocupacion" => "jQuery developer",
+        "Color" => "Blanco con manchas negras",
+        "Comidas" => array(
+            "Favoritas"=> "Pescado, Pollo",
+            "No_favoritas" => "Atún",
+        ),
+    ),
+    array(
+        "Nombre" => "Michisancio",
+        "Ocupacion" => "Amazing developer",
+        "Color" => "Naranja con rayitas",
+        "Comidas" => array(
+            "Favoritas"=> "Lasaña, Atún",
+            "No_favoritas" => "Fresas, Cacahuates",
+        ),
+    ),
+    array(
+        "Nombre" => "Mr. Michi",
+        "Ocupacion" => "PHP developer",
+        "Color" => "night mode",
+        "Comidas" => array(
+            "Favoritas"=> "Pizza, Salmon",
+            "No_favoritas" => "Pollo, Atun",
+        ),
+    ),
+
+
+    );
+
+$michisancio = $escuela[1];
+
+echo "Las comidas favoritas de Michisancio son " . $michisancio["Comidas"]["Favoritas"];
+
+echo "\n";
+
+*/
+
+
+
+// Validar el acceso a una sala de cine según los asientos disponibles.
+
+$asientos = 55;
+$asientos_disponibles = true;
+$asientos_por_terminar = true;
+$un_asiento = $asientos = true;
+
+
+if ($asientos > 6 ){
+    echo "Existen asientos disponibles para esta película ";
+
+}
+
+
+
+elseif($asientos  < 5 ){
+    echo "Los asientos están por terminarse!!";
+}
+
+elseif($asientos == 1){
+    echo "Solo queda un asiento en existencia";
+}
+
+else {
+    echo "Lo sentimos, la sala esta completamente llena";
+}
+
+echo "\n";
+
+
+

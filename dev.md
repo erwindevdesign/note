@@ -2227,7 +2227,7 @@ index.php:
 ```
 <?php
 
-edades = array(20, 18, 40);
+$edades = array(20, 18, 40);
 
 echo "Una de las edades que esta dentro es " . $edades[2] . "\n";
 ```
@@ -2241,11 +2241,326 @@ Array asociativo
 index.php:
 ```
 <?php
+
+$cafes = array(
+    "Capuccino" => 50,
+    "Latte" => 49,
+    "Americano" => 70
+);
+
+echo "El precio del cafe Americano es de $ {$cafes['Americano']}" . "\n";
+
 ```
 consola:
 ```
+❯ php index.php
+
+El precio del cafe Americano es de $ 70
+```
+Consulta de variables dentro de aaray 
+
+index.php [ ]:
+```
+<?php
+
+$personas = array(
+    "Carlos" => array(
+        "edad" => 20,
+        "apellido" => "Santana"
+    ),
+    "Mr.Michi" => array(
+        "edad" => 18,
+        "apellido" => "Michisancio"
+    ),
+);
+
+echo "La informacion de Carlos es: Edad: " . $personas["Carlos"]["edad"] . " Apellido: " . $personas["Carlos"]["apellido"] . "\n";
 
 ```
+consola:
+```
+❯ php index.php
+La informacion de Carlos es: Edad: 20 Apellido: Santana
+```
+Count - funsion
+
+> Conteo de elementos en un array
+
+index.php:
+```
+<?php
+
+$edades = [18, 22, 40, 34];
+
+echo count($edades) . "\n";
+```
+consola:
+```
+❯ php index.php
+4
+```
+array_push
+
+> insertar un elemento dentro de un array
+
+index.php [ array_push ]:
+```
+<?php
+
+$edades = [18, 22, 40, 46];
+
+array_push($edades, 13);
+
+var_dump($edades);
+```
+consola:
+```
+❯ php index.php
+array(5) {
+  [0]=>
+  int(18)
+  [1]=>
+  int(22)
+  [2]=>
+  int(40)
+  [3]=>
+  int(46)
+  [4]=>
+  int(13)
+}
+```
+is_array
+
+index.php [ is_array ]:
+```
+<?php
+
+$edades = [18, 22, 40, 46];
+
+$no_array = " ";
+
+var_dump (is_array ($edades)) . "\n"; 
+
+var_dump (is_array ($no_array) ) . "\n"; 
+```
+consola:
+```
+❯ php index.php
+bool(true)
+bool(false)
+```
+Manipulación de array's
+
+index.php [ explote ]:
+```
+<?php
+
+$fruits_list = "fresa, cereza, manzana";
+
+$fruits_list_array = explode(",", $fruits_list);
+
+var_dump($fruits_list_array) . "\n";
+```
+consola:
+```
+❯ php index.php
+array(3) {
+  [0]=>
+  string(5) "fresa"
+  [1]=>
+  string(7) " cereza"
+  [2]=>
+  string(8) " manzana"
+}
+```
+
+index.php [ implode ]:
+```
+
+<?php
+
+$fruits_list_array = ["fresa", "cereza", "manzana"];
+
+$fruits_list = implode(",", $fruits_list_array);
+
+var_dump($fruits_list) . "\n";
+```
+consola:
+```
+❯ php index.php
+string(20) "fresa,cereza,manzana"
+```
+POKEMON array
+
+index.php:
+```
+<?php
+
+$pokemon = [
+    
+    "Bulbasur" => array(
+        "element" => "plant",
+        "color" => "green",
+        "food" => array(
+            "favorite" => "salty",
+            "no_favorite" => "sweet",
+        )
+        ),
+
+    "Charmander" => array(
+        "element" => "fire",
+        "color" => "red",
+        "food" => array(
+            "favorite" => "smoky",
+            "no_favorite" => "dry",
+        )
+        ),
+    
+    "Squirtle" => array(
+        "element" => "aqua",
+        "color" => "blue",
+        "food" => array(
+            "favorite" => "sweet",
+            "no_favorite" => "salty",
+        )
+        ),
+    ];
+
+echo "The color of Bulbasur es " . $pokemon["Bulbasur"]["color"] . "\n";
+
+echo "The favorite food of Charmander is " . $pokemon["Charmander"]["food"]["favorite"] . "\n";
+
+echo "Squirtle is " . $pokemon["Squirtle"]["element"] . " element" . "\n";
+```
+consola:
+```
+❯ php index.php
+The color of Bulbasur is green
+The favorite food of Charmander is smoky
+Squirtle is aqua element
+```
+
+MICHI array
+
+index.php:
+```
+<?php
+
+$escuela = array(
+    array(
+        "Nombre" => "MichiJose",
+        "Ocupacion" => "jQuery developer",
+        "Color" => "Blanco con manchas negras",
+        "Comidas" => array(
+            "Favoritas"=> "Pescado, Pollo",
+            "No_favoritas" => "Atún",
+        ),
+    ),
+    array(
+        "Nombre" => "Michisancio",
+        "Ocupacion" => "Amazing developer",
+        "Color" => "Naranja con rayitas",
+        "Comidas" => array(
+            "Favoritas"=> "Lasaña, Atún",
+            "No_favoritas" => "Fresas, Cacahuates",
+        ),
+    ),
+    array(
+        "Nombre" => "Mr. Michi",
+        "Ocupacion" => "PHP developer",
+        "Color" => "night mode",
+        "Comidas" => array(
+            "Favoritas"=> "Pizza, Salmon",
+            "No_favoritas" => "Pollo, Atun",
+        ),
+    ),
+
+
+    );
+
+$michisancio = $escuela[1];
+
+echo "Las comidas favoritas de Michisancio son " . $michisancio["Comidas"]["Favoritas"];
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Las comidas favoritas de Michisancio son Lasaña, Atún
+```
+as condicionale snos ayudan a tomar deciciones respecto al flujo del codigo y de sus multiples variables de interacción.
+
+## if & else
+
+La sentencia **if** nos ayuda a validar una condición, mientrás que la sentencia **else** se cumplira si la anterior es invalidada.
+
+Sintaxis
+.php:
+```
+<?php
+
+if (/* Condición (bool:true, false){
+  // Si la condición se valida, se ejecuta esto.
+}
+else{
+  // Si lo anterior no se cumple, se ejecutara esto.
+}
+```
+
+
+Validar el acceso a una sala de cine según los asientos disponibles
+
+index.php [ validado ]:
+```
+<?php
+
+$asientos_disponibles = 16;
+
+if ($asientos_disponibles > 0 ){
+    echo "Existen asientos disponibles para esta película ";
+
+}
+
+else {
+    echo "Lo sentimos, la sala esta completamente llena";
+}
+
+echo "\n";
+
+```
+consola:
+```
+❯ php index.php
+Existen asientos disponibles para esta película
+```
+
+
+
+index.php [ invalidadndo ]:
+```
+<?php
+
+$asientos_disponibles = 0;
+
+if ($asientos_disponibles > 0 ){
+    echo "Existen asientos disponibles para esta película ";
+
+}
+
+else {
+    echo "Lo sentimos, la sala esta completamente llena";
+}
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Lo sentimos, la sala esta completamente llena
+```
+
+
 
 index.php [ ]:
 ```
@@ -2255,61 +2570,6 @@ consola:
 ```
 
 ```
-
-index.php [ ]:
-```
-<?php
-```
-consola:
-```
-
-```
-
-index.php [ ]:
-```
-<?php
-```
-consola:
-```
-
-```
-
-index.php [ ]:
-```
-<?php
-```
-consola:
-```
-
-```
-
-index.php [ ]:
-```
-<?php
-```
-consola:
-```
-
-```
-
-index.php [ ]:
-```
-<?php
-```
-consola:
-```
-
-```
-
-index.php [ ]:
-```
-<?php
-```
-consola:
-```
-
-```
-
 
 
 
