@@ -3,9 +3,12 @@
 echo "PHP es un lenguaje de programación que ocupa más del 70 % de los lenguajes que se utilizan en el desarrollo web";
 echo "\n";
 echo "\n";
-echo "Los ejercicios presentados son referencia del aprendisaje del lenguaje PHP y pretende presentar una recapitulación de ellos a modo de tutorial y antecedente del apre disaje obtenido";
+echo "Los ejercicios presentados son referencia del aprendisaje del lenguaje PHP y pretende presentar una recapitulación de ellos a modo de tutorial y antecedente del aprendisaje obtenido";
 echo "\n\n"; 
-
+echo "Ejercicio 1 - imprimir por pantalla texto"
+echo "\n\n";
+echo "La función "echo" realiza la impresión que cotenga la sentencia"
+echo 
 
 
 // echo "hola \n mami \n" ; 
