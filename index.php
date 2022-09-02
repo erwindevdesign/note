@@ -832,26 +832,26 @@ echo "\n";
 
 
 
-// Validar el acceso a una sala de cine según los asientos disponibles.
-
-$asientos = 55;
-$asientos_disponibles = true;
-$asientos_por_terminar = true;
-$un_asiento = $asientos = true;
 
 
-if ($asientos > 6 ){
+/* 
+
+// 33.Validar el acceso a una sala de cine según los asientos disponibles.
+
+$asientos_disponibles = 0;
+$por_terminar = false;
+$solo_uno = false;
+
+if ($asientos_disponibles > 0 ){
     echo "Existen asientos disponibles para esta película ";
 
 }
 
-
-
-elseif($asientos  < 5 ){
+elseif( $por_terminar == true){
     echo "Los asientos están por terminarse!!";
 }
 
-elseif($asientos == 1){
+elseif($solo_uno){
     echo "Solo queda un asiento en existencia";
 }
 
@@ -861,5 +861,319 @@ else {
 
 echo "\n";
 
+*/
+
+
+
+
+
+/* 
+// Laura: blue
+// MAria: red
+// Oscar: purple
+// Luis: green
+// Omar: brown
+
+
+$favorite_color = 5;
+
+switch( $favorite_color ){
+
+    case 1:
+        echo "a Laura le gusta el color AZUL";
+        break;
+        
+    case 2:
+        echo "a Maria le gusta el color ROJO";
+        break;
+    
+    case 3:
+        echo "a Oscar le gusta el color PURPURA";
+        break;
+
+    case 4:
+        echo "a Luis le gusta el color VERDE";
+        break;
+
+    case 5:
+        echo "a Omar le gusta el color CAFE";
+        break;
+
+    default:
+        echo "Ese usuario aún no ha es agregado";
+
+}
+
+echo "\n";
+
+*/
+
+
+
+
+
+/*
+ 
+Plataforma 
+
+donaciones de se retiran a partir de $100
+
+pedir al cartera_digital cuanto dinero tiene y tomar la desicion de retirar o no retirar
+
+
+
+1. validar cantidad en cartera-digital
+
+2. validar si supera o no los $100
+
+3. retirar x cantidad
+
+4. restar x cantidad de la cuenta 
+
+5. mostrar restante en cuenta
+
+6. dar las gracias
+
+$cantidad_cartera
+$usuario
+
+*/
+
+/* 
+
+$usuario = readline("¿Cual es tu No. de usuario? ");
+
+var_dump($usuario . "\n");
+
+echo "\n";
+
+$user = $cartera[$usuario][number];
+
+var_dump($user . "\n");
+
+
+
+
+
+$cartera = [
+    
+    "usuario1" => array(
+        "nombre" => "Oscar",
+        "username" => "Ocarin",
+        "number" => 1,
+        "saldo" => "$120",
+    ),
+
+    "usuario2" => array(
+        "nombre" => "Maria",
+        "username" => "MERYJANE",
+        "number" => 2,
+        "saldo" =>"$20",
+    ),
+
+    "usuario3" => array(
+        "nombre" => "Eduardo",
+        "username" => "LALO",
+        "number" => 3,
+        "saldo" => "$1200",
+    ),
+
+
+
+
+];
+
+ 
+switch($nombre){
+
+    case 1:
+        echo "Hola " . $usuario["username"] . " tu saldo es de: " . $usuario[saldo] . "\n";
+        break;
+        
+    default:
+        echo "Este usuario aún no ha es agregado";
+}
+
+echo "\n";
+ 
+*/
+
+
+
+
+/* 
+// 34.Retiro de donaciones
+
+$cantidad_donaciones = readline("Por favor, ingresa la cantidad de donaciones acumuladas con las que cuentas: ");
+
+if ($cantidad_donaciones >= 100){
+    echo "Tu retiro está en proceso ... ";
+}
+
+else {
+    echo "Lo sentimos, NO cuentas con la cantidad suficiente para el retiro.";
+}
+
+echo "\n";
+
+*/
+
+
+/* 
+// 35.Ciclo while
+
+$contador = 0;
+
+while($contador <= 10){
+    echo "Iteración No. $contador \n";
+    $contador++;
+
+}
+echo "\n";
+
+ */
+
+/* 
+ // Ciclo Do ... While
+
+ $usernames = ["Alana", "Josse", "Peach"];
+
+ var_dump ($usernames) . "\n" ;
+
+ do{
+    $username = readline("Ingresa el nombre de usuario: ");
+
+    
+    
+    echo "\n";
+
+ } while(in_array($username, $usernames));
+ 
+ array_push($usernames, $username);
+
+ var_dump ($usernames) . "\n" ;
+
+
+ echo "\n";
+
+  */
+
+
+
+
+
+
+
+/* 
+// 36.Ciclo for and for-revert
+
+  
+
+for ($contador = 0; $contador <= 10; $contador++ ){
+    
+    echo $contador . "\n";
+}
+
+echo "\n";
+
+
+
+for ($contador = 10; $contador >= 0; $contador-- ){
+    
+    echo $contador . "\n";
+}
+
+echo "\n"; */
+
+
+
+/* 
+// for complejo, incremento de $i en 1 e incremento de $j en 2
+
+for ($i = 0, $j = 0; $i < 10; $i++ , $j += 2){
+    echo "i = $i j = $j" . "\n";
+
+}
+
+echo "\n";
+
+
+for ($count = 0, $count2 = 0; $count < 10; $count++ , $count2 += 2){
+    echo "count+1 = $count y countx2 = $count2" . "\n";
+
+}
+
+ */
+
+
+/* 
+// foreach
+
+$cafe_list = [
+    "Americano" => 20,
+    "Latte" => 25,
+    "Capuccino" => 28.9,
+    "Mocca" => 31
+];
+
+var_dump($cafe_list);
+
+echo "\n";
+
+foreach($cafe_list as $cafe => $price){
+    echo "El cafe $cafe cuesta $$price USD \n";
+}
+
+echo "\n";
+
+ */
+
+
+/* 
+// foreach con break
+
+$cafe_list = [
+    "Americano" => 20,
+    "Latte" => 25,
+    "Olla from Chiapas" => 50,
+    "Capuccino" => 28.9,
+    "Mocca" => 31
+];
+
+var_dump($cafe_list);
+
+echo "\n";
+
+foreach ( $cafe_list as $cafe => $precio ) {
+    
+    if($cafe == "Olla from Chiapas") {
+        continue;
+    }
+    echo "El café $cafe, es más economico! \n";
+}
+
+echo "\n";
+
+ */
+
+// resolución 
+
+# Existe una variedad de tienedas en la ciudad conectadas por 
+# dos tipos de cainos diferentes para llegar, uno por calles 
+# pabimentadas y otra por ciclopistas, si partimos siempre de 
+# la tiendo 1, cuantos caminos existen para llegar a las demás
+# tiendas según el grafico.
+
+# 1.conteo de casos de uso en el problema
+/* 
+2 --> 1
+3 --> 2
+4 --> 3
+5 --> 5
+6 --> 8
+7 --> 13
+8 --> 21
+ */
+# 2.identificar, si es que existen patrones en la diagramación del problema
 
 
