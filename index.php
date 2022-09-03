@@ -1156,7 +1156,7 @@ echo "\n";
 
  */
 
-// resolución 
+// solución Reto: ¿cuántos caminos hay para llegar al mismo punto?
 
 # Existe una variedad de tienedas en la ciudad conectadas por 
 # dos tipos de cainos diferentes para llegar, uno por calles 
@@ -1174,6 +1174,160 @@ echo "\n";
 7 --> 13
 8 --> 21
  */
+
+/*  
 # 2.identificar, si es que existen patrones en la diagramación del problema
+
+// suceción de fibonacci <--- **
+
+$numero_de_tienda = (int) readline("Que número de tienda deseas ubicar: ");
+$anterior = 0;
+$actual = 1;
+
+for ($i = 2; $i <= $numero_de_tienda; $i++) { 
+
+    $temporal = $actual;
+    $actual += $anterior;
+    $anterior = $temporal;
+
+}
+
+echo "Existen $actual formas distintas  de llegar";
+
+echo "\n";
+
+ */
+
+
+// funciones
+
+/* function get_pokemon(){
+    
+    $numero_aleatorio = rand (1, 5);
+
+    switch($numero_aleatorio){
+
+        case 1:
+            echo "Picachu\n";
+            break;
+        case 2:
+            echo "Bulbasaur\n";
+            break;
+        case 3:
+            echo "Mew\n";
+            break;
+
+        default:
+        echo "Lo sentimos, no existe un pokemon aún!\n";
+    }
+}
+
+for ($i=0; $i < 20; $i++) { 
+    get_pokemon();
+}
+
+echo "\n";
+ */
+/* 
+// funcion estudiante legent
+
+function legent($rank){
+    if($rank >= 20000){
+        echo "Hello LEGEND !! \n";
+    }
+    else{
+        echo "sorry student, you not is legend user! \n";
+    }
+}
+
+do{
+    $user = (int) readline("How many points does your user have? \n");
+    legent ($user);
+}
+
+while(true);
+
+echo "\n"; */
+
+/* 
+// definir parametros por defecto en una funcion
+
+function suma($a = 1, $b = 1){
+    echo "La suma de $a + $b es: " . $a + $b . "\n";
+} 
+
+suma();
+suma(1,0);
+suma(1,55);
+
+echo "\n";
+ */
+
+
+/* 
+// unpacking
+
+$array1 = [1,2,3];
+$array2 = [4,5,6];
+
+$resultado = [...$array1, ...$array2];
+
+var_dump($resultado);
+
+echo "\n";
+
+ */
+
+/* 
+ // Definir parametros con unpacking
+
+function suma($a, $b){
+    echo "La suma de $a + $b es: " . $a + $b . "\n";
+} 
+
+$num = [1,2];
+$num0 = [55,345];
+$num1 = [100000, 1];
+
+suma(...$num);
+suma(...$num0);
+suma(...$num1);
+
+
+echo "\n";
+ */
+
+
+ /* 
+ function suma_iteractive(...$params){
+    var_dump($params);
+ }
+
+ suma_iteractive(1,2);
+ suma_iteractive(1000,2000,10,5000,8000);
+ suma_iteractive(651,231632, 64, 313, 6498 ,8, 315, 54, 78);
+
+ echo "\n";
+
+ */
+
+/* 
+function suma_iteractive(...$params){
+    
+    $suma = 0;
+
+    foreach ($params as $numero){
+        $suma += $numero;
+    }
+
+    echo "El resultado de la suma es: $suma \n";
+ }
+
+ suma_iteractive(1,2);
+ suma_iteractive(1000,2000,10,5000,8000);
+ suma_iteractive(651,231632, 64, 313, 6498 ,8, 315, 54, 78);
+
+ echo "\n";
+ */
 
 

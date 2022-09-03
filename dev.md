@@ -3446,11 +3446,388 @@ index.php
 ```
 <?php
 
+$numero_de_tienda = (int) readline("Que número de tienda deseas ubicar: ");
+$anterior = 0;
+$actual = 1;
 
+for ($i = 2; $i <= $numero_de_tienda; $i++) { 
+
+    $temporal = $actual;
+    $actual += $anterior;
+    $anterior = $temporal;
+
+}
+
+echo "Existen $actual formas distintas  de llegar";
+
+echo "\n";
 ```
 
 consola:
 
+```
+❯ php index.php
+Que número de tienda deseas ubicar: 22
+Existen 17711 formas distintas  de llegar
+```
+
+Función get_pokemon
+
+index.php [funcion]
+```
+<?php
+ 
+function get_pokemon(){
+    
+    $numero_aleatorio = rand (1, 5);
+
+    switch($numero_aleatorio){
+
+        case 1:
+            echo "Picachu\n";
+            break;
+        case 2:
+            echo "Bulbasaur\n";
+            break;
+        case 3:
+            echo "Mew\n";
+            break;
+
+        default:
+        echo "Lo sentimos, no existe un pokemon aún!\n";
+    }
+}
+
+get_pokemon();
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Picachu
+```
+```
+
+function get_pokemon(){
+    
+    $numero_aleatorio = rand (1, 5);
+
+    switch($numero_aleatorio){
+
+        case 1:
+            echo "Picachu\n";
+            break;
+        case 2:
+            echo "Bulbasaur\n";
+            break;
+        case 3:
+            echo "Mew\n";
+            break;
+
+        default:
+        echo "Lo sentimos, no existe un pokemon aún!\n";
+    }
+}
+
+for ($i=0; $i < 20; $i++) { 
+    get_pokemon();
+}
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Bulbasaur
+Lo sentimos, no existe un pokemon aún!
+Mew
+Mew
+Mew
+Mew
+Bulbasaur
+Bulbasaur
+Picachu
+Lo sentimos, no existe un pokemon aún!
+Bulbasaur
+Lo sentimos, no existe un pokemon aún!
+Lo sentimos, no existe un pokemon aún!
+Lo sentimos, no existe un pokemon aún!
+Lo sentimos, no existe un pokemon aún!
+Lo sentimos, no existe un pokemon aún!
+Mew
+Bulbasaur
+Mew
+Bulbasaur
+```
+función: estudiante legent
+
+index.php
+```
+<?php
+
+function legent($rank){
+    if($rank >= 20000){
+        echo "Hello LEGEND !! \n";
+    }
+    else{
+        echo "sorry student, you not is legend user! \n";
+    }
+}
+
+do{
+    $user = (int) readline("How many points does your user have? \n");
+    legent ($user);
+}
+
+while(true);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+How many points does your user have? 200
+sorry student, you not is legend user! 
+How many points does your user have? 20000
+Hello LEGEND !! 
+How many points does your user have? 3000
+sorry student, you not is legend user! 
+How many points does your user have? 464646
+Hello LEGEND !! 
+How many points does your user have? 555555
+Hello LEGEND !! 
+How many points does your user have?
+```
+### Valor por defecto en funcion
+
+index.php
+```
+<?php
+
+function suma($a = 1, $b = 1){
+    echo "La suma de $a + $b es: " . $a + $b . "\n";
+} 
+
+suma();
+suma(1,0);
+suma(1,55);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+La suma de 1 + 1 es: 2
+La suma de 1 + 0 es: 1
+La suma de 1 + 55 es: 56
+```
+unpacking
+
+index.php
+```
+<?php
+
+$array1 = [1,2,3];
+$array2 = [4,5,6];
+
+$resultado = [...$array1, ...$array2];
+
+var_dump($resultado);
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+array(6) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+  [2]=>
+  int(3)
+  [3]=>
+  int(4)
+  [4]=>
+  int(5)
+  [5]=>
+  int(6)
+}
+```
+Definir parametros con unpacking
+
+index.php
+```
+<?php
+
+function suma($a, $b){
+    echo "La suma de $a + $b es: " . $a + $b . "\n";
+} 
+
+$num = [1,2];
+$num0 = [55,345];
+$num1 = [100000, 1];
+
+suma(...$num);
+suma(...$num0);
+suma(...$num1);
+
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+La suma de 1 + 2 es: 3
+La suma de 55 + 345 es: 400
+La suma de 100000 + 1 es: 100001
+```
+Parametros dinámicos
+
+index.php
+```
+<?php
+
+ function suma_iteractive(...$params){
+    var_dump($params);
+ }
+
+/*  suma_iteractive(1,2); */
+ /* suma_iteractive(1000,2000,10,5000,8000); */
+ suma_iteractive(651,231632, 64, 313, 6498 ,8, 315, 54, 78);
+
+ echo "\n";
+```
+consola:
+```
+❯ php index.php
+array(2) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+}
+
+❯ php index.php
+array(5) {
+  [0]=>
+  int(1000)
+  [1]=>
+  int(2000)
+  [2]=>
+  int(10)
+  [3]=>
+  int(5000)
+  [4]=>
+  int(8000)
+}
+
+❯ php index.php
+array(9) {
+  [0]=>
+  int(651)
+  [1]=>
+  int(231632)
+  [2]=>
+  int(64)
+  [3]=>
+  int(313)
+  [4]=>
+  int(6498)
+  [5]=>
+  int(8)
+  [6]=>
+  int(315)
+  [7]=>
+  int(54)
+  [8]=>
+  int(78)
+}
+```
+index.php
+```
+<?php
+
+function suma_iteractive(...$params){
+    
+    $suma = 0;
+
+    foreach ($params as $numero){
+        $suma += $numero;
+    }
+
+    echo "El resultado de la suma es: $suma \n";
+ }
+
+ suma_iteractive(1,2);
+ suma_iteractive(1000,2000,10,5000,8000);
+ suma_iteractive(651,231632, 64, 313, 6498 ,8, 315, 54, 78);
+
+ echo "\n";
+```
+consola:
+```
+❯ php index.php
+El resultado de la suma es: 3 
+El resultado de la suma es: 16010 
+El resultado de la suma es: 239613
+```
+
+
+
+
+
+
+
+
+index.php
+```
+<?php
+
+
+```
+consola:
+```
+
+```
+index.php
+```
+<?php
+
+
+```
+consola:
+```
+
+```
+index.php
+```
+<?php
+
+
+```
+consola:
+```
+
+```
+index.php
+```
+<?php
+
+
+```
+consola:
+```
+
+```
+index.php
+```
+<?php
+
+
+```
+consola:
 ```
 
 ```
