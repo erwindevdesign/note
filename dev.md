@@ -3773,10 +3773,116 @@ El resultado de la suma es: 3
 El resultado de la suma es: 16010 
 El resultado de la suma es: 239613
 ```
+return
+
+index.php
+```
+<?php
+
+function aleatory(){
+
+    $aleatory_num = rand(1,4);
+
+    $sentence = " ";
+
+    switch($aleatory_num){
+        case 1:
+            $sentence = "Hello here! \n";
+            break;
+        
+        case 2:
+            $sentence = "Howdy!! :) \n";
+            break;
+        
+        case 3:
+            $sentence = "Good to see you \n";
+            break;
+
+        case 4:
+            $sentence = "What's going on? \n";
+            break;
+
+        
+    }  
+
+    return $sentence; 
+
+}
+
+echo aleatory();
 
 
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Good to see you 
 
+❯ php index.php
+Hello here! 
 
+❯ php index.php
+Howdy!! :)
+```
+Ordenar un array con usort / operador <=>
+
+index.php
+```
+<?php
+
+$precios = [12, 55, 69, 42, 23, 25, 20, 15];
+
+usort($precios, function($a, $b){
+    return $a <=> $b;
+});
+
+var_dump($precios);
+```
+consola:
+```
+❯ php index.php
+array(8) {
+  [0]=>
+  int(12)
+  [1]=>
+  int(15)
+  [2]=>
+  int(20)
+  [3]=>
+  int(23)
+  [4]=>
+  int(25)
+  [5]=>
+  int(42)
+  [6]=>
+  int(55)
+  [7]=>
+  int(69)
+}
+```
+Regresa la hora por pantalla
+
+index.php
+```
+<?php
+
+function hora(){
+    return date("h:i a");
+}
+
+echo "Función que regresa la hora por pantalla \n";
+
+echo "La hora exacta es: " . hora();
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+Función que regresa la hora por pantalla 
+La hora exacta es: 06:28 am
+```
 
 
 

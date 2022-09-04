@@ -1331,3 +1331,102 @@ function suma_iteractive(...$params){
  */
 
 
+/* 
+// return
+
+function aleatory(){
+
+    $aleatory_num = rand(1,4);
+
+    $sentence = " ";
+
+    switch($aleatory_num){
+        case 1:
+            $sentence = "Hello here! \n";
+            break;
+        
+        case 2:
+            $sentence = "Howdy!! :) \n";
+            break;
+        
+        case 3:
+            $sentence = "Good to see you \n";
+            break;
+
+        case 4:
+            $sentence = "What's going on? \n";
+            break;
+
+        
+    }  
+
+    return $sentence; 
+
+}
+
+echo aleatory();
+
+
+echo "\n";
+ */
+
+/* 
+// operador de nave espacial - ordenar un array con usort
+
+$precios = [12, 55, 69, 42, 23, 25, 20, 15];
+
+usort($precios, function($a, $b){
+    return $a <=> $b;
+});
+
+var_dump($precios);
+ */
+
+
+
+/*  
+// Hora por pantalla
+
+function hora(){
+    return date("h:i a");
+}
+
+echo "Función que regresa la hora por pantalla \n";
+
+echo "La hora exacta es: " . hora();
+
+echo "\n";
+ */
+
+
+// Hangedman game
+
+$words = ["Dinosaurio", "Parque", "Princesa", "Arbol", "Campana", "Amor", "Comer", "Escuela"];
+
+define("MAX_ATTEMPS", 6);
+
+echo "Hangedman-game \n\n";
+
+// preview
+
+$choose_word = $words[rand(0,7)];
+$choose_word = strtolower($choose_word);
+$word_length = strlen($choose_word);
+$discovery_letters = str_pad("", $word_length, "_");
+$attempts = 0;
+
+echo "Palabra de $word_length letas \n\n"; 
+echo $discovery_letters . "\n\n";
+
+// writing
+
+$player_letter = readline("Escribe una letra: ");
+$player_letter = strtolower($player_letter);
+
+// validete
+
+if
+
+
+
+echo "\n";
