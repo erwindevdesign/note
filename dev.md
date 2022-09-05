@@ -3883,20 +3883,404 @@ consola:
 Función que regresa la hora por pantalla 
 La hora exacta es: 06:28 am
 ```
+Hangedman game
+
+index.php
+```
+<?php
+
+function clear(){
+    if(PHP_OS === "WINNT"){
+        system("cls");
+    }
+    else{
+        system("clear");
+    }
+}
 
 
+$words = ["Dinosaurio", "Parque", "Princesa", "Arbol", "Campana", "Amor", "Comer", "Escuela"];
 
+define("MAX_ATTEMPS", 6);
+
+echo "Hangedman-game \n\n";
+
+// preview
+
+$choose_word = $words[rand(0,7)];
+$choose_word = strtolower($choose_word);
+$word_length = strlen($choose_word);
+$discovery_letters = str_pad("", $word_length, "_");
+$attempts = 0;
+
+do {
+
+    echo "Palabra de $word_length letas \n\n"; 
+    echo $discovery_letters . "\n\n";
+    
+    // writing
+    
+    $player_letter = readline("Escribe una letra: ");
+    $player_letter = strtolower($player_letter);
+    
+    // validete
+    
+    if (str_contains($choose_word, $player_letter)){
+        $offset = 0;
+        while(
+            
+            ($letter_position = strpos($choose_word, $player_letter,$offset) )!== false
+            
+            ){
+            
+            $discovery_letters[$letter_position] = $player_letter;
+            $offset = $letter_position + 1; 
+        }
+    }
+    else{
+    
+        clear();    
+        $attempts++;
+        echo "Letra incorrecta";
+        echo "Te quedán " . (MAX_ATTEMPS - $attempts) . " intentos";
+        sleep(3);
+    }
+    
+        
+} while ($attempts < MAX_ATTEMPS && $discovery_letters != $choose_word);
+
+clear();
+
+if ($attempts > MAX_ATTEMPS){
+    echo "Congratulations!! \n";
+    echo "Your complete this sentence \n";
+}
+else{
+    echo "Game-Over \n";
+}
+
+echo "La palabra es; $choose_word  \n";
+echo "Tú destapaste: $discovery_letters";
+
+echo "\n";
+```
+consola:
+```
+Game-Over 
+La palabra es; amor  
+Tú destapaste: amor
+```
+
+
+### CURSO PRACTICO PHP
+
+Operadores logicos
+
+| example | name | result |
+| -- | -- | -- |
+| $valorA and $valorB | and | true si el valor A y el valor B son true |
+| $valorA or $valorB | or | true si el valor A o el valor B son true |
+| $valorA xor $valorB | xor | true si uno de los valores son true, pero no ambos |
+| !$valorA | not | true si el valor A es false |
+| $valorA && valorB | and | true si el valor A y el valor B son true, tomando la presedencia del lado izquierdo |
+| $valorA \|\| $valorB | or | true si el valor A o el valor B son true, tomando la presedencia del lado izquierdo |
+
+Ejemplo de comparación de operadores logicos
+
+index.php
+```
+<?php
+
+$valorA = false;
+$valorB = true;
+
+$resultado = $valorA || $valorB;
+var_dump($resultado);
+
+?>
+```
+consola:
+```
+❯ php index.php
+bool(true)
+ 
+❯ php index.php
+bool(false)
+ 
+❯ php index.php
+bool(true)
+```
+operadores aritmeticos
+
+| example | name | result |
+| -- | -- | -- | 
+| $valorA + $valorB | suma + | la suma de valor A y valor B |
+| $valorA - $valorB | resta - | la resta de valor A y valor B |
+| $valorA * $valorB | multiplicación * | la multiplicación de valor A y valor B |
+| $valorA / $valorB | división / | la división de valor A y valor B |
+| $valorA % $valorB | módulo / residuo | el remanente de la división del valor A entre valor B |
+| $valorA ** $valorB | Potenciación ** | la potenciación del valor A a la potencia del valor B |
+
+suma
+
+index.php
+```
+<?php
+
+$valorA = 5;
+$valorB = 2;
+
+$suma = $valorA + $valorB;
+
+var_dump($suma);
+
+?>
+```
+consola:
+```
+❯ php index.php
+int(7)
+```
+potenciación
+
+index.php
+```
+<?php
+
+$valorA = 5;
+$valorB = 2;
+
+$potencia = $valorA ** $valorB;
+
+var_dump($potencia);
+
+?>
+```
+consola:
+```
+❯ php index.php
+int(25)
+```
+Estructuras de control
+
+1. If / else : nos ayuda avalidar si una sucede una condición oara que una acción se pueda ajecutar, y en caso de que no cumpla se ejecute otra acción.
+
+index.php
+```
+<?php
+
+// if - else
+
+$valorA = 5;
+
+if($valorA==10){
+    echo "Es igual a 10 \n";
+}
+else{
+    echo "no es igual a 10 \n";
+}
+```
+consola:
+```
+// if - else
+
+$valorA = 5;
+
+if($valorA==10){
+    echo "Es igual a 10 \n";
+}
+else{
+    echo "no es igual a 10 \n";
+}
+```
+index.php
+```
+<?php
+
+// if - else
+
+$valorA = 10;
+
+if($valorA==10){
+    echo "Es igual a 10 \n";
+}
+else{
+    echo "no es igual a 10 \n";
+}
+```
+consola:
+```
+❯ php index.php
+Es igual a 10 
+```
+
+2. while - do while : estructura similar a un ciclo que ejecuta una acción minentrás una condición se cumpla. 
 
 index.php
 ```
 <?php
 
 
+// while
+
+$i = 0;
+
+while ($i <= 10) {
+    
+    echo $i++ . "\n";
+
+}
+
+// do while
+
+$i = 0;
+
+do{
+    echo $i++ . "\n";
+
+} while ($i <= 10);
+
 ```
 consola:
 ```
+❯ php index.php
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+3. for - foreach : pasa por cada pocición de un array para realizar acciones sobre este
+
+index.php
+```
+<?php
+
+// for 
+
+$arr = [
+
+    1,2,3,4
+
+];
+
+for($i=0; $i<4; $i++){
+
+    echo $arr[$i] . "\n";
+}
+
+// foreach
+
+$arr = [
+
+    1,2,3,4
+
+];
+
+foreach($arr as $value){
+    echo $value . "\n";
+}
 
 ```
+consola:
+```
+❯ php index.php
+1
+2
+3
+4
+1
+2
+3
+4
+```
+Switch : se obtienen diferentes casos de evaluación para una variable.
+
+index.php
+```
+<?php
+
+// switch
+
+$valorA = 6;
+
+switch ($valorA) {
+    case 1:
+        echo "El valor es 1";
+        break;
+    case 2:
+        echo "El valor es 2";
+        break;
+    case 3:
+        echo "El valor es 3";
+        break;
+    default:
+        echo "No es ninguno de los valores: 1, 2, 3";
+        break;
+}
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+No es ninguno de los valores: 1, 2, 3
+```
+
+index.php
+```
+<?php
+
+$valorA = 3;
+
+switch ($valorA) {
+    case 1:
+        echo "El valor es 1";
+        break;
+    case 2:
+        echo "El valor es 2";
+        break;
+    case 3:
+        echo "El valor es 3";
+        break;
+    default:
+        echo "No es ninguno de los valores: 1, 2, 3";
+        break;
+}
+
+echo "\n";
+```
+consola:
+```
+❯ php index.php
+El valor es 3
+```
+
+
+
+
+
+
+
+
 index.php
 ```
 <?php

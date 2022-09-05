@@ -1398,8 +1398,18 @@ echo "La hora exacta es: " . hora();
 echo "\n";
  */
 
-
+/* 
 // Hangedman game
+
+function clear(){
+    if(PHP_OS === "WINNT"){
+        system("cls");
+    }
+    else{
+        system("clear");
+    }
+}
+
 
 $words = ["Dinosaurio", "Parque", "Princesa", "Arbol", "Campana", "Amor", "Comer", "Escuela"];
 
@@ -1415,18 +1425,294 @@ $word_length = strlen($choose_word);
 $discovery_letters = str_pad("", $word_length, "_");
 $attempts = 0;
 
-echo "Palabra de $word_length letas \n\n"; 
-echo $discovery_letters . "\n\n";
+do {
 
-// writing
+    echo "Palabra de $word_length letas \n\n"; 
+    echo $discovery_letters . "\n\n";
+    
+    // writing
+    
+    $player_letter = readline("Escribe una letra: ");
+    $player_letter = strtolower($player_letter);
+    
+    // validete
+    
+    if (str_contains($choose_word, $player_letter)){
+        $offset = 0;
+        while(
+            
+            ($letter_position = strpos($choose_word, $player_letter,$offset) )!== false
+            
+            ){
+            
+            $discovery_letters[$letter_position] = $player_letter;
+            $offset = $letter_position + 1; 
+        }
+    }
+    else{
+    
+        clear();    
+        $attempts++;
+        echo "Letra incorrecta";
+        echo "Te quedán " . (MAX_ATTEMPS - $attempts) . " intentos";
+        sleep(3);
+    }
+    
+        
+} while ($attempts < MAX_ATTEMPS && $discovery_letters != $choose_word);
 
-$player_letter = readline("Escribe una letra: ");
-$player_letter = strtolower($player_letter);
+clear();
 
-// validete
+if ($attempts > MAX_ATTEMPS){
+    echo "Congratulations!! \n";
+    echo "Your complete this sentence \n";
+}
+else{
+    echo "Game-End \n";
+}
 
-if
-
-
+echo "La palabra es; $choose_word  \n";
+echo "Tú destapaste: $discovery_letters";
 
 echo "\n";
+
+ */
+/* 
+    $img =[
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Catifa_Sierpinski.png/220px-Catifa_Sierpinski.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Penrose7.gif/220px-Penrose7.gif",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Wismut_Kristall_und_1cm3_Wuerfel.jpg/220px-Wismut_Kristall_und_1cm3_Wuerfel.jpg",
+    ];
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <?php  foreach( $img as $img){    ?>
+    
+        <img src="<?php echo img; ?>">
+
+    <?php }     ?> 
+    
+</body>
+</html>
+
+ */
+
+
+
+// CURSO PRACTICO PHP
+
+// logica
+
+# Problema 1: calcular la suma de 3 números aleatorios y mostrar el resultado.
+# Solución:
+/* 
+* leer el problema objetivamente
+* identificar las entradas
+* identificar las salidas
+* definir el proceso en base al analisis
+        - Entradas: 3 números aleatorios
+        - Salidas: 1 número
+        - Proceso: 
+
+            0. Ingresar los tres números
+            1. Identificar le primer número
+            2. Identificar el segundo número
+            3. sumar los primeros dos números
+            4. identificar el tercer número
+            5. sumar el tercer número con el resultado de la suma de los primeros dos números
+            6. Mostrar el resultado 
+
+Graficando el proceso
+
+* Entradas: a1 + a2 + a3
+* Procesos: a1 + a2 + a3 = aR
+* Salida: = R
+
+* Entradas: 3 + 1 + 4
+* Procesos: 3 + 1 + 4 = 8
+* Salida: = 8
+
+Problema 2: Convertir una entrada de formato de hora a.m. / p.m. a  24hrs
+
+    Entrada: a.m. / p.m.
+
+    Salida: 24 hrs
+
+
+Entrada: 07:05:45 p.m.
+
+        07:05:45 p.m.
+        h   m  s  t
+
+
+
+Salida: 19:05:45
+
+        19:05:45 
+        h   m  s 
+
+condiciones de uso
+
+12:00:00 a.m. --->  00:00:00
+12:00:00 p.m. --->  12:00:00
+
+si t = am y h = 12 ---> h 00:00:00
+si t = pm y h < 12 ---> h (h+12):00:00
+
+Salica = h : m : s 
+
+Solución:
+
+Graficando el proceso:
+
+
+ */
+
+/* 
+// operadores logicos
+
+$valorA = false;
+$valorB = true;
+
+$resultado = $valorA || $valorB;
+var_dump($resultado);
+
+?>
+  */
+/* 
+
+// operadores aritmeticos
+
+$valorA = 5;
+$valorB = 2;
+
+$potencia = $valorA ** $valorB;
+
+var_dump($potencia);
+
+?>
+ */
+
+
+/* 
+
+// if - else
+
+$valorA = 10;
+
+if($valorA==10){
+    echo "Es igual a 10 \n";
+}
+else{
+    echo "no es igual a 10 \n";
+}
+
+ */
+
+/* 
+
+// while
+
+$i = 0;
+
+while ($i <= 10) {
+    
+    echo $i++ . "\n";
+
+}
+
+// do while
+
+$i = 0;
+
+do{
+    echo $i++ . "\n";
+
+} while ($i <= 10);
+
+ */
+
+
+/* 
+
+// for 
+
+$arr = [
+
+    1,2,3,4
+
+];
+
+for($i=0; $i<4; $i++){
+
+    echo $arr[$i] . "\n";
+}
+
+// foreach
+
+$arr = [
+
+    1,2,3,4
+
+];
+
+foreach($arr as $value){
+    echo $value . "\n";
+}
+ */
+
+
+/* 
+// switch
+
+$valorA = 3;
+
+switch ($valorA) {
+    case 1:
+        echo "El valor es 1";
+        break;
+    case 2:
+        echo "El valor es 2";
+        break;
+    case 3:
+        echo "El valor es 3";
+        break;
+    default:
+        echo "No es ninguno de los valores: 1, 2, 3";
+        break;
+}
+
+echo "\n";
+ */
+
+
+function concantenar($nombre, $apellido){
+    echo $nombre." ". $apellido;
+
+}
+
+concantenar("Maria", "Jose"."\n");
+
+function sumar($numeros){
+    $suma = 0;
+    for ($i=0; $i < 4; $i++) { 
+        $suma += $numeros[$i];
+    }
+    echo "La suma de los números es: " . $suma . "\n";
+}
+
+$numeros = [
+    1,2,3,4
+];
+sumar($numeros);
