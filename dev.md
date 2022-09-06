@@ -4273,6 +4273,39 @@ consola:
 ❯ php index.php
 El valor es 3
 ```
+### funciones definidas para concadenar y sumar parametros
+
+index.php
+```
+<?php
+
+function concantenar($nombre, $apellido){
+    echo $nombre." ". $apellido;
+
+}
+
+concantenar("Maria", "Jose"."\n");
+
+function sumar($numeros){
+    $suma = 0;
+    for ($i=0; $i < 4; $i++) { 
+        $suma += $numeros[$i];
+    }
+    echo "La suma de los números es: " . $suma . "\n";
+}
+
+$numeros = [
+    1,2,3,4
+];
+sumar($numeros);
+```
+consola:
+```
+❯ php index.php
+Maria Jose
+La suma de los números es: 10
+```
+
 
 
 
