@@ -12,9 +12,37 @@ La estructura lógica de un texto enfocado al aprendizaje es de ayuda para la co
 
 ## In To 📦
 
-La estructura del repositorio se distribuye en temás de desarrollo de código en base a la ruta de aprendisaje seguida para la adquisición de habilidades técnicas y el desarrollo de productos digitales.
+La estructura del repositorio se distribuye en temás de desarrollo de código en base a la ruta de aprendisaje seguida para la adquisición de habilidades técnicas y el desarrollo de lógica de programación. Los directorios en la rama main contendran ejercicios de lógica de programación integrando composición frontend y logica del lado del backend para la creación de plantillas interactivas que puedan ser utilizadas en metodologias como **atomic design** y/o **refactorización** de código con áreas de mejora y diversidad de casos de uso.
 
-## Estructura de carpetas :open_file_folder:
+### Directory structure :open_file_folder:
+
+~~~
+  main ------- README.md --->--- PHP.Directory --- > -- ** Integration **
+    |              |             MySQL.Directory                | 
+    |              |             HTML-CSS.Directory             | 
+Description (Documentation)-->   dev.md                         +
+Structure       (notes)          design.md                      |
+    |              |             management.md                  |
+	|              |                                             |
+    +            develop ------ develop ------ develop          +
+    |                              |              |             |    
+    |                              v              v             |
+  Added                            |              |             |  
+ changes ------ Check: ------- relase ---_--- relase ------- relace
+             orthography:
+ 		    voice & tone:
+
+~~~
+
+El apartado Index enlistara los directorios para uso como guía de exploración del código contenido y consulta de reutilización en diversos casos de uso.
+
+## Index
+
+PHP.Directory
+
+1. sintaxis.md --> contiene la sintaxis basica del lenguaje contenido en el directorio.  
+
+2. exercise01.php --> hora expresada en segundos
 
  
 
