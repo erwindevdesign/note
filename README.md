@@ -2,7 +2,7 @@
 
 La estructura lógica de un texto enfocado al aprendizaje es de ayuda para la comprensión de la información escrita, este repositorio pretende contener la información recabada durante la adquisición de diversos conocimientos para el crecimiento profesional y trasladarlos a un texto de enfoque técnico que sea referente de temas base en la construcción de proyectos de código, incrementando durante su desarrollo habilidades en escritura técnica y comunicación efectiva con enfoque al usuario, ubicando la línea de voz y tono de marca profesional en proceso de definición. 
 
-> *Además* de incrementar habilidades de escritura en **Terminal** y géstion de ramas en **GitHub** :octocat:
+> *Además* de incrementar habilidades de escritura en **Terminal** y gestión de ramas en **GitHub** 
 
 
 <p align=center >
@@ -12,18 +12,19 @@ La estructura lógica de un texto enfocado al aprendizaje es de ayuda para la co
 
 ## In To 📦
 
-La estructura del repositorio se distribuye en temás de desarrollo de código en base a la ruta de aprendisaje seguida para la adquisición de habilidades técnicas y el desarrollo de lógica de programación. Los directorios en la rama main contendran ejercicios de lógica de programación integrando composición frontend y logica del lado del backend para la creación de plantillas interactivas que puedan ser utilizadas en metodologias como **atomic design** y/o **refactorización** de código con áreas de mejora y diversidad de casos de uso.
+La estructura del repositorio se distribuye en temas de desarrollo de código con base en a la ruta de aprendizaje seguida para la adquisición de habilidades técnicas y el desarrollo de lógica de programación. Los directorios en la rama main contendrán ejercicios de lógica de programación, integrando composición dle lado de frontend y logica de lado del backend para la creación de plantillas interactivas que puedan ser utilizadas en metodologías como **atomic design** y/o **refactorización** de código con áreas de mejora y diversidad de casos de uso.
 
 ### Directory structure :open_file_folder:
 
 ~~~
+
   main ------- README.md --->--- PHP.Directory --- > -- ** Integration **
     |              |             MySQL.Directory                | 
     |              |             HTML-CSS.Directory             | 
 Description (Documentation)-->   dev.md                         +
 Structure       (notes)          design.md                      |
     |              |             management.md                  |
-	|              |                                             |
+	|              |                                            |
     +            develop ------ develop ------ develop          +
     |                              |              |             |    
     |                              v              v             |
@@ -34,19 +35,30 @@ Structure       (notes)          design.md                      |
 
 ~~~
 
-El apartado Index enlistara los directorios para uso como guía de exploración del código contenido y consulta de reutilización en diversos casos de uso.
+El apartado Index enlistará los directorios para uso como guía de exploración del código contenido y consulta de reutilización en diversos casos de uso.
+
+Los archivos **sintaxis.md** presentarán la estructura básica con la cual comenzaremos a implementar. Los archivos tipo **exercisex.php** o **exercise.html** contendrán fragmentos de código y pruebas de implementación a una estructura mayor, archivo el cual tendremos que ejecutar en la terminal de comandos. Los archivo tipo **index.php** y **server.php** contendrán la estructura de la implementación con respuesta del servidor, archivo el cual se tendrá que desplegar según las características del servidor utilizado para desplegar.
 
 ## Index
+
+
+- **dev.md** - este recurso contendra la información recabada de ejercicios, notas y fuentes en tema de desarrollo de servicio y/o producto desplegado con código.
+
+- **design.md** - este recurso contendra la información recabada de ejercicios, tutoriales y recursos en tema de diseño de servicio y/o producto digital.
+
+- **management.md** - este recurso contendra estructuras y metodologías de gestión de recursos en el desarrollo de un servicio o producto digital.
 
 PHP.Directory
 
 1. sintaxis.md --> contiene la sintaxis basica del lenguaje contenido en el directorio.  
 
-2. exercise01.php --> hora expresada en segundos
+2. exercise01.php --> hora expresada en segundos.
+
+
 
  
 
-## En el contenido de este repositorio se documentaran procesos como: 
+## Dentro del contenido de este repositorio se documentan procesos como: 
 
 ### Gestión de desarrollo de ramas en Git y GitHub :octocat:
 
@@ -98,5 +110,5 @@ features -------- > --------- relase ------- relase ------- relace
 
 
 
-Con todo el :heart: y como antecedente del recorrido en el aprendizaje obtenido en este multiverso :space_invader: tecnológico. 
+Con todo el :heart: y como antecedente del recorrido en el aprendizaje obtenido en un multiverso :space_invader: tecnológico. 
 
