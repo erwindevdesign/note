@@ -88,3 +88,52 @@ $nombre_de_variable = "asignación_de_dato"
 | Mayor o igual que | Regresa el valor **bool** de la comparación del valor de igual o mayor cantidad entre los elementos                       | <=       |
 | Spaceship         | Regresa el valor **int** de 1,0,-1 de la comparación entre los elementos que sean mayores (1), iguales (0) o menores (-1) | <=>      |
 | Función de NULL   | Regresa el valor **int** de la primera comparación entre elementos y su contenido                                         | ??       |
+
+
+Operadores logicos
+
+| example | name | result |
+| -- | -- | -- |
+| $valorA and $valorB | and | true si el valor A y el valor B son true |
+| $valorA or $valorB | or | true si el valor A o el valor B son true |
+| $valorA xor $valorB | xor | true si uno de los valores son true, pero no ambos |
+| !$valorA | not | true si el valor A es false |
+| $valorA && valorB | and | true si el valor A y el valor B son true, tomando la presedencia del lado izquierdo |
+| $valorA \|\| $valorB | or | true si el valor A o el valor B son true, tomando la presedencia del lado izquierdo |
+
+Ejemplo de comparación de operadores logicos
+
+index.php
+```
+<?php
+
+$valorA = false;
+$valorB = true;
+
+$resultado = $valorA || $valorB;
+var_dump($resultado);
+
+?>
+```
+consola:
+```
+❯ php index.php
+bool(true)
+ 
+❯ php index.php
+bool(false)
+ 
+❯ php index.php
+bool(true)
+```
+operadores aritmeticos
+
+| example | name | result |
+| -- | -- | -- | 
+| $valorA + $valorB | suma + | la suma de valor A y valor B |
+| $valorA - $valorB | resta - | la resta de valor A y valor B |
+| $valorA * $valorB | multiplicación * | la multiplicación de valor A y valor B |
+| $valorA / $valorB | división / | la división de valor A y valor B |
+| $valorA % $valorB | módulo / residuo | el remanente de la división del valor A entre valor B |
+| $valorA ** $valorB | Potenciación ** | la potenciación del valor A a la potencia del valor B |
+
