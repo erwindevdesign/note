@@ -123,3 +123,15 @@ Atraer — Interactuar — Deleitar
     39. Misión, servicio, acciones(plays), objetivos(tarjets), omisiones.
     40. El recorrido del comprador, en la etapa de **reconocimiento** tu prospecto experimenta y expresa síntomas de un problema u oportunidad, hace investigación . Durante la etapa de **consideración** tu prospecto ya definió claramente cuál es su problema u oportunidad, esta dispuesto a revisar todos los enfoques y opciones disponibles que puedan ayudar a solucionar su problemática. En al etapa de **decisión** tu prospecto definió una estrategia, método o formas de abordar el problema.
     41.
+
+    <<<<<<<<<<<<<<<<             >>>>>>>>>>>>>>>>
+
+# Etapas del recorrido del comprador 
+
+| Etapas del comprador | 1. Reconocimiento | 2. Consideración | 3. Decisión |
+| -- | -- | -- | -- |
+| Tipos de contenido | informes analíticos / dibulgación de investigaciones / libros y guías electronícas / contenidos educativos / editorial y de experto / white papers. | Webinar / podcast / video / comparación de white papers / guias de expertos / interacciones en vivo | Comparación de ofertas / casos de estudio / Descarga de pruba / 
+| Comportamiento del buyer persona | Se han dado cuenta de una necesidad a cubrir | Han definido bien su problematica y busca como solucionarla. | Han encontrado la solución y evaluan el abanico de posibilidades, estrategias y metodos que existen.
+| Información que busca | Enfoques y distintos metodos para resolver su problematica y/o necesidad | Exploran en busca de proveedores y productos, asi como información neutral de terceror como pueden ser los comentarios del producto o servicio enr edes sociales | documentan los posibles candidatos de compra, tomando puntos de referencia para su desición final |
+| Palabras clave | solucionar problema, problema, resolver, riesgos, potenciar, mejorar, optimizar, evitar | solución, proveedor, serviio, herramienta, dispositivo, software, aplicación | comparación vs la comptencia, pros y contras, puntos de referencia, revisión,  prueba |
+

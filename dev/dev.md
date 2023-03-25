@@ -63,7 +63,7 @@
 
 ## Datos y su interacción en el código <a name='id1'></a>
 
-Durante la historia, el ser humano ha desarrollafo entendimiento y comprensión de lo que sucede en su **entorno** desarrollo habilidades de **agrupamiento** y **organización** de la **información** que persibe en su ambiente. Esto ayuda su comprensión del ser con su entorno y la posibilidad de compartir la misma información y pensamiento a partir del pensamiento lógico de ideas y conseptos que son semanticamente interpretables en un flujo de comunicación donde se distribulla la información adecuada para su comprensión sistemica.
+A lo largo de la historia del ser humano, se ha desarrollado construido mediante diversos **lenguajes** el entendimiento y la comprensión de lo que sucede en su entorno desarrollo habilidades de **agrupamiento** y **organización** de la **información** que persibe en su ambiente. Esto ayuda su comprensión del ser con su entorno y la posibilidad de compartir la misma información y pensamiento a partir del pensamiento lógico de ideas y conseptos que son semanticamente interpretables en un flujo de comunicación donde se distribulla la información adecuada para su comprensión sistemica.
 
 Una de las caracteristicas del desarrollo del **pensamiento lógico** en el ser humano fue la creación del lenguaje para la comunicación en sociedad, este intercambio complejo de información constituye lo que llamaeremos como **código** linguistico.
 
